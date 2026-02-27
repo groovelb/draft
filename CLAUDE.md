@@ -24,14 +24,6 @@ YOU MUST NOT 명시적 허용 없이 규칙을 위반하는 코드를 작성하�
 ### Reference
 @.claude/rules/components.md - 기존 컴포넌트 목록 (컴포넌트 작업 전 필수 확인)
 
-## Key Directories
-
-- `src/components/` – 재사용 UI 컴포넌트
-- `src/stories/` – 문서 전용 스토리 (overview, style, template, page)
-- `src/common/ui/` – 공통 UI 요소
-- `src/styles/` – 테마, 전역 스타일
-- `.storybook/` – Storybook 설정
-
 ## Common Commands
 
 ```bash

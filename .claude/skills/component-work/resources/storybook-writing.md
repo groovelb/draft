@@ -4,13 +4,35 @@ Storybook 스토리 작성 시 준수해야 할 규칙
 
 ## 스토리 카테고리 구조
 
-| 카테고리 | title 접두사 | 설명 |
-|---------|-------------|------|
-| **Style** | `Style/` | 디자인 토큰 문서 (색상, 타이포그래피, 간격 등) |
-| **Custom Component** | `Custom Component/` | 프로젝트에서 새로 만든 재사용 컴포넌트 |
-| **Template** | `Template/` | 여러 컴포넌트를 조합한 템플릿 |
-| **Section** | `Section/` | 페이지를 구성하는 섹션 단위 컴포넌트 |
-| **Page** | `Page/` | 전체 페이지 레벨 컴포넌트 |
+### 문서/가이드
+
+| title prefix | 설명 |
+|-------------|------|
+| `Style/` | 디자인 토큰 문서 |
+| `Overview/` | 프로젝트 개요 문서 |
+| `Template/` | 템플릿 가이드 |
+| `Page/` | 페이지 가이드 |
+| `Common/` | 유틸리티 컴포넌트 |
+
+### 컴포넌트 (텍소노미 기반)
+
+| title prefix | 카테고리 |
+|-------------|---------|
+| `Component/1. Typography/` | Typography |
+| `Component/2. Container/` | Container |
+| `Component/3. Card/` | Card |
+| `Component/4. Media/` | Media |
+| `Component/5. Data Display/` | Data Display |
+| `Component/6. In-page Navigation/` | In-page Navigation |
+| `Component/7. Input & Control/` | Input & Control |
+| `Component/8. Layout/` | Layout |
+| `Component/9. Overlay & Feedback/` | Overlay & Feedback |
+| `Component/10. Navigation/` | Navigation |
+| `Interactive/11. KineticTypography/` | KineticTypography |
+| `Interactive/12. Scroll/` | Scroll |
+| `Interactive/13. ContentTransition/` | ContentTransition |
+| `Interactive/14. Motion/` | Motion |
+| `Interactive/15. DynamicColor/` | DynamicColor |
 
 ## 필수 규칙
 

@@ -50,11 +50,5 @@ JavaScript + React.js 코드 작성 규칙
  * Example usage:
  * <Button label="확인" onClick={handleClick} />
  */
-function Button({ label, onClick, isActive = true }) {
-  return (
-    <button onClick={onClick} disabled={!isActive}>
-      {label}
-    </button>
-  );
-}
+function Button({ label, onClick, isActive = true }) { ... }
 ```

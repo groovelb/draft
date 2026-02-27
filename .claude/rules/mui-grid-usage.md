@@ -14,48 +14,4 @@ import Grid from '@mui/material/Grid';   // 정확함! 이것만 사용!
 
 **중요**: MUI v7에서는 `Grid2`가 아닌 `Grid`를 직접 import해야 합니다.
 
----
-
-## Grid 사용 예시
-
-Grid 컴포넌트의 import 구문과 props 참고:
-
-```jsx
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: (theme.vars ?? theme).palette.text.secondary,
-  ...theme.applyStyles('dark', {
-    backgroundColor: '#1A2027',
-  }),
-}));
-
-export default function FullWidthGrid() {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid size={{ xs: 6, md: 8 }}>
-          <Item>xs=6 md=8</Item>
-        </Grid>
-        <Grid size={{ xs: 6, md: 4 }}>
-          <Item>xs=6 md=4</Item>
-        </Grid>
-        <Grid size={{ xs: 6, md: 4 }}>
-          <Item>xs=6 md=4</Item>
-        </Grid>
-        <Grid size={{ xs: 6, md: 8 }}>
-          <Item>xs=6 md=8</Item>
-        </Grid>
-      </Grid>
-    </Box>
-  );
-}
-```
+> 상세 사용 예시: `.claude/skills/component-work/resources/mui-grid-example.md` 참조
