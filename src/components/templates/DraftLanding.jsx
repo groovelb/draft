@@ -178,7 +178,7 @@ export function DraftLanding({ data = brandData, sx }) {
       {/* ============================================================
           Section 3: Core Values
           ============================================================ */}
-      <SectionContainer sx={ { py: { xs: 10, md: 16 }, bgcolor: 'background.paper' } }>
+      <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
         <PageContainer sx={ { px: widePx } }>
           <Title
             overline="CORE VALUES"
@@ -287,7 +287,7 @@ export function DraftLanding({ data = brandData, sx }) {
       {/* ============================================================
           Section 5: Product Lines
           ============================================================ */}
-      <SectionContainer sx={ { py: { xs: 10, md: 16 }, bgcolor: 'background.paper' } }>
+      <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
         <PageContainer sx={ { px: widePx } }>
           <Title
             overline="PRODUCT LINES"
