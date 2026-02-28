@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+
+  <!-- ============================================================
+       ROLLERBALL PEN — Blueprint Isometric Exploded View
+       Brass body, 0.5mm tip
+       Color: #003DA5 (Blueprint Blue), stroke only
+       Perspective: 30° true isometric (pen angled)
+       ============================================================ -->
+
+  <!-- ============================================================
+       Layer 1: CAP (top)
+       ============================================================ -->
+  <g>
+    <!-- Cap body (cylinder, isometric angle) -->
+    <ellipse cx="200" cy="80" rx="12" ry="6" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+    <line x1="188" y1="80" x2="188" y2="130" stroke="#003DA5" stroke-width="1" />
+    <line x1="212" y1="80" x2="212" y2="130" stroke="#003DA5" stroke-width="1" />
+    <ellipse cx="200" cy="130" rx="12" ry="6" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Cap clip -->
+    <line x1="212" y1="82" x2="214" y2="82" stroke="#003DA5" stroke-width="1" />
+    <line x1="214" y1="82" x2="214" y2="128" stroke="#003DA5" stroke-width="1" />
+    <line x1="214" y1="128" x2="212" y2="130" stroke="#003DA5" stroke-width="0.8" />
+
+    <!-- Cap ring detail -->
+    <ellipse cx="200" cy="126" rx="12.5" ry="6.2" stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.5" />
+
+    <!-- Brass texture (horizontal hatching) -->
+    <g stroke="#003DA5" stroke-width="0.3" opacity="0.15">
+      <line x1="189" y1="90" x2="211" y2="90" />
+      <line x1="189" y1="95" x2="211" y2="95" />
+      <line x1="189" y1="100" x2="211" y2="100" />
+      <line x1="189" y1="105" x2="211" y2="105" />
+      <line x1="189" y1="110" x2="211" y2="110" />
+      <line x1="189" y1="115" x2="211" y2="115" />
+      <line x1="189" y1="120" x2="211" y2="120" />
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Layer 2: BARREL BODY (middle)
+       ============================================================ -->
+  <g>
+    <!-- Barrel body (cylinder) -->
+    <ellipse cx="200" cy="185" rx="11" ry="5.5" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+    <line x1="189" y1="185" x2="189" y2="310" stroke="#003DA5" stroke-width="1" />
+    <line x1="211" y1="185" x2="211" y2="310" stroke="#003DA5" stroke-width="1" />
+    <ellipse cx="200" cy="310" rx="11" ry="5.5" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Grip section (knurled area near bottom) -->
+    <g stroke="#003DA5" stroke-width="0.3" opacity="0.25">
+      <line x1="189" y1="280" x2="211" y2="280" />
+      <line x1="189" y1="283" x2="211" y2="283" />
+      <line x1="189" y1="286" x2="211" y2="286" />
+      <line x1="189" y1="289" x2="211" y2="289" />
+      <line x1="189" y1="292" x2="211" y2="292" />
+      <line x1="189" y1="295" x2="211" y2="295" />
+      <line x1="189" y1="298" x2="211" y2="298" />
+      <line x1="189" y1="301" x2="211" y2="301" />
+      <line x1="189" y1="304" x2="211" y2="304" />
+    </g>
+
+    <!-- Brass texture (body hatching) -->
+    <g stroke="#003DA5" stroke-width="0.3" opacity="0.12">
+      <line x1="190" y1="195" x2="210" y2="195" />
+      <line x1="190" y1="205" x2="210" y2="205" />
+      <line x1="190" y1="215" x2="210" y2="215" />
+      <line x1="190" y1="225" x2="210" y2="225" />
+      <line x1="190" y1="235" x2="210" y2="235" />
+      <line x1="190" y1="245" x2="210" y2="245" />
+      <line x1="190" y1="255" x2="210" y2="255" />
+      <line x1="190" y1="265" x2="210" y2="265" />
+    </g>
+
+    <!-- Center ring (brass accent) -->
+    <ellipse cx="200" cy="275" rx="12" ry="6" stroke="#003DA5" stroke-width="0.6" fill="none" opacity="0.4" />
+  </g>
+
+  <!-- ============================================================
+       Layer 3: REFILL CARTRIDGE (shown beside, ghost)
+       ============================================================ -->
+  <g opacity="0.35">
+    <!-- Refill tube -->
+    <line x1="240" y1="220" x2="240" y2="350" stroke="#003DA5" stroke-width="0.8" />
+    <line x1="244" y1="220" x2="244" y2="350" stroke="#003DA5" stroke-width="0.8" />
+    <ellipse cx="242" cy="220" rx="2" ry="1" stroke="#003DA5" stroke-width="0.6" />
+    <!-- Ink level -->
+    <rect x="240" y="260" width="4" height="60" fill="rgba(0,61,165,0.1)" stroke="none" />
+    <!-- Tip -->
+    <line x1="240" y1="350" x2="242" y2="358" stroke="#003DA5" stroke-width="0.6" />
+    <line x1="244" y1="350" x2="242" y2="358" stroke="#003DA5" stroke-width="0.6" />
+    <circle cx="242" cy="359" r="0.8" fill="#003DA5" />
+  </g>
+
+  <!-- ============================================================
+       Layer 4: TIP SECTION (bottom)
+       ============================================================ -->
+  <g>
+    <!-- Taper cone -->
+    <line x1="189" y1="355" x2="197" y2="395" stroke="#003DA5" stroke-width="1" />
+    <line x1="211" y1="355" x2="203" y2="395" stroke="#003DA5" stroke-width="1" />
+    <ellipse cx="200" cy="355" rx="11" ry="5.5" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+    <!-- Ball tip -->
+    <ellipse cx="200" cy="395" rx="3" ry="1.5" stroke="#003DA5" stroke-width="0.8" fill="rgba(0,61,165,0.02)" />
+    <circle cx="200" cy="399" r="1.2" fill="#003DA5" opacity="0.4" />
+  </g>
+
+  <!-- ============================================================
+       Alignment guide lines (dashed, between layers)
+       ============================================================ -->
+  <g stroke="#003DA5" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.2">
+    <!-- Cap to barrel -->
+    <line x1="188" y1="135" x2="189" y2="180" />
+    <line x1="212" y1="135" x2="211" y2="180" />
+    <!-- Barrel to tip -->
+    <line x1="189" y1="315" x2="189" y2="350" />
+    <line x1="211" y1="315" x2="211" y2="350" />
+  </g>
+
+  <!-- ============================================================
+       Annotations
+       ============================================================ -->
+  <g>
+    <!-- CAP label -->
+    <line x1="214" y1="105" x2="280" y2="105"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="214" cy="105" r="1.5" fill="#003DA5" />
+    <text x="284" y="103"
+      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      CAP
+    </text>
+    <text x="284" y="113"
+      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      BRASS FINISH
+    </text>
+
+    <!-- BARREL label -->
+    <line x1="211" y1="240" x2="280" y2="240"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="211" cy="240" r="1.5" fill="#003DA5" />
+    <text x="284" y="238"
+      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      BARREL
+    </text>
+    <text x="284" y="248"
+      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      BRASS BODY
+    </text>
+
+    <!-- REFILL label -->
+    <line x1="244" y1="290" x2="280" y2="290"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="244" cy="290" r="1.5" fill="#003DA5" />
+    <text x="284" y="288"
+      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5" opacity="0.5">
+      REFILL 0.5MM
+    </text>
+
+    <!-- GRIP label -->
+    <line x1="189" y1="290" x2="140" y2="290"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="189" cy="290" r="1.5" fill="#003DA5" />
+    <text x="94" y="288"
+      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      GRIP
+    </text>
+    <text x="94" y="298"
+      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      KNURLED
+    </text>
+
+    <!-- TIP label -->
+    <line x1="203" y1="397" x2="280" y2="397"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="203" cy="397" r="1.5" fill="#003DA5" />
+    <text x="284" y="395"
+      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      BALL TIP
+    </text>
+    <text x="284" y="405"
+      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      0.5MM
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Title
+       ============================================================ -->
+  <text x="200" y="470"
+    font-family="'Silkscreen', monospace" font-size="8" fill="#003DA5"
+    text-anchor="middle" letter-spacing="0.1em">
+    ROLLERBALL PEN
+  </text>
+
+</svg>

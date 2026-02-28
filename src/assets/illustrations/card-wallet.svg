@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+
+  <!-- ============================================================
+       CARD WALLET — Blueprint Isometric Exploded View
+       Business card wallet, 20-card capacity, brass clip
+       Color: #003DA5 (Blueprint Blue), stroke only
+       ============================================================ -->
+
+  <!-- ============================================================
+       Layer 1: BRASS CLIP (top)
+       ============================================================ -->
+  <g>
+    <!-- Clip body (small rectangular bar) -->
+    <polygon
+      points="200,75 230,58 224,55 194,72"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.04)"
+    />
+    <polygon
+      points="200,75 230,58 230,62 200,79"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.06)"
+    />
+    <polygon
+      points="200,75 194,72 194,76 200,79"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.05)"
+    />
+
+    <!-- Clip spring detail -->
+    <path d="M200,79 Q197,85 200,88 Q203,85 200,79"
+      stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.4" />
+
+    <!-- Hatching for brass -->
+    <g stroke="#003DA5" stroke-width="0.2" opacity="0.2">
+      <line x1="198" y1="74" x2="226" y2="59" />
+      <line x1="200" y1="76" x2="228" y2="61" />
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Layer 2: BUSINESS CARDS (fanned, middle)
+       ============================================================ -->
+  <g>
+    <!-- Card stack (3 visible, representing 20) -->
+    <!-- Card 3 (back, most offset) -->
+    <g opacity="0.25">
+      <polygon
+        points="200,155 260,120 222,100 162,135"
+        stroke="#003DA5" stroke-width="0.6"
+        fill="rgba(0,61,165,0.02)"
+      />
+    </g>
+
+    <!-- Card 2 (middle) -->
+    <g opacity="0.4">
+      <polygon
+        points="200,150 258,116 220,97 162,131"
+        stroke="#003DA5" stroke-width="0.6"
+        fill="rgba(0,61,165,0.02)"
+      />
+    </g>
+
+    <!-- Card 1 (front, full opacity) -->
+    <g>
+      <polygon
+        points="200,145 256,112 218,94 162,127"
+        stroke="#003DA5" stroke-width="0.8"
+        fill="rgba(0,61,165,0.02)"
+      />
+      <!-- Text lines on card -->
+      <g stroke="#003DA5" stroke-width="0.3" opacity="0.3">
+        <line x1="175" y1="125" x2="215" y2="103" />
+        <line x1="178" y1="128" x2="208" y2="112" />
+        <line x1="180" y1="131" x2="200" y2="120" />
+      </g>
+    </g>
+
+    <!-- Stack edge lines (side view showing depth) -->
+    <g stroke="#003DA5" stroke-width="0.3" opacity="0.2">
+      <line x1="200" y1="146" x2="200" y2="157" />
+      <line x1="200" y1="148" x2="260" y2="114" />
+      <line x1="200" y1="150" x2="258" y2="116" />
+      <line x1="200" y1="152" x2="256" y2="118" />
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Layer 3: WALLET BODY (bottom, opened)
+       ============================================================ -->
+  <g>
+    <!-- Wallet outer (top face, opened flat) -->
+    <polygon
+      points="200,240 290,193 230,163 140,210"
+      stroke="#003DA5" stroke-width="1"
+      fill="rgba(0,61,165,0.02)"
+    />
+    <!-- Right side -->
+    <polygon
+      points="200,240 290,193 290,198 200,245"
+      stroke="#003DA5" stroke-width="1"
+      fill="rgba(0,61,165,0.05)"
+    />
+    <!-- Left side -->
+    <polygon
+      points="200,240 140,210 140,215 200,245"
+      stroke="#003DA5" stroke-width="1"
+      fill="rgba(0,61,165,0.04)"
+    />
+
+    <!-- Card slot lines (inside wallet) -->
+    <g stroke="#003DA5" stroke-width="0.5" opacity="0.3">
+      <!-- Slot 1 -->
+      <line x1="160" y1="220" x2="220" y2="187" />
+      <!-- Slot 2 -->
+      <line x1="170" y1="216" x2="230" y2="183" />
+      <!-- Slot 3 -->
+      <line x1="180" y1="212" x2="240" y2="179" />
+    </g>
+
+    <!-- Center fold line -->
+    <line x1="170" y1="225" x2="260" y2="178"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="4 2" opacity="0.3" />
+
+    <!-- Leather texture -->
+    <g stroke="#003DA5" stroke-width="0.2" opacity="0.08">
+      <line x1="155" y1="222" x2="270" y2="195" />
+      <line x1="160" y1="218" x2="275" y2="191" />
+      <line x1="165" y1="214" x2="280" y2="187" />
+      <line x1="170" y1="210" x2="280" y2="183" />
+    </g>
+
+    <!-- Clip mount point (small circle on top face) -->
+    <circle cx="215" cy="200" r="2"
+      stroke="#003DA5" stroke-width="0.5" fill="rgba(0,61,165,0.04)" opacity="0.5" />
+  </g>
+
+  <!-- ============================================================
+       Alignment guides
+       ============================================================ -->
+  <g stroke="#003DA5" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.2">
+    <line x1="200" y1="92" x2="215" y2="100" />
+    <line x1="200" y1="160" x2="200" y2="235" />
+  </g>
+
+  <!-- ============================================================
+       Annotations
+       ============================================================ -->
+  <g>
+    <line x1="230" y1="58" x2="290" y2="58"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="230" cy="58" r="1.5" fill="#003DA5" />
+    <text x="294" y="56" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">BRASS CLIP</text>
+
+    <line x1="260" y1="120" x2="290" y2="120"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="260" cy="120" r="1.5" fill="#003DA5" />
+    <text x="294" y="118" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">CARDS</text>
+    <text x="294" y="128" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">20 CAPACITY</text>
+
+    <line x1="290" y1="195" x2="310" y2="195"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="290" cy="195" r="1.5" fill="#003DA5" />
+    <text x="314" y="193" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">WALLET</text>
+    <text x="314" y="203" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">LEATHER</text>
+
+    <line x1="260" y1="178" x2="310" y2="178"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="260" cy="178" r="1.5" fill="#003DA5" />
+    <text x="314" y="176" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5" opacity="0.5">3 SLOTS</text>
+  </g>
+
+  <!-- ============================================================
+       Title
+       ============================================================ -->
+  <text x="200" y="470"
+    font-family="'Silkscreen', monospace" font-size="8" fill="#003DA5"
+    text-anchor="middle" letter-spacing="0.1em">
+    CARD WALLET
+  </text>
+
+</svg>

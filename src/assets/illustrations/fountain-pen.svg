@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+
+  <!-- ============================================================
+       FOUNTAIN PEN — Blueprint Isometric Exploded View
+       Steel nib, EF/F/M selection
+       Color: #003DA5 (Blueprint Blue), stroke only
+       ============================================================ -->
+
+  <!-- ============================================================
+       Layer 1: CAP (top)
+       ============================================================ -->
+  <g>
+    <ellipse cx="200" cy="52" rx="13" ry="6.5" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+    <line x1="187" y1="52" x2="187" y2="112" stroke="#003DA5" stroke-width="1" />
+    <line x1="213" y1="52" x2="213" y2="112" stroke="#003DA5" stroke-width="1" />
+    <ellipse cx="200" cy="112" rx="13" ry="6.5" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Cap band (decorative ring) -->
+    <ellipse cx="200" cy="60" rx="13.5" ry="6.8" stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.4" />
+    <ellipse cx="200" cy="64" rx="13.5" ry="6.8" stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.4" />
+
+    <!-- Cap clip -->
+    <line x1="213" y1="55" x2="215" y2="55" stroke="#003DA5" stroke-width="1" />
+    <line x1="215" y1="55" x2="215" y2="108" stroke="#003DA5" stroke-width="1" />
+    <line x1="215" y1="108" x2="213" y2="112" stroke="#003DA5" stroke-width="0.8" />
+    <!-- Clip ball end -->
+    <circle cx="215" cy="108" r="1.2" fill="#003DA5" opacity="0.3" />
+
+    <!-- Cap top finial -->
+    <ellipse cx="200" cy="49" rx="5" ry="2.5" stroke="#003DA5" stroke-width="0.6" fill="rgba(0,61,165,0.04)" />
+  </g>
+
+  <!-- ============================================================
+       Layer 2: BARREL (middle)
+       ============================================================ -->
+  <g>
+    <ellipse cx="200" cy="155" rx="12" ry="6" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+    <line x1="188" y1="155" x2="188" y2="260" stroke="#003DA5" stroke-width="1" />
+    <line x1="212" y1="155" x2="212" y2="260" stroke="#003DA5" stroke-width="1" />
+    <ellipse cx="200" cy="260" rx="12" ry="6" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Thread lines at bottom -->
+    <g stroke="#003DA5" stroke-width="0.3" opacity="0.3">
+      <ellipse cx="200" cy="252" rx="12" ry="6" fill="none" />
+      <ellipse cx="200" cy="255" rx="11.5" ry="5.8" fill="none" />
+      <ellipse cx="200" cy="258" rx="11" ry="5.5" fill="none" />
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Layer 3: CONVERTER (shown beside barrel)
+       ============================================================ -->
+  <g opacity="0.35">
+    <!-- Converter body -->
+    <rect x="237" y="170" width="8" height="70" rx="2"
+      stroke="#003DA5" stroke-width="0.8" fill="rgba(0,61,165,0.02)" />
+    <!-- Ink level inside -->
+    <rect x="238" y="200" width="6" height="30"
+      fill="rgba(0,61,165,0.08)" stroke="none" />
+    <!-- Piston knob -->
+    <rect x="238" y="165" width="6" height="8" rx="1"
+      stroke="#003DA5" stroke-width="0.6" fill="rgba(0,61,165,0.04)" />
+    <!-- Nipple at bottom -->
+    <line x1="241" y1="240" x2="241" y2="248" stroke="#003DA5" stroke-width="0.6" />
+  </g>
+
+  <!-- ============================================================
+       Layer 4: NIB SECTION (grip + nib)
+       ============================================================ -->
+  <g>
+    <!-- Grip section (tapered cylinder) -->
+    <ellipse cx="200" cy="300" rx="11" ry="5.5" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+    <line x1="189" y1="300" x2="192" y2="348" stroke="#003DA5" stroke-width="1" />
+    <line x1="211" y1="300" x2="208" y2="348" stroke="#003DA5" stroke-width="1" />
+    <ellipse cx="200" cy="348" rx="8" ry="4" stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Grip texture (subtle rings) -->
+    <g stroke="#003DA5" stroke-width="0.3" opacity="0.2">
+      <ellipse cx="200" cy="310" rx="10.5" ry="5.2" fill="none" />
+      <ellipse cx="200" cy="316" rx="10" ry="5" fill="none" />
+      <ellipse cx="200" cy="322" rx="9.5" ry="4.8" fill="none" />
+      <ellipse cx="200" cy="328" rx="9" ry="4.5" fill="none" />
+      <ellipse cx="200" cy="334" rx="8.6" ry="4.3" fill="none" />
+    </g>
+  </g>
+
+  <!-- ============================================================
+       Layer 5: NIB (bottom, detailed)
+       ============================================================ -->
+  <g>
+    <!-- Nib body (shield shape) -->
+    <path d="M195,370 L200,415 L205,370"
+      stroke="#003DA5" stroke-width="1" fill="rgba(0,61,165,0.03)" />
+    <!-- Nib slit -->
+    <line x1="200" y1="375" x2="200" y2="413" stroke="#003DA5" stroke-width="0.5" />
+    <!-- Breather hole -->
+    <circle cx="200" cy="380" r="2" stroke="#003DA5" stroke-width="0.6" fill="rgba(0,61,165,0.02)" />
+    <!-- Nib curvature lines -->
+    <path d="M196,374 Q200,372 204,374" stroke="#003DA5" stroke-width="0.4" fill="none" opacity="0.3" />
+    <path d="M197,378 Q200,376 203,378" stroke="#003DA5" stroke-width="0.4" fill="none" opacity="0.3" />
+    <!-- Tipping -->
+    <ellipse cx="200" cy="415" rx="1" ry="0.5" fill="#003DA5" opacity="0.5" />
+    <!-- Feed (visible behind nib) -->
+    <path d="M197,375 L199,410" stroke="#003DA5" stroke-width="0.4" opacity="0.2" stroke-dasharray="1 1.5" />
+    <path d="M203,375 L201,410" stroke="#003DA5" stroke-width="0.4" opacity="0.2" stroke-dasharray="1 1.5" />
+  </g>
+
+  <!-- ============================================================
+       Alignment guide lines
+       ============================================================ -->
+  <g stroke="#003DA5" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.2">
+    <line x1="187" y1="117" x2="188" y2="150" />
+    <line x1="213" y1="117" x2="212" y2="150" />
+    <line x1="188" y1="265" x2="189" y2="295" />
+    <line x1="212" y1="265" x2="211" y2="295" />
+    <line x1="192" y1="353" x2="195" y2="368" />
+    <line x1="208" y1="353" x2="205" y2="368" />
+  </g>
+
+  <!-- ============================================================
+       Annotations
+       ============================================================ -->
+  <g>
+    <line x1="215" y1="80" x2="290" y2="80"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="215" cy="80" r="1.5" fill="#003DA5" />
+    <text x="294" y="78" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">CAP</text>
+    <text x="294" y="88" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">W/ CLIP</text>
+
+    <line x1="212" y1="210" x2="290" y2="210"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="212" cy="210" r="1.5" fill="#003DA5" />
+    <text x="294" y="208" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">BARREL</text>
+
+    <line x1="245" y1="210" x2="290" y2="210"
+      stroke="#003DA5" stroke-width="0.5" opacity="0" />
+    <text x="294" y="228" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5" opacity="0.5">CONVERTER</text>
+
+    <line x1="211" y1="320" x2="290" y2="320"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="211" cy="320" r="1.5" fill="#003DA5" />
+    <text x="294" y="318" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">GRIP</text>
+    <text x="294" y="328" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">SECTION</text>
+
+    <line x1="205" y1="390" x2="290" y2="390"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="205" cy="390" r="1.5" fill="#003DA5" />
+    <text x="294" y="388" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">STEEL NIB</text>
+    <text x="294" y="398" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">EF / F / M</text>
+  </g>
+
+  <!-- ============================================================
+       Title
+       ============================================================ -->
+  <text x="200" y="470"
+    font-family="'Silkscreen', monospace" font-size="8" fill="#003DA5"
+    text-anchor="middle" letter-spacing="0.1em">
+    FOUNTAIN PEN
+  </text>
+
+</svg>

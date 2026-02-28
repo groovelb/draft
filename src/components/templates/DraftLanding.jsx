@@ -9,6 +9,28 @@ import { RatioContainer } from '../container/RatioContainer';
 import { Title } from '../typography/Title';
 import { StretchedHeadline } from '../typography/StretchedHeadline';
 import brandData from '../../docs/brand-draft.json';
+import GridNotebookA5 from '../../assets/illustrations/grid-notebook-a5.svg';
+import GridMemoPad from '../../assets/illustrations/grid-memo-pad.svg';
+import DeskMat from '../../assets/illustrations/desk-mat.svg';
+import RollerballPen from '../../assets/illustrations/rollerball-pen.svg';
+import FountainPen from '../../assets/illustrations/fountain-pen.svg';
+import InkCartridgeSet from '../../assets/illustrations/ink-cartridge-set.svg';
+import LeatherBinderA5 from '../../assets/illustrations/leather-binder-a5.svg';
+import DocumentFolder from '../../assets/illustrations/document-folder.svg';
+import CardWallet from '../../assets/illustrations/card-wallet.svg';
+
+/** 제품명 → 일러스트 SVG 매핑 */
+const illustrationMap = {
+  'Grid Notebook A5': GridNotebookA5,
+  'Grid Memo Pad': GridMemoPad,
+  'Desk Mat': DeskMat,
+  'Rollerball Pen': RollerballPen,
+  'Fountain Pen': FountainPen,
+  'Ink Cartridge Set': InkCartridgeSet,
+  'Leather Binder A5': LeatherBinderA5,
+  'Document Folder': DocumentFolder,
+  'Card Wallet': CardWallet,
+};
 
 /** 일러스트 플레이스홀더 공통 스타일 */
 const placeholderSx = {
@@ -323,15 +345,24 @@ export function DraftLanding({ data = brandData, sx }) {
                 <LineGrid container gap={ 24 } borderColor="primary.main">
                   { line.items.map((item) => (
                     <Grid size={ { xs: 12, sm: 4 } } key={ item.name }>
-                      {/* 일러스트 placeholder */}
-                      <RatioContainer
-                        ratio="4:3"
-                        sx={ placeholderSx }
-                      >
-                        <Typography variant="caption" sx={ { color: 'text.disabled' } }>
-                          { item.name }
-                        </Typography>
-                      </RatioContainer>
+                      {/* 제품 일러스트 또는 placeholder */}
+                      { illustrationMap[item.name] ? (
+                        <Box
+                          component="img"
+                          src={ illustrationMap[item.name] }
+                          alt={ item.name }
+                          sx={ { width: '100%', height: 'auto', display: 'block' } }
+                        />
+                      ) : (
+                        <RatioContainer
+                          ratio="4:3"
+                          sx={ placeholderSx }
+                        >
+                          <Typography variant="caption" sx={ { color: 'text.disabled' } }>
+                            { item.name }
+                          </Typography>
+                        </RatioContainer>
+                      ) }
 
                       {/* 제품 정보 */}
                       <Box sx={ { mt: 2 } }>
