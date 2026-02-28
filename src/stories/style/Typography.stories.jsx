@@ -30,6 +30,8 @@ export const Docs = {
     const tokenStructure = {
       typography: {
         fontFamily: theme.typography.fontFamily,
+        headingFontFamily: theme.typography.headingFontFamily,
+        displayFontFamily: theme.typography.displayFontFamily,
         fontSize: theme.typography.fontSize,
         fontWeightLight: theme.typography.fontWeightLight,
         fontWeightRegular: theme.typography.fontWeightRegular,
@@ -50,6 +52,31 @@ export const Docs = {
         overline: theme.typography.overline,
       },
     };
+
+    // 폰트 패밀리 3-tier 데이터
+    const fontFamilies = [
+      {
+        tier: 'Brand Display',
+        token: 'displayFontFamily',
+        fontFamily: theme.typography.displayFontFamily,
+        description: '브랜드 마크, 특수 디스플레이 (Pixel)',
+        sample: 'BLUEPRINT STATIONERY',
+      },
+      {
+        tier: 'Heading',
+        token: 'headingFontFamily',
+        fontFamily: theme.typography.headingFontFamily,
+        description: 'h1~h6 에디토리얼 헤딩 (Serif)',
+        sample: 'The Blueprint of Ideas',
+      },
+      {
+        tier: 'Body',
+        token: 'fontFamily',
+        fontFamily: theme.typography.fontFamily,
+        description: '본문, UI 텍스트, 한국어 (Sans-serif)',
+        sample: '아날로그 필기의 따뜻함 The quick brown fox',
+      },
+    ];
 
     // 토큰 값 (테이블용)
     const tokenValues = [
@@ -100,6 +127,42 @@ export const Docs = {
           <Box sx={ { p: 2, border: '1px solid', borderColor: 'divider', borderRadius: 1, mb: 4 } }>
             { Object.entries(tokenStructure).map(([key, value]) => (
               <TreeNode key={ key } keyName={ key } value={ value } defaultOpen />
+            )) }
+          </Box>
+
+          {/* Font Family 3-tier */}
+          <SectionTitle title="Font Family (3-tier)" description="브랜드 타이포그래피 시스템" />
+          <Box sx={ { display: 'flex', flexDirection: 'column', gap: 3, mb: 4 } }>
+            { fontFamilies.map((row) => (
+              <Box
+                key={ row.tier }
+                sx={ {
+                  p: 3,
+                  border: '1px solid',
+                  borderColor: 'divider',
+                } }
+              >
+                <Box sx={ { display: 'flex', alignItems: 'baseline', gap: 1, mb: 0.5 } }>
+                  <Typography variant="subtitle2" sx={ { fontWeight: 700 } }>
+                    { row.tier }
+                  </Typography>
+                  <Typography variant="caption" sx={ { fontFamily: 'monospace', color: 'text.secondary' } }>
+                    { row.token }
+                  </Typography>
+                </Box>
+                <Typography variant="caption" color="text.secondary" sx={ { display: 'block', mb: 2 } }>
+                  { row.description }
+                </Typography>
+                <Typography
+                  sx={ {
+                    fontFamily: row.fontFamily,
+                    fontSize: row.tier === 'Brand Display' ? '1.5rem' : '1.75rem',
+                    lineHeight: 1.3,
+                  } }
+                >
+                  { row.sample }
+                </Typography>
+              </Box>
             )) }
           </Box>
 
@@ -177,10 +240,15 @@ export const Docs = {
               mb: 4,
             } }
           >
-{ `// Typography variant 사용
+{ `// Typography variant 사용 (h1~h6 → Playfair Display serif)
 <Typography variant="h1">페이지 타이틀</Typography>
 <Typography variant="body1">본문 텍스트</Typography>
 <Typography variant="caption">캡션 텍스트</Typography>
+
+// Brand Display 폰트 (Silkscreen pixel)
+<Typography sx={{ fontFamily: (theme) => theme.typography.displayFontFamily }}>
+  BRAND DISPLAY
+</Typography>
 
 // sx prop으로 커스텀
 <Typography sx={{ fontWeight: 700 }}>볼드 텍스트</Typography>

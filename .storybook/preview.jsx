@@ -3,14 +3,16 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import { defaultTheme } from '../src/styles/themes';
 
-// Google Fonts 로드 (Material Symbols + 기본 폰트)
+// Google Fonts 로드 (Material Symbols + 브랜드 폰트)
 const googleFonts = [
   // Material Symbols
   'Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
   'Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
   'Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
-  // Default Theme Font
-  'Outfit:wght@300;400;500;600;700;800;900',
+  // Heading — Serif (retro editorial)
+  'Playfair+Display:wght@400;500;600;700;800;900',
+  // Brand Display — Pixel (bitmap)
+  'Silkscreen:wght@400;700',
 ];
 
 googleFonts.forEach((font) => {
