@@ -26,13 +26,13 @@ export function ProductCard({ Illustration, name, description }) {
       </BlueprintReveal>
 
       <Box sx={ { mt: 3, px: { xs: 0, md: 1 } } }>
-        <Typography variant="h5">
+        <Typography variant="h5" sx={ { color: 'common.white' } }>
           { name }
         </Typography>
         <Typography
           variant="body1"
           sx={ {
-            color: 'text.primary',
+            color: 'rgba(255,255,255,0.7)',
             mt: 1,
             wordBreak: 'keep-all',
           } }

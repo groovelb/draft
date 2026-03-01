@@ -22,23 +22,23 @@ import { ProductCard } from './ProductCard';
  */
 export function ProductLineBlock({ lineName, concept, items, illustrationMap, gridGap }) {
   return (
-    <LineGrid gap={ gridGap } borderColor="text.primary">
+    <LineGrid gap={ gridGap } borderColor="common.white">
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Typography
           variant="h3"
-          sx={ { color: 'primary.main' } }
+          sx={ { color: 'common.white' } }
         >
           { lineName }
         </Typography>
         <Typography
           variant="body1"
-          sx={ { color: 'text.primary', mt: 1.5 } }
+          sx={ { color: 'rgba(255,255,255,0.7)', mt: 1.5 } }
         >
           { concept }
         </Typography>
       </Box>
 
-      <LineGrid container gap={ gridGap } borderColor="text.primary">
+      <LineGrid container gap={ gridGap } borderColor="common.white">
         { items.map((item) => (
           <Grid size={ { xs: 12, sm: 4 } } key={ item.name }>
             <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 }, textAlign: 'center' } }>

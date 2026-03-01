@@ -44,14 +44,13 @@ export function CoreValuesSection({ coreValues, gridGap }) {
       <LineGrid container gap={ gridGap } borderColor="text.primary">
         { coreValues.map((value, index) => (
           <Grid size={ { xs: 12, sm: 6 } } key={ value.key }>
-            <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 }, textAlign: 'center' } }>
-              <CoreValueCard
-                Illustration={ valueIllustrationMap[value.key] }
-                index={ index }
-                label={ value.label }
-                description={ value.description }
-              />
-            </Box>
+            <CoreValueCard
+              Illustration={ valueIllustrationMap[value.key] }
+              index={ index }
+              title={ value.key }
+              label={ value.label }
+              description={ value.description }
+            />
           </Grid>
         )) }
       </LineGrid>

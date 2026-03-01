@@ -42,7 +42,15 @@ const illustrationMap = {
  */
 export function ProductLinesSection({ products, gridGap }) {
   return (
-    <LineGrid gap={ gridGap } borderColor="text.primary">
+    <LineGrid
+      gap={ gridGap }
+      borderColor="common.white"
+      sx={ {
+        bgcolor: 'primary.main',
+        color: 'common.white',
+        '& svg': { filter: 'brightness(0) invert(1)' },
+      } }
+    >
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
           title="Three Lines of Tools"

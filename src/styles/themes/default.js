@@ -154,42 +154,48 @@ const typography = {
     fontWeight: 900,
     fontSize: '4.5rem',      // 72px — CTA, 페이지 레벨
     lineHeight: 1.1,
-    letterSpacing: '-0.02em',
+    letterSpacing: '-0.04em',
+    wordSpacing: '0.12em',
   },
   h2: {
     fontFamily: dotoStack,
     fontWeight: 900,
     fontSize: '3.125rem',    // 50px — 섹션 타이틀
     lineHeight: 1.15,
-    letterSpacing: '-0.01em',
+    letterSpacing: '-0.03em',
+    wordSpacing: '0.1em',
   },
   h3: {
     fontFamily: dotoStack,
     fontWeight: 900,
     fontSize: '2.5rem',      // 40px — 카테고리 타이틀
     lineHeight: 1.2,
-    letterSpacing: '-0.01em',
+    letterSpacing: '-0.03em',
+    wordSpacing: '0.08em',
   },
   h4: {
     fontFamily: dotoStack,
     fontWeight: 900,
     fontSize: '1.875rem',    // 30px (24×1.25)
     lineHeight: 1.3,
-    letterSpacing: '0',
+    letterSpacing: '-0.02em',
+    wordSpacing: '0.06em',
   },
   h5: {
     fontFamily: dotoStack,
     fontWeight: 900,
     fontSize: '1.563rem',    // 25px (20×1.25)
     lineHeight: 1.35,
-    letterSpacing: '0',
+    letterSpacing: '-0.02em',
+    wordSpacing: '0.06em',
   },
   h6: {
     fontFamily: dotoStack,
     fontWeight: 900,
     fontSize: '1.4rem',      // ~22px (18×1.25)
     lineHeight: 1.4,
-    letterSpacing: '0',
+    letterSpacing: '-0.02em',
+    wordSpacing: '0.06em',
   },
 
   // 본문 스타일 — Noto Serif KR (serif)

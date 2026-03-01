@@ -22,13 +22,13 @@ export function CtaSection({ closingMessage, ctaText, widePx }) {
       heightRatio={ 0.7 }
       align="center"
       justify="center"
-      sx={ { bgcolor: 'background.default' } }
+      sx={ { bgcolor: '#111111' } }
     >
       <PageContainer sx={ { textAlign: 'center', px: widePx } }>
         <Typography
           variant="overline"
           sx={ {
-            color: (theme) => theme.palette.accent?.main || '#B8956A',
+            color: 'rgba(255,255,255,0.5)',
             letterSpacing: '0.15em',
           } }
         >
@@ -37,7 +37,7 @@ export function CtaSection({ closingMessage, ctaText, widePx }) {
 
         <Typography
           variant="h1"
-          sx={ { mt: 2, mb: 4 } }
+          sx={ { mt: 2, mb: 4, color: 'common.white' } }
         >
           Write Thoughts as You Draw Blueprints.
         </Typography>
@@ -45,7 +45,7 @@ export function CtaSection({ closingMessage, ctaText, widePx }) {
         <Typography
           variant="body1"
           sx={ {
-            color: 'text.primary',
+            color: 'rgba(255,255,255,0.7)',
             mb: 6,
             maxWidth: '45ch',
             mx: 'auto',
@@ -60,15 +60,15 @@ export function CtaSection({ closingMessage, ctaText, widePx }) {
           variant="outlined"
           size="large"
           sx={ {
-            borderColor: 'primary.main',
-            color: 'primary.main',
+            borderColor: 'common.white',
+            color: 'common.white',
             px: 6,
             py: 1.5,
             fontFamily: '"Doto", monospace',
             letterSpacing: '0.05em',
             '&:hover': {
-              bgcolor: 'primary.main',
-              color: 'white',
+              bgcolor: 'common.white',
+              color: '#111111',
             },
           } }
         >
@@ -76,8 +76,8 @@ export function CtaSection({ closingMessage, ctaText, widePx }) {
         </Button>
 
         <Box sx={ { mt: { xs: 10, md: 16 }, width: '100%' } }>
-          <Divider sx={ { borderColor: 'primary.main', mb: 3 } } />
-          <Typography variant="caption" sx={ { color: 'text.primary' } }>
+          <Divider sx={ { borderColor: 'rgba(255,255,255,0.2)', mb: 3 } } />
+          <Typography variant="caption" sx={ { color: 'rgba(255,255,255,0.4)' } }>
             DRAFT. — WRITE THE BLUEPRINT.
           </Typography>
         </Box>
