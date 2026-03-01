@@ -6,7 +6,8 @@
  *
  * ## 브랜드 비주얼 필러
  * - **Blueprint Precision**: Blueprint Blue (#003DA5), 그리드 시스템
- * - **Analog Warmth**: Aged Paper (#F5F0E6) 배경, 세리프 헤딩
+ * - **Cool Paper**: Blue-tinted Paper (#EEF1F6) 배경, 도면 종이 느낌
+ * - **Black Ink**: 검정 잉크 (#111111) 텍스트
  * - **Pixel Heritage**: Doto 기하학적 도트매트릭스 디스플레이 폰트
  * - **Masculine Restraint**: 절제된 팔레트, borderRadius 0
  *
@@ -65,30 +66,30 @@ const palette = {
     contrastText: '#FFFFFF',
   },
 
-  // 텍스트 색상 — Navy Ink (만년필 잉크)
+  // 텍스트 색상 — Ink (살짝 파란 틸트의 잉크)
   text: {
-    primary: '#1A1A2E',
-    secondary: '#5C5C6E',
-    disabled: 'rgba(26, 26, 46, 0.38)',
+    primary: '#10131A',
+    secondary: '#4A4D55',
+    disabled: 'rgba(16, 19, 26, 0.38)',
   },
 
-  // 배경 색상 — Aged Paper
+  // 배경 색상 — Cool Paper (미세한 블루 틴트 종이)
   background: {
-    default: '#F5F0E6',
-    paper: '#FAF7F0',
+    default: '#F4F5F7',
+    paper: '#F9FAFB',
   },
 
   // 구분선
-  divider: 'rgba(26, 26, 46, 0.12)',
+  divider: 'rgba(16, 19, 26, 0.12)',
 
   // 액션 상태
   action: {
-    active: 'rgba(26, 26, 46, 0.54)',
-    hover: 'rgba(26, 26, 46, 0.04)',
-    selected: 'rgba(26, 26, 46, 0.08)',
-    disabled: 'rgba(26, 26, 46, 0.26)',
-    disabledBackground: 'rgba(26, 26, 46, 0.12)',
-    focus: 'rgba(26, 26, 46, 0.12)',
+    active: 'rgba(16, 19, 26, 0.54)',
+    hover: 'rgba(16, 19, 26, 0.04)',
+    selected: 'rgba(16, 19, 26, 0.08)',
+    disabled: 'rgba(16, 19, 26, 0.26)',
+    disabledBackground: 'rgba(16, 19, 26, 0.12)',
+    focus: 'rgba(16, 19, 26, 0.12)',
   },
 
   // Grey 스케일
@@ -395,41 +396,41 @@ defaultTheme.dashboard = {
   iconWeight: 400,
   cardBorderRadius: 0,
   cardColors: [
-    'linear-gradient(to bottom, #FAF7F0 0%, #FAF7F0 100%)',
-    'linear-gradient(to bottom, #FAF7F0 0%, #FAF7F0 100%)',
-    'linear-gradient(to bottom, #FAF7F0 0%, #FAF7F0 100%)',
-    'linear-gradient(to bottom, #FAF7F0 0%, #FAF7F0 100%)',
-    'linear-gradient(to bottom, #FAF7F0 0%, #FAF7F0 100%)',
-    'linear-gradient(to bottom, #FAF7F0 0%, #FAF7F0 100%)',
+    'linear-gradient(to bottom, #F9FAFB 0%, #F9FAFB 100%)',
+    'linear-gradient(to bottom, #F9FAFB 0%, #F9FAFB 100%)',
+    'linear-gradient(to bottom, #F9FAFB 0%, #F9FAFB 100%)',
+    'linear-gradient(to bottom, #F9FAFB 0%, #F9FAFB 100%)',
+    'linear-gradient(to bottom, #F9FAFB 0%, #F9FAFB 100%)',
+    'linear-gradient(to bottom, #F9FAFB 0%, #F9FAFB 100%)',
   ],
   subCardColors: [
-    'linear-gradient(to bottom, #F5F0E6 0%, #F5F0E6 100%)',
-    'linear-gradient(to bottom, #F5F0E6 0%, #F5F0E6 100%)',
-    'linear-gradient(to bottom, #F5F0E6 0%, #F5F0E6 100%)',
-    'linear-gradient(to bottom, #F5F0E6 0%, #F5F0E6 100%)',
-    'linear-gradient(to bottom, #F5F0E6 0%, #F5F0E6 100%)',
-    'linear-gradient(to bottom, #F5F0E6 0%, #F5F0E6 100%)',
+    'linear-gradient(to bottom, #F4F5F7 0%, #F4F5F7 100%)',
+    'linear-gradient(to bottom, #F4F5F7 0%, #F4F5F7 100%)',
+    'linear-gradient(to bottom, #F4F5F7 0%, #F4F5F7 100%)',
+    'linear-gradient(to bottom, #F4F5F7 0%, #F4F5F7 100%)',
+    'linear-gradient(to bottom, #F4F5F7 0%, #F4F5F7 100%)',
+    'linear-gradient(to bottom, #F4F5F7 0%, #F4F5F7 100%)',
   ],
   textColor: palette.text.primary,
   textSecondary: palette.text.secondary,
   textShadow: '0 0 0 rgba(0, 0, 0, 0)',
   backdropFilter: 'blur(0px)',
   WebkitBackdropFilter: 'blur(0px)',
-  border: '1px solid rgba(26, 26, 46, 0.08)',
-  borderColor: 'rgba(26, 26, 46, 0.08)',
+  border: '1px solid rgba(16, 19, 26, 0.08)',
+  borderColor: 'rgba(16, 19, 26, 0.08)',
   shadow: customShadows.lg,
-  subBorder: '1px solid rgba(26, 26, 46, 0.06)',
+  subBorder: '1px solid rgba(16, 19, 26, 0.06)',
   subShadow: '0 0 0 rgba(0, 0, 0, 0)',
   subBackdropFilter: 'blur(0px)',
   subBorderRadius: 0,
-  dividerColor: 'rgba(26, 26, 46, 0.12)',
+  dividerColor: 'rgba(16, 19, 26, 0.12)',
   progressHeight: 6,
-  progressTrackColor: 'rgba(26, 26, 46, 0.08)',
+  progressTrackColor: 'rgba(16, 19, 26, 0.08)',
   progressBarColor: palette.primary.main,
   progressGradient: false,
   progressBorderRadius: 0,
-  background: '#F5F0E6',
-  atmosphere: 'linear-gradient(to bottom, #F5F0E6 0%, #FAF7F0 100%)',
+  background: '#F4F5F7',
+  atmosphere: 'linear-gradient(to bottom, #F4F5F7 0%, #F9FAFB 100%)',
   atmosphereOpacity: 0,
   accentColor: palette.primary.main,
   accentColors: {

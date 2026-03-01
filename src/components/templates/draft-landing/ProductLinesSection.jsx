@@ -1,5 +1,4 @@
-import { PageContainer } from '../../layout/PageContainer';
-import { SectionContainer } from '../../container/SectionContainer';
+import { Box } from '@mui/material';
 import LineGrid from '../../layout/LineGrid';
 import { Title } from '../../typography/Title';
 import { ProductLineBlock } from './ProductLineBlock';
@@ -31,39 +30,36 @@ const illustrationMap = {
  * ProductLinesSection 컴포넌트
  *
  * DraftLanding의 Product Lines 섹션.
- * 3개 라인(GRID, INK, FOLIO)을 각각 3열 제품 그리드로 표시한다.
+ * 3개 라인(GRID, INK, FOLIO)을 full-bleed 격자로 표시한다.
+ * 타이틀 ↔ 각 라인 사이 full-bleed 수평선 구분.
  *
  * Props:
  * @param {Array} products - 제품 라인 데이터 배열 [Required]
  * @param {number} gridGap - LineGrid gap (px) [Required]
- * @param {object} widePx - 반응형 px 값 [Required]
  *
  * Example usage:
- * <ProductLinesSection products={ data.products } gridGap={ 64 } widePx={ widePx } />
+ * <ProductLinesSection products={ data.products } gridGap={ 0 } />
  */
-export function ProductLinesSection({ products, gridGap, widePx }) {
+export function ProductLinesSection({ products, gridGap }) {
   return (
-    <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
-      <PageContainer sx={ { px: widePx } }>
+    <LineGrid gap={ gridGap } borderColor="text.primary">
+      <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
           title="Three Lines of Tools"
           level="h2"
-          sx={ { mb: { xs: 6, md: 10 } } }
         />
+      </Box>
 
-        <LineGrid gap={ gridGap } borderColor="primary.main">
-          { products.map((line) => (
-            <ProductLineBlock
-              key={ line.line }
-              lineName={ line.line }
-              concept={ line.concept }
-              items={ line.items }
-              illustrationMap={ illustrationMap }
-              gridGap={ gridGap }
-            />
-          )) }
-        </LineGrid>
-      </PageContainer>
-    </SectionContainer>
+      { products.map((line) => (
+        <ProductLineBlock
+          key={ line.line }
+          lineName={ line.line }
+          concept={ line.concept }
+          items={ line.items }
+          illustrationMap={ illustrationMap }
+          gridGap={ gridGap }
+        />
+      )) }
+    </LineGrid>
   );
 }

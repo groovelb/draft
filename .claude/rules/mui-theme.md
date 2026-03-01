@@ -15,8 +15,8 @@ MUI 커스텀 테마 설정 규칙. 구현 상세는 `src/styles/themes/default.
 
 - **Primary**: `#003DA5` (Blueprint Blue)
 - **Secondary**: `#5C4A3A` (Warm Leather)
-- **Background**: `#F5F0E6` (Aged Paper)
-- **Text**: `#1A1A2E` (Navy Ink)
+- **Background**: `#EEF1F6` (Blue-tinted Paper)
+- **Text**: `#111111` (Black Ink)
 - **Accent**: `#B8956A` (Brass)
 
 ## Elevation
