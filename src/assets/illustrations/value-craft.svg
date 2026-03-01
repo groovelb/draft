@@ -187,14 +187,14 @@
 
       <!-- Time annotation in inset -->
       <text x="348" y="288"
-        font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.5">
+        font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.5">
         0.3s
       </text>
     </g>
 
     <!-- Inset label -->
     <text x="330" y="340"
-      font-family="'VT323', monospace" font-size="5" fill="#003DA5"
+      font-family="'Doto', monospace" font-size="5" fill="#003DA5"
       text-anchor="middle" opacity="0.4">
       DETAIL (5:1)
     </text>
@@ -232,11 +232,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="218" cy="175" r="1.5" fill="#003DA5" />
     <text x="284" y="168"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       CAPILLARY FEED
     </text>
     <text x="284" y="178"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       12 GROOVES
     </text>
 
@@ -245,11 +245,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="195" cy="190" r="1.5" fill="#003DA5" />
     <text x="30" y="188"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       INK CHANNEL
     </text>
     <text x="30" y="198"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       CAPILLARY ACTION
     </text>
 
@@ -258,11 +258,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="205" cy="268" r="1.5" fill="#003DA5" />
     <text x="55" y="293"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       TIPPING
     </text>
     <text x="55" y="303"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       IRIDIUM ALLOY
     </text>
 
@@ -271,23 +271,23 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="200" cy="277" r="1.5" fill="#003DA5" />
     <text x="55" y="323"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       0.3 SEC TRANSFER
     </text>
     <text x="55" y="333"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       INK ABSORPTION
     </text>
 
     <!-- SECTION A-A label (top) -->
     <text x="170" y="72"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       A
     </text>
     <line x1="170" y1="75" x2="170" y2="85"
       stroke="#003DA5" stroke-width="0.6" opacity="0.4" />
     <text x="230" y="72"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       A
     </text>
     <line x1="230" y1="75" x2="230" y2="85"
@@ -309,7 +309,7 @@
       <line x1="230" y1="138" x2="230" y2="142" />
     </g>
     <text x="200" y="136"
-      font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.4"
+      font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.4"
       text-anchor="middle">
       NIB WIDTH
     </text>
@@ -321,7 +321,7 @@
       <line x1="223" y1="175" x2="227" y2="175" />
     </g>
     <text x="232" y="173"
-      font-family="'VT323', monospace" font-size="4" fill="#003DA5" opacity="0.35">
+      font-family="'Doto', monospace" font-size="4" fill="#003DA5" opacity="0.35">
       1MM
     </text>
   </g>
@@ -330,7 +330,7 @@
        Title
        ============================================================ -->
   <text x="200" y="380"
-    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     CRAFT
   </text>

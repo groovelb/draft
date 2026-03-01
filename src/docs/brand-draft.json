@@ -27,30 +27,30 @@
     }
   ],
   "message": {
-    "hero": "코드 에디터를 열기 전, 당신은 어디에 먼저 적었는가.",
+    "hero": "Before you open the code editor, where did you write first?",
     "body": "건축가의 첫 번째 스케치. 개발자의 의사코드. 창업자의 냅킨 위 사업 계획. 완성된 것들은 화면 안에 있지만, 시작은 언제나 종이 위에 있었다.",
     "closing": "도면을 그리듯, 생각을 적는다. 5mm 그리드 위에 정렬되는 사고. 잉크가 종이에 스미는 0.3초의 확신.",
-    "cta": "첫 번째 선을 긋다"
+    "cta": "Draw the First Line"
   },
   "usp": [
     {
       "key": "grid-system",
-      "label": "5mm 그리드 시스템",
+      "label": "5mm Grid System",
       "description": "사고를 정렬하는 정밀한 그리드. Blueprint 도면에서 차용한 5mm 간격."
     },
     {
       "key": "analog-for-digital",
-      "label": "디지털 세대의 아날로그",
+      "label": "Analog for Digital",
       "description": "디지털 환경에서 일하는 사람들을 위해 설계된 아날로그 도구."
     },
     {
       "key": "masculine-restraint",
-      "label": "절제된 남성 취향",
+      "label": "Quiet Luxury",
       "description": "장식을 배제하고 기능과 질감에 집중한 도구. Quiet Luxury."
     },
     {
       "key": "blueprint-aesthetic",
-      "label": "Blueprint 미학",
+      "label": "Blueprint Aesthetic",
       "description": "기술 도면의 정밀함과 아날로그 종이의 따뜻함이 공존하는 시각 언어."
     }
   ],

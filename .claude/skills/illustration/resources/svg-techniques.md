@@ -37,7 +37,7 @@
 
   <!-- Title -->
   <text x="[cx]" y="[bottom]"
-    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     [TITLE]
   </text>
@@ -146,7 +146,7 @@
 
 <!-- 5. 배율 라벨 -->
 <text x="[인셋cx]" y="[인셋cy + r + 10]"
-  font-family="'VT323', monospace" font-size="5" fill="#003DA5"
+  font-family="'Doto', monospace" font-size="5" fill="#003DA5"
   text-anchor="middle" opacity="0.4">
   DETAIL (4:1)
 </text>

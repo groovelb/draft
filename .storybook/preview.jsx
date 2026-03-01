@@ -9,10 +9,10 @@ const googleFonts = [
   'Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
   'Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
   'Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
-  // Heading — Serif (retro editorial)
-  'Playfair+Display:wght@400;500;600;700;800;900',
-  // Brand Display — Pixel (classic terminal)
-  'VT323',
+  // Heading / Display — Doto dot-matrix (geometric)
+  'Doto:wght@100..900',
+  // Body — Serif (Korean support)
+  'Noto+Serif+KR:wght@200..900',
 ];
 
 googleFonts.forEach((font) => {

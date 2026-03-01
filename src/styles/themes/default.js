@@ -7,13 +7,12 @@
  * ## 브랜드 비주얼 필러
  * - **Blueprint Precision**: Blueprint Blue (#003DA5), 그리드 시스템
  * - **Analog Warmth**: Aged Paper (#F5F0E6) 배경, 세리프 헤딩
- * - **Pixel Heritage**: VT323 클래식 터미널 디스플레이 폰트
+ * - **Pixel Heritage**: Doto 기하학적 도트매트릭스 디스플레이 폰트
  * - **Masculine Restraint**: 절제된 팔레트, borderRadius 0
  *
- * ## 타이포그래피 3-tier
- * - Brand Display: VT323 (classic terminal pixel)
- * - Heading: Playfair Display (serif, retro editorial)
- * - Body: Pretendard Variable (sans, 한국어 가독성)
+ * ## 타이포그래피 2-tier
+ * - Heading / Display: Doto (geometric dot-matrix)
+ * - Body: Noto Serif KR (serif, 한국어 가독성)
  */
 
 import { createTheme } from '@mui/material/styles';
@@ -119,35 +118,24 @@ const palette = {
 // ============================================================
 
 // 폰트 패밀리 정의
-const serifHeadingStack = '"Playfair Display", "Pretendard Variable", Pretendard, serif';
-const pixelDisplayStack = '"VT323", monospace';
+const dotoStack = '"Doto", monospace';
 const bodyStack = [
-  '"Pretendard Variable"',
-  'Pretendard',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  'system-ui',
-  'Roboto',
-  '"Helvetica Neue"',
-  '"Segoe UI"',
-  '"Apple SD Gothic Neo"',
-  '"Noto Sans KR"',
-  '"Malgun Gothic"',
-  '"Apple Color Emoji"',
-  '"Segoe UI Emoji"',
-  '"Segoe UI Symbol"',
-  'sans-serif',
+  '"Noto Serif KR"',
+  '"Noto Serif"',
+  'Georgia',
+  '"Times New Roman"',
+  'serif',
 ].join(',');
 
 const typography = {
   // 기본 폰트 패밀리 (본문)
   fontFamily: bodyStack,
 
-  // 헤딩 폰트 패밀리 (세리프 — 레트로 에디토리얼)
-  headingFontFamily: serifHeadingStack,
+  // 헤딩 폰트 패밀리 (Doto — 기하학적 도트매트릭스)
+  headingFontFamily: dotoStack,
 
-  // 디스플레이 폰트 패밀리 (픽셀 — 브랜드 마크)
-  displayFontFamily: pixelDisplayStack,
+  // 디스플레이 폰트 패밀리 (Doto — 브랜드 마크)
+  displayFontFamily: dotoStack,
 
   // 폰트 크기 기준
   fontSize: 14,
@@ -159,58 +147,60 @@ const typography = {
   fontWeightMedium: 500,
   fontWeightBold: 700,
 
-  // 헤딩 스타일 — Playfair Display (serif)
+  // 헤딩 스타일 — Doto (geometric dot-matrix)
   h1: {
-    fontFamily: serifHeadingStack,
-    fontWeight: 700,
-    fontSize: '3.125rem',    // 50px (40×1.25)
-    lineHeight: 1.15,
+    fontFamily: dotoStack,
+    fontWeight: 900,
+    fontSize: '4.5rem',      // 72px — CTA, 페이지 레벨
+    lineHeight: 1.1,
     letterSpacing: '-0.02em',
   },
   h2: {
-    fontFamily: serifHeadingStack,
-    fontWeight: 700,
-    fontSize: '2.5rem',      // 40px (32×1.25)
-    lineHeight: 1.2,
+    fontFamily: dotoStack,
+    fontWeight: 900,
+    fontSize: '3.125rem',    // 50px — 섹션 타이틀
+    lineHeight: 1.15,
     letterSpacing: '-0.01em',
   },
   h3: {
-    fontFamily: serifHeadingStack,
-    fontWeight: 600,
-    fontSize: '2.188rem',    // 35px (28×1.25)
-    lineHeight: 1.25,
+    fontFamily: dotoStack,
+    fontWeight: 900,
+    fontSize: '2.5rem',      // 40px — 카테고리 타이틀
+    lineHeight: 1.2,
     letterSpacing: '-0.01em',
   },
   h4: {
-    fontFamily: serifHeadingStack,
-    fontWeight: 600,
+    fontFamily: dotoStack,
+    fontWeight: 900,
     fontSize: '1.875rem',    // 30px (24×1.25)
     lineHeight: 1.3,
     letterSpacing: '0',
   },
   h5: {
-    fontFamily: serifHeadingStack,
-    fontWeight: 500,
+    fontFamily: dotoStack,
+    fontWeight: 900,
     fontSize: '1.563rem',    // 25px (20×1.25)
     lineHeight: 1.35,
     letterSpacing: '0',
   },
   h6: {
-    fontFamily: serifHeadingStack,
-    fontWeight: 500,
+    fontFamily: dotoStack,
+    fontWeight: 900,
     fontSize: '1.4rem',      // ~22px (18×1.25)
     lineHeight: 1.4,
     letterSpacing: '0',
   },
 
-  // 본문 스타일 — Pretendard (sans-serif)
+  // 본문 스타일 — Noto Serif KR (serif)
   body1: {
     fontSize: '1.25rem',     // 20px (16×1.25)
+    fontWeight: 500,
     lineHeight: 1.6,
     letterSpacing: '0',
   },
   body2: {
     fontSize: '1.1rem',      // ~18px (14×1.25)
+    fontWeight: 500,
     lineHeight: 1.6,
     letterSpacing: '0',
   },

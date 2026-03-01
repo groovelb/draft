@@ -194,23 +194,23 @@
 
       <!-- (0,0) label -->
       <text x="82" y="104"
-        font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+        font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
         (0,0)
       </text>
       <!-- Axis labels -->
       <text x="112" y="104"
-        font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.35">
+        font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.35">
         X
       </text>
       <text x="72" y="56"
-        font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.35">
+        font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.35">
         Y
       </text>
     </g>
 
     <!-- Inset label -->
     <text x="78" y="137"
-      font-family="'VT323', monospace" font-size="5" fill="#003DA5"
+      font-family="'Doto', monospace" font-size="5" fill="#003DA5"
       text-anchor="middle" opacity="0.4">
       DETAIL (5:1)
     </text>
@@ -239,11 +239,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="220" cy="185" r="1.5" fill="#003DA5" />
     <text x="314" y="108"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       ORIGIN (0,0)
     </text>
     <text x="314" y="118"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       FIRST CONTACT
     </text>
 
@@ -252,11 +252,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="268" cy="162" r="1.5" fill="#003DA5" />
     <text x="314" y="143"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       FIRST MARK
     </text>
     <text x="314" y="153"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       INK ON PAPER
     </text>
 
@@ -265,11 +265,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="150" cy="220" r="1.5" fill="#003DA5" />
     <text x="14" y="278"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       BLANK
     </text>
     <text x="14" y="288"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       → PURPOSE
     </text>
 
@@ -278,11 +278,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="200" cy="165" r="1.5" fill="#003DA5" />
     <text x="110" y="128"
-      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
       SPINE
     </text>
     <text x="110" y="138"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       THREAD BOUND
     </text>
   </g>
@@ -298,7 +298,7 @@
       <line x1="293" y1="159" x2="297" y2="163" />
     </g>
     <text x="195" y="225"
-      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5"
       transform="rotate(-30, 195, 225)">
       A5 SPREAD (297x210MM)
     </text>
@@ -308,7 +308,7 @@
        Title
        ============================================================ -->
   <text x="200" y="370"
-    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     ORIGIN
   </text>

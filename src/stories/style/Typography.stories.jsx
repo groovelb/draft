@@ -240,12 +240,12 @@ export const Docs = {
               mb: 4,
             } }
           >
-{ `// Typography variant 사용 (h1~h6 → Playfair Display serif)
+{ `// Typography variant 사용 (h1~h6 → Doto dot-matrix)
 <Typography variant="h1">페이지 타이틀</Typography>
 <Typography variant="body1">본문 텍스트</Typography>
 <Typography variant="caption">캡션 텍스트</Typography>
 
-// Brand Display 폰트 (Silkscreen pixel)
+// Brand Display 폰트 (Doto dot-matrix)
 <Typography sx={{ fontFamily: (theme) => theme.typography.displayFontFamily }}>
   BRAND DISPLAY
 </Typography>

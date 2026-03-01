@@ -1,49 +1,12 @@
-import { Box, Typography, Button, Divider } from '@mui/material';
-import Grid from '@mui/material/Grid';
-import { FullPageContainer } from '../layout/FullPageContainer';
-import { PageContainer } from '../layout/PageContainer';
-import { SectionContainer } from '../container/SectionContainer';
-import LineGrid from '../layout/LineGrid';
-import { PhiSplit } from '../layout/PhiSplit';
-
-import { Title } from '../typography/Title';
-import { StretchedHeadline } from '../typography/StretchedHeadline';
+import { Box } from '@mui/material';
 import brandData from '../../docs/brand-draft.json';
-import GridNotebookA5 from '../../assets/illustrations/grid-notebook-a5.svg';
-import GridMemoPad from '../../assets/illustrations/grid-memo-pad.svg';
-import DeskMat from '../../assets/illustrations/desk-mat.svg';
-import RollerballPen from '../../assets/illustrations/rollerball-pen.svg';
-import FountainPen from '../../assets/illustrations/fountain-pen.svg';
-import InkCartridgeSet from '../../assets/illustrations/ink-cartridge-set.svg';
-import LeatherBinderA5 from '../../assets/illustrations/leather-binder-a5.svg';
-import DocumentFolder from '../../assets/illustrations/document-folder.svg';
-import CardWallet from '../../assets/illustrations/card-wallet.svg';
-import BrandHero from '../../assets/illustrations/brand-hero.svg';
-import ValuePrecision from '../../assets/illustrations/value-precision.svg';
-import ValueOrigin from '../../assets/illustrations/value-origin.svg';
-import ValueRestraint from '../../assets/illustrations/value-restraint.svg';
-import ValueCraft from '../../assets/illustrations/value-craft.svg';
 
-/** Core Value key → 일러스트 SVG 매핑 */
-const valueIllustrationMap = {
-  'precision': ValuePrecision,
-  'origin': ValueOrigin,
-  'restraint': ValueRestraint,
-  'craft': ValueCraft,
-};
-
-/** 제품명 → 일러스트 SVG 매핑 */
-const illustrationMap = {
-  'Grid Notebook A5': GridNotebookA5,
-  'Grid Memo Pad': GridMemoPad,
-  'Desk Mat': DeskMat,
-  'Rollerball Pen': RollerballPen,
-  'Fountain Pen': FountainPen,
-  'Ink Cartridge Set': InkCartridgeSet,
-  'Leather Binder A5': LeatherBinderA5,
-  'Document Folder': DocumentFolder,
-  'Card Wallet': CardWallet,
-};
+import { HeroSection } from './draft-landing/HeroSection';
+import { BrandStorySection } from './draft-landing/BrandStorySection';
+import { CoreValuesSection } from './draft-landing/CoreValuesSection';
+import { UspSection } from './draft-landing/UspSection';
+import { ProductLinesSection } from './draft-landing/ProductLinesSection';
+import { CtaSection } from './draft-landing/CtaSection';
 
 /** LineGrid 공통 gap (px) */
 const GRID_GAP = 64;
@@ -59,9 +22,9 @@ const widePx = { xs: 3, sm: 6, md: 12, lg: 20 };
  * LineGrid를 활용하여 도면 느낌의 그리드 구조를 시각화한다.
  *
  * 동작 방식:
- * 1. 전체 화면 Hero에서 "DRAFT."가 Silkscreen 픽셀 폰트로 표시됨
+ * 1. 전체 화면 Hero에서 "DRAFT."가 Doto 폰트로 표시됨
  * 2. 브랜드 스토리가 황금비 분할 레이아웃으로 펼쳐짐
- * 3. Core Values 4열 LineGrid로 표시
+ * 3. Core Values 2x2 LineGrid로 표시
  * 4. USP 2x2 LineGrid로 표시
  * 5. Product Lines 3개 라인이 각 3열 LineGrid로 제품 목록 표시
  * 6. CTA 섹션에서 마감 메시지와 행동 유도 버튼
@@ -77,380 +40,42 @@ const widePx = { xs: 3, sm: 6, md: 12, lg: 20 };
 export function DraftLanding({ data = brandData, sx }) {
   return (
     <Box sx={ { bgcolor: 'background.default', ...sx } }>
+      <HeroSection
+        tagline={ data.brand.tagline }
+        heroMessage={ data.message.hero }
+        widePx={ widePx }
+      />
 
-      {/* ============================================================
-          Section 1: Hero
-          ============================================================ */}
-      <FullPageContainer
-        align="center"
-        justify="center"
-        sx={ { bgcolor: 'background.default' } }
-      >
-        <PageContainer sx={ { px: widePx } }>
-          <Box sx={ { display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
-            <Typography
-              variant="overline"
-              sx={ {
-                color: 'text.primary',
-                letterSpacing: '0.2em',
-                mb: { xs: 2, md: 3 },
-              } }
-            >
-              STATIONERY FOR DIGITAL MINDS
-            </Typography>
+      <BrandStorySection
+        bodyMessage={ data.message.body }
+        closingMessage={ data.message.closing }
+        gridGap={ GRID_GAP }
+        widePx={ widePx }
+      />
 
-            <StretchedHeadline
-              text="DRAFT."
-              fillWidth={ false }
-              fontFamily='"VT323", monospace'
-              fontSize="clamp(3.75rem, 18vw, 15rem)"
-              fontWeight={ 700 }
-              textTransform="none"
-              sx={ { color: 'primary.main', width: '100%', textAlign: 'center' } }
-            />
+      <CoreValuesSection
+        coreValues={ data.coreValues }
+        gridGap={ GRID_GAP }
+        widePx={ widePx }
+      />
 
-            <Typography
-              variant="overline"
-              sx={ {
-                fontFamily: '"VT323", monospace',
-                color: 'primary.main',
-                letterSpacing: '0.15em',
-                mt: { xs: 1, md: 2 },
-              } }
-            >
-              { data.brand.tagline }
-            </Typography>
+      <UspSection
+        usp={ data.usp }
+        gridGap={ GRID_GAP }
+        widePx={ widePx }
+      />
 
-            <Typography
-              variant="body1"
-              sx={ {
-                color: 'text.primary',
-                mt: { xs: 8, md: 14 },
-                maxWidth: '36ch',
-                textAlign: 'center',
-                lineHeight: 1.8,
-              } }
-            >
-              { data.message.hero }
-            </Typography>
-          </Box>
-        </PageContainer>
-      </FullPageContainer>
+      <ProductLinesSection
+        products={ data.products }
+        gridGap={ GRID_GAP }
+        widePx={ widePx }
+      />
 
-      {/* ============================================================
-          Section 2: Brand Story
-          ============================================================ */}
-      <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
-        <PageContainer sx={ { px: widePx } }>
-          <LineGrid gap={ GRID_GAP } borderColor="primary.main">
-
-            {/* Block 1: 브랜드 스토리 텍스트 */}
-            <PhiSplit
-              primary={
-                <Title
-                  overline="BRAND STORY"
-                  title="The Blueprint of Ideas"
-                  level="h2"
-                />
-              }
-              secondary={
-                <Typography
-                  variant="body1"
-                  sx={ {
-                    color: 'text.primary',
-                    lineHeight: 2,
-                    wordBreak: 'keep-all',
-                  } }
-                >
-                  { data.message.body }
-                </Typography>
-              }
-              gap={ 6 }
-              stackAt="md"
-            />
-
-            {/* Block 2: 일러스트 + 클로징 */}
-            <PhiSplit
-              isReversed
-              primary={
-                <Box
-                  component="img"
-                  src={ BrandHero }
-                  alt="The Blueprint Desk"
-                  sx={ { width: '100%', height: 'auto', display: 'block' } }
-                />
-              }
-              secondary={
-                <Typography
-                  variant="body1"
-                  sx={ {
-                    color: 'text.primary',
-                    lineHeight: 2,
-                    wordBreak: 'keep-all',
-                  } }
-                >
-                  { data.message.closing }
-                </Typography>
-              }
-              gap={ 6 }
-              stackAt="md"
-            />
-          </LineGrid>
-        </PageContainer>
-      </SectionContainer>
-
-      {/* ============================================================
-          Section 3: Core Values
-          ============================================================ */}
-      <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
-        <PageContainer sx={ { px: widePx } }>
-          <Title
-            overline="CORE VALUES"
-            title="도면 위에 세운 원칙"
-            level="h3"
-            sx={ { mb: { xs: 6, md: 10 } } }
-          />
-
-          <LineGrid container gap={ GRID_GAP } borderColor="primary.main">
-            { data.coreValues.map((value, index) => (
-              <Grid size={ { xs: 12, sm: 6 } } key={ value.key }>
-                <Box sx={ { py: { xs: 3, md: 5 }, px: { xs: 1, md: 2 } } }>
-                  {/* Core Value 일러스트 */}
-                  <Box
-                    component="img"
-                    src={ valueIllustrationMap[value.key] }
-                    alt={ value.key }
-                    sx={ {
-                      width: '100%',
-                      height: 'auto',
-                      display: 'block',
-                      aspectRatio: '1 / 1',
-                      objectFit: 'contain',
-                      mb: 4,
-                    } }
-                  />
-
-                  {/* 넘버링 */}
-                  <Typography
-                    variant="overline"
-                    sx={ { color: 'primary.main' } }
-                  >
-                    { `0${index + 1}` }
-                  </Typography>
-
-                  {/* 라벨 */}
-                  <Typography variant="h2" sx={ { mt: 1 } }>
-                    { value.label }
-                  </Typography>
-
-                  {/* 설명 */}
-                  <Typography
-                    variant="body1"
-                    sx={ {
-                      color: 'text.primary',
-                      mt: 1.5,
-                      lineHeight: 1.8,
-                      wordBreak: 'keep-all',
-                    } }
-                  >
-                    { value.description }
-                  </Typography>
-                </Box>
-              </Grid>
-            )) }
-          </LineGrid>
-        </PageContainer>
-      </SectionContainer>
-
-      {/* ============================================================
-          Section 4: USP
-          ============================================================ */}
-      <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
-        <PageContainer sx={ { px: widePx } }>
-          <Title
-            overline="WHY DRAFT."
-            title="디지털 시대의 아날로그"
-            level="h3"
-            sx={ { mb: { xs: 6, md: 10 } } }
-          />
-
-          <LineGrid container gap={ GRID_GAP } borderColor="primary.main">
-            { data.usp.map((item) => (
-              <Grid size={ { xs: 12, md: 6 } } key={ item.key }>
-                <Box sx={ { py: { xs: 4, md: 6 }, px: { xs: 1, md: 2 } } }>
-                  <Typography
-                    variant="overline"
-                    sx={ {
-                      color: (theme) => theme.palette.accent?.main || '#B8956A',
-                    } }
-                  >
-                    { item.key.replace(/-/g, ' ') }
-                  </Typography>
-
-                  <Typography variant="h1" sx={ { mt: 1.5 } }>
-                    { item.label }
-                  </Typography>
-
-                  <Typography
-                    variant="body1"
-                    sx={ {
-                      color: 'text.primary',
-                      mt: 2.5,
-                      maxWidth: '50ch',
-                      lineHeight: 1.8,
-                      wordBreak: 'keep-all',
-                    } }
-                  >
-                    { item.description }
-                  </Typography>
-                </Box>
-              </Grid>
-            )) }
-          </LineGrid>
-        </PageContainer>
-      </SectionContainer>
-
-      {/* ============================================================
-          Section 5: Product Lines
-          ============================================================ */}
-      <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
-        <PageContainer sx={ { px: widePx } }>
-          <Title
-            overline="PRODUCT LINES"
-            title="세 가지 도구의 체계"
-            level="h3"
-            sx={ { mb: { xs: 6, md: 10 } } }
-          />
-
-          <LineGrid gap={ GRID_GAP } borderColor="primary.main">
-            { data.products.map((line) => (
-              <Box key={ line.line }>
-                {/* 라인 헤더 */}
-                <Box sx={ { mb: { xs: 4, md: 6 } } }>
-                  <Typography
-                    sx={ {
-                      fontFamily: '"VT323", monospace',
-                      fontSize: { xs: '1.563rem', md: '1.875rem' },
-                      color: 'primary.main',
-                      fontWeight: 700,
-                    } }
-                  >
-                    { line.line }
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={ { color: 'text.primary', mt: 1.5 } }
-                  >
-                    { line.concept }
-                  </Typography>
-                </Box>
-
-                {/* 제품 그리드 */}
-                <LineGrid container gap={ GRID_GAP } borderColor="primary.main">
-                  { line.items.map((item) => (
-                    <Grid size={ { xs: 12, sm: 4 } } key={ item.name }>
-                      {/* 제품 일러스트 */}
-                      <Box
-                        component="img"
-                        src={ illustrationMap[item.name] }
-                        alt={ item.name }
-                        sx={ { width: '100%', height: 'auto', display: 'block' } }
-                      />
-
-                      {/* 제품 정보 */}
-                      <Box sx={ { mt: 3, px: { xs: 0, md: 1 } } }>
-                        <Typography variant="h4">
-                          { item.name }
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          sx={ {
-                            color: 'text.primary',
-                            mt: 1,
-                            wordBreak: 'keep-all',
-                          } }
-                        >
-                          { item.description }
-                        </Typography>
-                      </Box>
-                    </Grid>
-                  )) }
-                </LineGrid>
-              </Box>
-            )) }
-          </LineGrid>
-        </PageContainer>
-      </SectionContainer>
-
-      {/* ============================================================
-          Section 6: CTA / Footer
-          ============================================================ */}
-      <FullPageContainer
-        heightRatio={ 0.7 }
-        align="center"
-        justify="center"
-        sx={ { bgcolor: 'background.default' } }
-      >
-        <PageContainer sx={ { textAlign: 'center', px: widePx } }>
-          <Typography
-            variant="overline"
-            sx={ {
-              color: (theme) => theme.palette.accent?.main || '#B8956A',
-              letterSpacing: '0.15em',
-            } }
-          >
-            DRAFT.
-          </Typography>
-
-          <Typography
-            variant="h1"
-            sx={ { mt: 2, mb: 4 } }
-          >
-            도면을 그리듯, 생각을 적는다.
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={ {
-              color: 'text.primary',
-              mb: 6,
-              maxWidth: '45ch',
-              mx: 'auto',
-              lineHeight: 1.8,
-              wordBreak: 'keep-all',
-            } }
-          >
-            { data.message.closing }
-          </Typography>
-
-          <Button
-            variant="outlined"
-            size="large"
-            sx={ {
-              borderColor: 'primary.main',
-              color: 'primary.main',
-              px: 6,
-              py: 1.5,
-              fontFamily: '"VT323", monospace',
-              letterSpacing: '0.05em',
-              '&:hover': {
-                bgcolor: 'primary.main',
-                color: 'white',
-              },
-            } }
-          >
-            { data.message.cta }
-          </Button>
-
-          {/* Footer */}
-          <Box sx={ { mt: { xs: 10, md: 16 }, width: '100%' } }>
-            <Divider sx={ { borderColor: 'primary.main', mb: 3 } } />
-            <Typography variant="caption" sx={ { color: 'text.primary' } }>
-              DRAFT. — WRITE THE BLUEPRINT.
-            </Typography>
-          </Box>
-        </PageContainer>
-      </FullPageContainer>
+      <CtaSection
+        closingMessage={ data.message.closing }
+        ctaText={ data.message.cta }
+        widePx={ widePx }
+      />
     </Box>
   );
 }

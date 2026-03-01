@@ -32,12 +32,12 @@
 <circle cx="[소스x]" cy="[y]" r="1.5" fill="#003DA5" />
 <!-- 1차 라벨 (이름) -->
 <text x="[라벨x+4]" y="[y-2]"
-  font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+  font-family="'Doto', monospace" font-size="7" fill="#003DA5">
   PRIMARY LABEL
 </text>
 <!-- 2차 라벨 (상세) -->
 <text x="[라벨x+4]" y="[y+8]"
-  font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+  font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
   SECONDARY DETAIL
 </text>
 ```
@@ -63,7 +63,7 @@
 </g>
 <!-- 치수 텍스트 -->
 <text x="[중간]" y="[중간y-4]"
-  font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+  font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5"
   text-anchor="middle">
   [측정값]MM
 </text>
@@ -94,11 +94,11 @@
 
 | 용도 | font-family | font-size | opacity |
 |------|------------|-----------|---------|
-| 타이틀 | `'VT323', monospace` | 8 | 1.0 |
-| 1차 라벨 | `'VT323', monospace` | 7 | 1.0 |
-| 2차 라벨 | `'VT323', monospace` | 6 | 0.5 |
-| 미세 주석 | `'VT323', monospace` | 5 | 0.4 |
-| 치수 텍스트 | `'VT323', monospace` | 6 | 0.5 |
+| 타이틀 | `'Doto', monospace` | 8 | 1.0 |
+| 1차 라벨 | `'Doto', monospace` | 7 | 1.0 |
+| 2차 라벨 | `'Doto', monospace` | 6 | 0.5 |
+| 미세 주석 | `'Doto', monospace` | 5 | 0.4 |
+| 치수 텍스트 | `'Doto', monospace` | 6 | 0.5 |
 
 - 타이틀: `text-anchor="middle"`, `letter-spacing="0.1em"`
 - 모든 텍스트: `fill="#003DA5"`

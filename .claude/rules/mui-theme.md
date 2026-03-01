@@ -6,11 +6,10 @@ MUI 커스텀 테마 설정 규칙. 구현 상세는 `src/styles/themes/default.
 
 - 커스텀 테마는 `src/styles/themes/default.js`에서 관리
 
-## Typography (3-tier)
+## Typography (2-tier)
 
-- **Brand Display**: VT323 (클래식 터미널 픽셀) — `theme.typography.displayFontFamily`
-- **Heading**: Playfair Display (세리프, 레트로 에디토리얼) — `theme.typography.headingFontFamily`
-- **Body**: Pretendard Variable (산세리프, 한국어 가독성) — `theme.typography.fontFamily`
+- **Heading / Display**: Doto (기하학적 도트매트릭스) — `theme.typography.headingFontFamily`, `theme.typography.displayFontFamily`
+- **Body**: Noto Serif KR (세리프, 한국어 가독성, fontWeight 500) — `theme.typography.fontFamily`
 
 ## Color
 
