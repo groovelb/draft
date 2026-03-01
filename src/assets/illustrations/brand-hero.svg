@@ -204,7 +204,7 @@
     <line x1="120" y1="200" x2="70" y2="170"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4" />
     <text x="30" y="168"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       GRID NOTEBOOK
     </text>
 
@@ -212,7 +212,7 @@
     <line x1="238" y1="157" x2="268" y2="140"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4" />
     <text x="272" y="138"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       FOUNTAIN PEN
     </text>
 
@@ -220,7 +220,7 @@
     <line x1="418" y1="190" x2="450" y2="175"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4" />
     <text x="454" y="173"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       BLUEPRINT BLUE
     </text>
 
@@ -228,7 +228,7 @@
     <line x1="480" y1="176" x2="510" y2="160"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4" />
     <text x="514" y="158"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       DESK MAT
     </text>
   </g>
@@ -242,15 +242,15 @@
     <line x1="440" y1="348" x2="580" y2="348"
       stroke="#003DA5" stroke-width="0.3" opacity="0.3" />
     <text x="450" y="344"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.4">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.4">
       DRAFT.
     </text>
     <text x="450" y="362"
-      font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.3">
+      font-family="'Doto', monospace" font-size="9" fill="#003DA5" opacity="0.3">
       THE BLUEPRINT DESK
     </text>
     <text x="450" y="374"
-      font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.3">
+      font-family="'Doto', monospace" font-size="9" fill="#003DA5" opacity="0.3">
       ISOMETRIC ASSEMBLY VIEW
     </text>
   </g>

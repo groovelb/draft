@@ -150,7 +150,7 @@
 
     <!-- Inset label -->
     <text x="68" y="140"
-      font-family="'Doto', monospace" font-size="5" fill="#003DA5"
+      font-family="'Doto', monospace" font-size="9" fill="#003DA5"
       text-anchor="middle" opacity="0.4">
       DETAIL (3:1)
     </text>
@@ -178,21 +178,21 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="252" cy="186" r="1.5" fill="#003DA5" />
     <text x="334" y="258"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       1 PEN
     </text>
     <text x="334" y="268"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       BRASS BODY
     </text>
 
     <!-- NEGATIVE SPACE label (in the empty area) -->
     <text x="170" y="160"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5" opacity="0.35">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5" opacity="0.35">
       NEGATIVE SPACE
     </text>
     <text x="170" y="169"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.25">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.25">
       94%
     </text>
 
@@ -201,11 +201,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="82" cy="110" r="1.5" fill="#003DA5" />
     <text x="124" y="128"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       ∅12MM
     </text>
     <text x="124" y="138"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       BARREL
     </text>
 
@@ -214,11 +214,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="265" cy="88" r="1.5" fill="#003DA5" />
     <text x="304" y="66"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       PU LEATHER
     </text>
     <text x="304" y="76"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       3MM THICK
     </text>
   </g>
@@ -234,7 +234,7 @@
       <line x1="353" y1="153" x2="357" y2="157" />
     </g>
     <text x="272" y="208"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5"
       transform="rotate(-30, 272, 208)">
       600MM
     </text>
@@ -246,7 +246,7 @@
       <line x1="248" y1="217" x2="252" y2="217" />
     </g>
     <text x="257" y="188"
-      font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.4">
+      font-family="'Doto', monospace" font-size="9" fill="#003DA5" opacity="0.4">
       140MM
     </text>
   </g>
@@ -255,7 +255,7 @@
        Title
        ============================================================ -->
   <text x="200" y="370"
-    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="14" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     RESTRAINT
   </text>

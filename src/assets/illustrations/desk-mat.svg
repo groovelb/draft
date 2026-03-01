@@ -109,11 +109,11 @@
       stroke="#003DA5" stroke-width="0.5" />
     <circle cx="260" cy="55" r="1.5" fill="#003DA5" />
     <text x="314" y="30"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       GRID SURFACE
     </text>
     <text x="314" y="40"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       5MM PRINT
     </text>
 
@@ -122,11 +122,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="340" cy="101" r="1.5" fill="#003DA5" />
     <text x="358" y="99"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       PU LEATHER
     </text>
     <text x="358" y="109"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       3MM THICK
     </text>
   </g>
@@ -142,7 +142,7 @@
     <line x1="338" y1="113" x2="342" y2="117" />
   </g>
   <text x="265" y="163"
-    font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+    font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5"
     transform="rotate(-30, 265, 163)">
     600MM
   </text>
@@ -155,7 +155,7 @@
     <line x1="118" y1="148" x2="122" y2="152" />
   </g>
   <text x="150" y="180"
-    font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+    font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5"
     transform="rotate(30, 150, 180)">
     400MM
   </text>
@@ -164,7 +164,7 @@
        Title
        ============================================================ -->
   <text x="200" y="470"
-    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="14" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     DESK MAT
   </text>

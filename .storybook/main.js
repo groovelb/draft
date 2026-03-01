@@ -16,7 +16,22 @@ const config = {
   "framework": "@storybook/react-vite",
   async viteFinal(config) {
     config.plugins = config.plugins || [];
-    config.plugins.push(svgr());
+    config.plugins.push(svgr({
+      svgrOptions: {
+        svgoConfig: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  collapseGroups: false,
+                },
+              },
+            },
+          ],
+        },
+      },
+    }));
     return config;
   },
 };

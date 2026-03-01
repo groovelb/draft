@@ -98,7 +98,7 @@
     </g>
 
     <!-- Ruler measurement numbers -->
-    <g font-family="'Doto', monospace" font-size="4" fill="#003DA5" opacity="0.4">
+    <g font-family="'Doto', monospace" font-size="8" fill="#003DA5" opacity="0.4">
       <text x="267" y="176" transform="rotate(-30, 267, 176)">0</text>
       <text x="253" y="169" transform="rotate(-30, 253, 169)">10</text>
       <text x="239" y="162" transform="rotate(-30, 239, 162)">20</text>
@@ -153,7 +153,7 @@
 
     <!-- Inset label -->
     <text x="330" y="153"
-      font-family="'Doto', monospace" font-size="5" fill="#003DA5"
+      font-family="'Doto', monospace" font-size="9" fill="#003DA5"
       text-anchor="middle" opacity="0.4">
       DETAIL (4:1)
     </text>
@@ -183,17 +183,17 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="130" cy="208" r="1.5" fill="#003DA5" />
     <text x="14" y="206"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       5MM GRID
     </text>
     <text x="14" y="216"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       80GSM PAPER
     </text>
 
     <!-- 90° label (from inset) -->
     <text x="348" y="86"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5" opacity="0.6">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5" opacity="0.6">
       90°
     </text>
 
@@ -202,11 +202,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="268" cy="182" r="1.5" fill="#003DA5" />
     <text x="314" y="213"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       TOLERANCE
     </text>
     <text x="314" y="223"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       ±0.1MM
     </text>
 
@@ -215,11 +215,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="280" cy="173" r="1.5" fill="#003DA5" />
     <text x="314" y="163"
-      font-family="'Doto', monospace" font-size="7" fill="#003DA5">
+      font-family="'Doto', monospace" font-size="12" fill="#003DA5">
       STRAIGHTEDGE
     </text>
     <text x="314" y="173"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">
       STAINLESS
     </text>
   </g>
@@ -237,7 +237,7 @@
       <line x1="152" y1="220" x2="154" y2="224" />
     </g>
     <text x="150" y="232"
-      font-family="'Doto', monospace" font-size="5" fill="#003DA5" opacity="0.5"
+      font-family="'Doto', monospace" font-size="9" fill="#003DA5" opacity="0.5"
       transform="rotate(30, 150, 232)">
       5MM
     </text>
@@ -249,7 +249,7 @@
       <line x1="266" y1="194" x2="270" y2="198" />
     </g>
     <text x="214" y="232"
-      font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+      font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5"
       transform="rotate(-30, 214, 232)">
       148MM
     </text>
@@ -259,7 +259,7 @@
        Title
        ============================================================ -->
   <text x="200" y="370"
-    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="14" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     PRECISION
   </text>

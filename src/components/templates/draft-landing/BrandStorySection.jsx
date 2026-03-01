@@ -52,7 +52,7 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
         <PhiSplit
           isReversed
           primary={
-            <BlueprintReveal stagger={ 200 } duration={ 800 } distance={ 16 }>
+            <BlueprintReveal stagger={ 200 } duration={ 800 } converge={ 0.3 }>
               <BrandHero
                 style={ { width: '100%', height: 'auto', display: 'block' } }
                 aria-label="The Blueprint Desk"

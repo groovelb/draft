@@ -150,31 +150,31 @@
     <line x1="230" y1="58" x2="290" y2="58"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="230" cy="58" r="1.5" fill="#003DA5" />
-    <text x="294" y="56" font-family="'Doto', monospace" font-size="7" fill="#003DA5">BRASS CLIP</text>
+    <text x="294" y="56" font-family="'Doto', monospace" font-size="12" fill="#003DA5">BRASS CLIP</text>
 
     <line x1="260" y1="120" x2="290" y2="120"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="260" cy="120" r="1.5" fill="#003DA5" />
-    <text x="294" y="118" font-family="'Doto', monospace" font-size="7" fill="#003DA5">CARDS</text>
-    <text x="294" y="128" font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">20 CAPACITY</text>
+    <text x="294" y="118" font-family="'Doto', monospace" font-size="12" fill="#003DA5">CARDS</text>
+    <text x="294" y="128" font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">20 CAPACITY</text>
 
     <line x1="290" y1="195" x2="310" y2="195"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="290" cy="195" r="1.5" fill="#003DA5" />
-    <text x="314" y="193" font-family="'Doto', monospace" font-size="7" fill="#003DA5">WALLET</text>
-    <text x="314" y="203" font-family="'Doto', monospace" font-size="6" fill="#003DA5" opacity="0.5">LEATHER</text>
+    <text x="314" y="193" font-family="'Doto', monospace" font-size="12" fill="#003DA5">WALLET</text>
+    <text x="314" y="203" font-family="'Doto', monospace" font-size="10" fill="#003DA5" opacity="0.5">LEATHER</text>
 
     <line x1="260" y1="178" x2="310" y2="178"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="260" cy="178" r="1.5" fill="#003DA5" />
-    <text x="314" y="176" font-family="'Doto', monospace" font-size="7" fill="#003DA5" opacity="0.5">3 SLOTS</text>
+    <text x="314" y="176" font-family="'Doto', monospace" font-size="12" fill="#003DA5" opacity="0.5">3 SLOTS</text>
   </g>
 
   <!-- ============================================================
        Title
        ============================================================ -->
   <text x="200" y="470"
-    font-family="'Doto', monospace" font-size="8" fill="#003DA5"
+    font-family="'Doto', monospace" font-size="14" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     CARD WALLET
   </text>

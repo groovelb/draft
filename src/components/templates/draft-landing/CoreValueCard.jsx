@@ -22,7 +22,7 @@ export function CoreValueCard({ Illustration, index, label, description }) {
       <BlueprintReveal
         stagger={ 150 }
         duration={ 700 }
-        distance={ 24 }
+        converge={ 0.4 }
         sx={ { mb: 4 } }
       >
         <Illustration

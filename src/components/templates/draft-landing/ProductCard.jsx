@@ -18,7 +18,7 @@ import BlueprintReveal from '../../motion/BlueprintReveal';
 export function ProductCard({ Illustration, name, description }) {
   return (
     <Box>
-      <BlueprintReveal stagger={ 120 } duration={ 600 } distance={ 20 }>
+      <BlueprintReveal stagger={ 120 } duration={ 600 } converge={ 0.35 }>
         <Illustration
           style={ { width: '100%', height: 'auto', display: 'block' } }
           aria-label={ name }
