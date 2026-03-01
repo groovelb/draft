@@ -168,11 +168,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="270" cy="99" r="1.5" fill="#003DA5" />
     <text x="304" y="97"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       TEAR-OFF SHEET
     </text>
     <text x="304" y="107"
-      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       5MM GRID
     </text>
 
@@ -181,11 +181,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="275" cy="257" r="1.5" fill="#003DA5" />
     <text x="304" y="255"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       100 SHEETS
     </text>
     <text x="304" y="265"
-      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       80GSM
     </text>
 
@@ -194,7 +194,7 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="277" cy="353" r="1.5" fill="#003DA5" />
     <text x="304" y="356"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       BACKING BOARD
     </text>
 
@@ -203,7 +203,7 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="152" cy="113" r="1.5" fill="#003DA5" />
     <text x="52" y="110"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       PERFORATION
     </text>
   </g>
@@ -218,7 +218,7 @@
     <line x1="200" y1="412" x2="277" y2="368" stroke-dasharray="2 2" />
   </g>
   <text x="230" y="400"
-    font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+    font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5"
     transform="rotate(-30, 230, 400)">
     148MM
   </text>
@@ -230,7 +230,7 @@
     <line x1="200" y1="412" x2="145" y2="381" stroke-dasharray="2 2" />
   </g>
   <text x="163" y="403"
-    font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+    font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5"
     transform="rotate(30, 163, 403)">
     105MM
   </text>
@@ -239,7 +239,7 @@
        Title
        ============================================================ -->
   <text x="200" y="470"
-    font-family="'Silkscreen', monospace" font-size="8" fill="#003DA5"
+    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     GRID MEMO PAD
   </text>

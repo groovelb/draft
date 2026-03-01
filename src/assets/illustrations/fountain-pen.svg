@@ -124,36 +124,36 @@
     <line x1="215" y1="80" x2="290" y2="80"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="215" cy="80" r="1.5" fill="#003DA5" />
-    <text x="294" y="78" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">CAP</text>
-    <text x="294" y="88" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">W/ CLIP</text>
+    <text x="294" y="78" font-family="'VT323', monospace" font-size="7" fill="#003DA5">CAP</text>
+    <text x="294" y="88" font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">W/ CLIP</text>
 
     <line x1="212" y1="210" x2="290" y2="210"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="212" cy="210" r="1.5" fill="#003DA5" />
-    <text x="294" y="208" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">BARREL</text>
+    <text x="294" y="208" font-family="'VT323', monospace" font-size="7" fill="#003DA5">BARREL</text>
 
     <line x1="245" y1="210" x2="290" y2="210"
       stroke="#003DA5" stroke-width="0.5" opacity="0" />
-    <text x="294" y="228" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5" opacity="0.5">CONVERTER</text>
+    <text x="294" y="228" font-family="'VT323', monospace" font-size="7" fill="#003DA5" opacity="0.5">CONVERTER</text>
 
     <line x1="211" y1="320" x2="290" y2="320"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="211" cy="320" r="1.5" fill="#003DA5" />
-    <text x="294" y="318" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">GRIP</text>
-    <text x="294" y="328" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">SECTION</text>
+    <text x="294" y="318" font-family="'VT323', monospace" font-size="7" fill="#003DA5">GRIP</text>
+    <text x="294" y="328" font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">SECTION</text>
 
     <line x1="205" y1="390" x2="290" y2="390"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="205" cy="390" r="1.5" fill="#003DA5" />
-    <text x="294" y="388" font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">STEEL NIB</text>
-    <text x="294" y="398" font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">EF / F / M</text>
+    <text x="294" y="388" font-family="'VT323', monospace" font-size="7" fill="#003DA5">STEEL NIB</text>
+    <text x="294" y="398" font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">EF / F / M</text>
   </g>
 
   <!-- ============================================================
        Title
        ============================================================ -->
   <text x="200" y="470"
-    font-family="'Silkscreen', monospace" font-size="8" fill="#003DA5"
+    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     FOUNTAIN PEN
   </text>

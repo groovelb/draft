@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+
+  <!-- ============================================================
+       CORE VALUE: RESTRAINT — 절제
+       펜 한 자루, 종이 한 장. 그것으로 충분하다.
+       Color: #003DA5 (Blueprint Blue), stroke only
+       ============================================================ -->
+
+  <!-- Single sheet of paper (centered, isometric) -->
+  <g>
+    <polygon
+      points="200,140 280,186 200,310 120,264"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.015)"
+    />
+    <!-- Subtle grid (very faint, just enough to see) -->
+    <g stroke="#003DA5" stroke-width="0.2" opacity="0.08">
+      <line x1="140" y1="256" x2="260" y2="180" />
+      <line x1="150" y1="246" x2="270" y2="170" />
+      <line x1="160" y1="235" x2="265" y2="164" />
+      <line x1="170" y1="225" x2="258" y2="158" />
+      <line x1="180" y1="215" x2="250" y2="152" />
+      <line x1="190" y1="205" x2="242" y2="146" />
+    </g>
+  </g>
+
+  <!-- Single pen (centered vertically on the paper) -->
+  <g>
+    <!-- Pen body (simple, restrained) -->
+    <line x1="192" y1="280" x2="210" y2="170"
+      stroke="#003DA5" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="196" y1="280" x2="214" y2="170"
+      stroke="#003DA5" stroke-width="1.2" stroke-linecap="round" />
+
+    <!-- Cap -->
+    <line x1="210" y1="170" x2="214" y2="155"
+      stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="214" y1="170" x2="218" y2="155"
+      stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+    <!-- Cap top -->
+    <ellipse cx="216" cy="154" rx="2.5" ry="1" stroke="#003DA5" stroke-width="0.5" opacity="0.5" />
+
+    <!-- Nib -->
+    <line x1="192" y1="280" x2="194" y2="288"
+      stroke="#003DA5" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="196" y1="280" x2="194" y2="288"
+      stroke="#003DA5" stroke-width="0.8" stroke-linecap="round" />
+    <!-- Tip -->
+    <circle cx="194" cy="289" r="0.8" fill="#003DA5" opacity="0.4" />
+  </g>
+
+  <!-- Negative space emphasis — dashed boundary showing emptiness -->
+  <circle cx="200" cy="215" r="100"
+    stroke="#003DA5" stroke-width="0.4" stroke-dasharray="6 8"
+    fill="none" opacity="0.1" />
+
+  <!-- Label -->
+  <text x="200" y="365"
+    font-family="'VT323', monospace" font-size="7" fill="#003DA5"
+    text-anchor="middle" opacity="0.5">
+    ONE PEN. ONE SHEET.
+  </text>
+
+</svg>

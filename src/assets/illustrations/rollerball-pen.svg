@@ -126,11 +126,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="214" cy="105" r="1.5" fill="#003DA5" />
     <text x="284" y="103"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       CAP
     </text>
     <text x="284" y="113"
-      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       BRASS FINISH
     </text>
 
@@ -139,11 +139,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="211" cy="240" r="1.5" fill="#003DA5" />
     <text x="284" y="238"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       BARREL
     </text>
     <text x="284" y="248"
-      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       BRASS BODY
     </text>
 
@@ -152,7 +152,7 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="244" cy="290" r="1.5" fill="#003DA5" />
     <text x="284" y="288"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5" opacity="0.5">
       REFILL 0.5MM
     </text>
 
@@ -161,11 +161,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="189" cy="290" r="1.5" fill="#003DA5" />
     <text x="94" y="288"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       GRIP
     </text>
     <text x="94" y="298"
-      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       KNURLED
     </text>
 
@@ -174,11 +174,11 @@
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
     <circle cx="203" cy="397" r="1.5" fill="#003DA5" />
     <text x="284" y="395"
-      font-family="'Silkscreen', monospace" font-size="7" fill="#003DA5">
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
       BALL TIP
     </text>
     <text x="284" y="405"
-      font-family="'Silkscreen', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
       0.5MM
     </text>
   </g>
@@ -187,7 +187,7 @@
        Title
        ============================================================ -->
   <text x="200" y="470"
-    font-family="'Silkscreen', monospace" font-size="8" fill="#003DA5"
+    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
     text-anchor="middle" letter-spacing="0.1em">
     ROLLERBALL PEN
   </text>

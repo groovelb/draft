@@ -11,8 +11,8 @@ const googleFonts = [
   'Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
   // Heading — Serif (retro editorial)
   'Playfair+Display:wght@400;500;600;700;800;900',
-  // Brand Display — Pixel (bitmap)
-  'Silkscreen:wght@400;700',
+  // Brand Display — Pixel (classic terminal)
+  'VT323',
 ];
 
 googleFonts.forEach((font) => {

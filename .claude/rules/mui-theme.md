@@ -1,21 +1,24 @@
 # MUI Custom Theme (SHOULD)
 
-MUI 커스텀 테마 설정 규칙. 구현 상세는 `src/styles/theme.js` 참조.
+MUI 커스텀 테마 설정 규칙. 구현 상세는 `src/styles/themes/default.js` 참조.
 
 ## 테마 파일 관리
 
-- 커스텀 테마는 `src/styles/theme.js`에서 관리
+- 커스텀 테마는 `src/styles/themes/default.js`에서 관리
 
-## Typography
+## Typography (3-tier)
 
-- **본문**: Pretendard Variable 웹폰트
-- **Headline 영어**: Google Font의 Outfit
-- **Headline 한글**: Pretendard 가장 높은 weight
+- **Brand Display**: VT323 (클래식 터미널 픽셀) — `theme.typography.displayFontFamily`
+- **Heading**: Playfair Display (세리프, 레트로 에디토리얼) — `theme.typography.headingFontFamily`
+- **Body**: Pretendard Variable (산세리프, 한국어 가독성) — `theme.typography.fontFamily`
 
 ## Color
 
-- **Primary**: `#0000FF`
-- **Secondary**: `blueGrey[900]`
+- **Primary**: `#003DA5` (Blueprint Blue)
+- **Secondary**: `#5C4A3A` (Warm Leather)
+- **Background**: `#F5F0E6` (Aged Paper)
+- **Text**: `#1A1A2E` (Navy Ink)
+- **Accent**: `#B8956A` (Brass)
 
 ## Elevation
 

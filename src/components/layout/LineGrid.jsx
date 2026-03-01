@@ -78,9 +78,9 @@ const LineGrid = React.forwardRef(({
     const sizeProps = child.props.size || {};
     let span;
     if (isMobile) {
-      span = sizeProps.xs || sizeProps.sm || 12;
+      span = sizeProps.sm || sizeProps.xs || 12;
     } else {
-      span = sizeProps.md || sizeProps.lg || sizeProps.xl || sizeProps.xs || 12;
+      span = sizeProps.md || sizeProps.sm || sizeProps.xs || 12;
     }
     return Math.max(1, Math.min(12, typeof span === 'number' ? span : 12));
   });

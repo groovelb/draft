@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+
+  <!-- ============================================================
+       CORE VALUE: CRAFT — 도구에 대한 존중
+       잉크가 종이에 스며드는 순간. 닙 클로즈업.
+       Color: #003DA5 (Blueprint Blue), stroke only
+       ============================================================ -->
+
+  <!-- Paper surface (background, zoomed in) -->
+  <rect x="60" y="140" width="280" height="200" rx="0"
+    stroke="#003DA5" stroke-width="0.5"
+    fill="rgba(0,61,165,0.01)" opacity="0.4" />
+
+  <!-- Paper fiber texture (very subtle) -->
+  <g stroke="#003DA5" stroke-width="0.15" opacity="0.06">
+    <line x1="70" y1="180" x2="330" y2="180" />
+    <line x1="70" y1="200" x2="330" y2="200" />
+    <line x1="70" y1="220" x2="330" y2="220" />
+    <line x1="70" y1="240" x2="330" y2="240" />
+    <line x1="70" y1="260" x2="330" y2="260" />
+    <line x1="70" y1="280" x2="330" y2="280" />
+    <line x1="70" y1="300" x2="330" y2="300" />
+  </g>
+
+  <!-- Nib (large, close-up, centered) -->
+  <g>
+    <!-- Nib body (shield shape) -->
+    <path d="M185,130 L200,260 L215,130"
+      stroke="#003DA5" stroke-width="1.2" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Nib curvature -->
+    <path d="M188,140 Q200,135 212,140"
+      stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.3" />
+    <path d="M190,155 Q200,150 210,155"
+      stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.25" />
+    <path d="M192,170 Q200,165 208,170"
+      stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.2" />
+
+    <!-- Slit -->
+    <line x1="200" y1="150" x2="200" y2="255"
+      stroke="#003DA5" stroke-width="0.6" opacity="0.5" />
+
+    <!-- Breather hole -->
+    <circle cx="200" cy="156" r="4"
+      stroke="#003DA5" stroke-width="0.6" fill="rgba(0,61,165,0.02)" />
+
+    <!-- Tipping material -->
+    <ellipse cx="200" cy="260" rx="3" ry="1.5"
+      stroke="#003DA5" stroke-width="0.8" fill="rgba(0,61,165,0.04)" />
+  </g>
+
+  <!-- Ink contact point — the 0.3 second moment -->
+  <g>
+    <!-- Ink dot at tip -->
+    <circle cx="200" cy="263" r="3"
+      fill="#003DA5" opacity="0.15" />
+
+    <!-- Ink spreading rings (ripple effect) -->
+    <circle cx="200" cy="265" r="6"
+      stroke="#003DA5" stroke-width="0.4" fill="none" opacity="0.2" />
+    <circle cx="200" cy="267" r="12"
+      stroke="#003DA5" stroke-width="0.3" fill="none" opacity="0.12" />
+    <circle cx="200" cy="269" r="20"
+      stroke="#003DA5" stroke-width="0.25" fill="none" opacity="0.06" />
+
+    <!-- Ink line being drawn -->
+    <path d="M200,263 Q210,270 230,275 Q260,282 290,280"
+      stroke="#003DA5" stroke-width="1" fill="none" opacity="0.3"
+      stroke-linecap="round" />
+  </g>
+
+  <!-- Dimension callout: 0.3 sec -->
+  <g opacity="0.4">
+    <line x1="215" y1="263" x2="280" y2="263"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <text x="284" y="261"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5">
+      0.3 SEC
+    </text>
+    <text x="284" y="271"
+      font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.6">
+      INK ABSORPTION
+    </text>
+  </g>
+
+  <!-- Label -->
+  <text x="200" y="370"
+    font-family="'VT323', monospace" font-size="7" fill="#003DA5"
+    text-anchor="middle" opacity="0.5">
+    INK MEETS PAPER
+  </text>
+
+</svg>

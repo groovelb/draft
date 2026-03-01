@@ -5,7 +5,7 @@ import { PageContainer } from '../layout/PageContainer';
 import { SectionContainer } from '../container/SectionContainer';
 import LineGrid from '../layout/LineGrid';
 import { PhiSplit } from '../layout/PhiSplit';
-import { RatioContainer } from '../container/RatioContainer';
+
 import { Title } from '../typography/Title';
 import { StretchedHeadline } from '../typography/StretchedHeadline';
 import brandData from '../../docs/brand-draft.json';
@@ -18,6 +18,19 @@ import InkCartridgeSet from '../../assets/illustrations/ink-cartridge-set.svg';
 import LeatherBinderA5 from '../../assets/illustrations/leather-binder-a5.svg';
 import DocumentFolder from '../../assets/illustrations/document-folder.svg';
 import CardWallet from '../../assets/illustrations/card-wallet.svg';
+import BrandHero from '../../assets/illustrations/brand-hero.svg';
+import ValuePrecision from '../../assets/illustrations/value-precision.svg';
+import ValueOrigin from '../../assets/illustrations/value-origin.svg';
+import ValueRestraint from '../../assets/illustrations/value-restraint.svg';
+import ValueCraft from '../../assets/illustrations/value-craft.svg';
+
+/** Core Value key → 일러스트 SVG 매핑 */
+const valueIllustrationMap = {
+  'precision': ValuePrecision,
+  'origin': ValueOrigin,
+  'restraint': ValueRestraint,
+  'craft': ValueCraft,
+};
 
 /** 제품명 → 일러스트 SVG 매핑 */
 const illustrationMap = {
@@ -32,15 +45,8 @@ const illustrationMap = {
   'Card Wallet': CardWallet,
 };
 
-/** 일러스트 플레이스홀더 공통 스타일 */
-const placeholderSx = {
-  border: '1px dashed',
-  borderColor: 'primary.main',
-  backgroundColor: 'rgba(0, 61, 165, 0.03)',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
+/** LineGrid 공통 gap (px) */
+const GRID_GAP = 64;
 
 /** 넓은 여백 (에디토리얼 인쇄물 느낌) */
 const widePx = { xs: 3, sm: 6, md: 12, lg: 20 };
@@ -85,7 +91,7 @@ export function DraftLanding({ data = brandData, sx }) {
             <Typography
               variant="overline"
               sx={ {
-                color: 'text.secondary',
+                color: 'text.primary',
                 letterSpacing: '0.2em',
                 mb: { xs: 2, md: 3 },
               } }
@@ -95,21 +101,21 @@ export function DraftLanding({ data = brandData, sx }) {
 
             <StretchedHeadline
               text="DRAFT."
-              fontFamily='"Silkscreen", monospace'
-              fontSize="clamp(3rem, 15vw, 12rem)"
+              fillWidth={ false }
+              fontFamily='"VT323", monospace'
+              fontSize="clamp(3.75rem, 18vw, 15rem)"
               fontWeight={ 700 }
               textTransform="none"
-              sx={ { color: 'primary.main', width: '100%' } }
+              sx={ { color: 'primary.main', width: '100%', textAlign: 'center' } }
             />
 
             <Typography
               variant="overline"
               sx={ {
-                fontFamily: '"Silkscreen", monospace',
+                fontFamily: '"VT323", monospace',
                 color: 'primary.main',
                 letterSpacing: '0.15em',
                 mt: { xs: 1, md: 2 },
-                fontSize: { xs: '0.625rem', md: '0.75rem' },
               } }
             >
               { data.brand.tagline }
@@ -118,7 +124,7 @@ export function DraftLanding({ data = brandData, sx }) {
             <Typography
               variant="body1"
               sx={ {
-                color: 'text.secondary',
+                color: 'text.primary',
                 mt: { xs: 8, md: 14 },
                 maxWidth: '36ch',
                 textAlign: 'center',
@@ -136,7 +142,7 @@ export function DraftLanding({ data = brandData, sx }) {
           ============================================================ */}
       <SectionContainer sx={ { py: { xs: 10, md: 16 } } }>
         <PageContainer sx={ { px: widePx } }>
-          <LineGrid gap={ 48 } borderColor="primary.main">
+          <LineGrid gap={ GRID_GAP } borderColor="primary.main">
 
             {/* Block 1: 브랜드 스토리 텍스트 */}
             <PhiSplit
@@ -151,7 +157,7 @@ export function DraftLanding({ data = brandData, sx }) {
                 <Typography
                   variant="body1"
                   sx={ {
-                    color: 'text.secondary',
+                    color: 'text.primary',
                     lineHeight: 2,
                     wordBreak: 'keep-all',
                   } }
@@ -168,21 +174,17 @@ export function DraftLanding({ data = brandData, sx }) {
               isReversed
               primary={
                 <Box
-                  sx={ {
-                    ...placeholderSx,
-                    height: { xs: 200, md: 300 },
-                  } }
-                >
-                  <Typography variant="caption" sx={ { color: 'text.disabled' } }>
-                    Brand Illustration
-                  </Typography>
-                </Box>
+                  component="img"
+                  src={ BrandHero }
+                  alt="The Blueprint Desk"
+                  sx={ { width: '100%', height: 'auto', display: 'block' } }
+                />
               }
               secondary={
                 <Typography
                   variant="body1"
                   sx={ {
-                    color: 'text.secondary',
+                    color: 'text.primary',
                     lineHeight: 2,
                     wordBreak: 'keep-all',
                   } }
@@ -209,22 +211,24 @@ export function DraftLanding({ data = brandData, sx }) {
             sx={ { mb: { xs: 6, md: 10 } } }
           />
 
-          <LineGrid container gap={ 32 } borderColor="primary.main">
+          <LineGrid container gap={ GRID_GAP } borderColor="primary.main">
             { data.coreValues.map((value, index) => (
-              <Grid size={ { xs: 12, sm: 6, md: 3 } } key={ value.key }>
-                <Box sx={ { py: { xs: 2, md: 3 } } }>
-                  {/* 일러스트 placeholder */}
+              <Grid size={ { xs: 12, sm: 6 } } key={ value.key }>
+                <Box sx={ { py: { xs: 3, md: 5 }, px: { xs: 1, md: 2 } } }>
+                  {/* Core Value 일러스트 */}
                   <Box
+                    component="img"
+                    src={ valueIllustrationMap[value.key] }
+                    alt={ value.key }
                     sx={ {
-                      ...placeholderSx,
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
                       aspectRatio: '1 / 1',
-                      mb: 3,
+                      objectFit: 'contain',
+                      mb: 4,
                     } }
-                  >
-                    <Typography variant="caption" sx={ { color: 'text.disabled' } }>
-                      { value.key }
-                    </Typography>
-                  </Box>
+                  />
 
                   {/* 넘버링 */}
                   <Typography
@@ -235,16 +239,16 @@ export function DraftLanding({ data = brandData, sx }) {
                   </Typography>
 
                   {/* 라벨 */}
-                  <Typography variant="h5" sx={ { mt: 0.5 } }>
+                  <Typography variant="h2" sx={ { mt: 1 } }>
                     { value.label }
                   </Typography>
 
                   {/* 설명 */}
                   <Typography
-                    variant="body2"
+                    variant="body1"
                     sx={ {
-                      color: 'text.secondary',
-                      mt: 1,
+                      color: 'text.primary',
+                      mt: 1.5,
                       lineHeight: 1.8,
                       wordBreak: 'keep-all',
                     } }
@@ -270,10 +274,10 @@ export function DraftLanding({ data = brandData, sx }) {
             sx={ { mb: { xs: 6, md: 10 } } }
           />
 
-          <LineGrid container gap={ 40 } borderColor="primary.main">
+          <LineGrid container gap={ GRID_GAP } borderColor="primary.main">
             { data.usp.map((item) => (
               <Grid size={ { xs: 12, md: 6 } } key={ item.key }>
-                <Box sx={ { py: { xs: 2, md: 4 } } }>
+                <Box sx={ { py: { xs: 4, md: 6 }, px: { xs: 1, md: 2 } } }>
                   <Typography
                     variant="overline"
                     sx={ {
@@ -283,15 +287,15 @@ export function DraftLanding({ data = brandData, sx }) {
                     { item.key.replace(/-/g, ' ') }
                   </Typography>
 
-                  <Typography variant="h4" sx={ { mt: 1 } }>
+                  <Typography variant="h1" sx={ { mt: 1.5 } }>
                     { item.label }
                   </Typography>
 
                   <Typography
                     variant="body1"
                     sx={ {
-                      color: 'text.secondary',
-                      mt: 2,
+                      color: 'text.primary',
+                      mt: 2.5,
                       maxWidth: '50ch',
                       lineHeight: 1.8,
                       wordBreak: 'keep-all',
@@ -318,15 +322,15 @@ export function DraftLanding({ data = brandData, sx }) {
             sx={ { mb: { xs: 6, md: 10 } } }
           />
 
-          <LineGrid gap={ 64 } borderColor="primary.main">
+          <LineGrid gap={ GRID_GAP } borderColor="primary.main">
             { data.products.map((line) => (
               <Box key={ line.line }>
                 {/* 라인 헤더 */}
                 <Box sx={ { mb: { xs: 4, md: 6 } } }>
                   <Typography
                     sx={ {
-                      fontFamily: '"Silkscreen", monospace',
-                      fontSize: { xs: '1.25rem', md: '1.5rem' },
+                      fontFamily: '"VT323", monospace',
+                      fontSize: { xs: '1.563rem', md: '1.875rem' },
                       color: 'primary.main',
                       fontWeight: 700,
                     } }
@@ -334,46 +338,35 @@ export function DraftLanding({ data = brandData, sx }) {
                     { line.line }
                   </Typography>
                   <Typography
-                    variant="body2"
-                    sx={ { color: 'text.secondary', mt: 1 } }
+                    variant="body1"
+                    sx={ { color: 'text.primary', mt: 1.5 } }
                   >
                     { line.concept }
                   </Typography>
                 </Box>
 
                 {/* 제품 그리드 */}
-                <LineGrid container gap={ 24 } borderColor="primary.main">
+                <LineGrid container gap={ GRID_GAP } borderColor="primary.main">
                   { line.items.map((item) => (
                     <Grid size={ { xs: 12, sm: 4 } } key={ item.name }>
-                      {/* 제품 일러스트 또는 placeholder */}
-                      { illustrationMap[item.name] ? (
-                        <Box
-                          component="img"
-                          src={ illustrationMap[item.name] }
-                          alt={ item.name }
-                          sx={ { width: '100%', height: 'auto', display: 'block' } }
-                        />
-                      ) : (
-                        <RatioContainer
-                          ratio="4:3"
-                          sx={ placeholderSx }
-                        >
-                          <Typography variant="caption" sx={ { color: 'text.disabled' } }>
-                            { item.name }
-                          </Typography>
-                        </RatioContainer>
-                      ) }
+                      {/* 제품 일러스트 */}
+                      <Box
+                        component="img"
+                        src={ illustrationMap[item.name] }
+                        alt={ item.name }
+                        sx={ { width: '100%', height: 'auto', display: 'block' } }
+                      />
 
                       {/* 제품 정보 */}
-                      <Box sx={ { mt: 2 } }>
-                        <Typography variant="subtitle2">
+                      <Box sx={ { mt: 3, px: { xs: 0, md: 1 } } }>
+                        <Typography variant="h4">
                           { item.name }
                         </Typography>
                         <Typography
-                          variant="body2"
+                          variant="body1"
                           sx={ {
-                            color: 'text.secondary',
-                            mt: 0.5,
+                            color: 'text.primary',
+                            mt: 1,
                             wordBreak: 'keep-all',
                           } }
                         >
@@ -410,7 +403,7 @@ export function DraftLanding({ data = brandData, sx }) {
           </Typography>
 
           <Typography
-            variant="h2"
+            variant="h1"
             sx={ { mt: 2, mb: 4 } }
           >
             도면을 그리듯, 생각을 적는다.
@@ -419,7 +412,7 @@ export function DraftLanding({ data = brandData, sx }) {
           <Typography
             variant="body1"
             sx={ {
-              color: 'text.secondary',
+              color: 'text.primary',
               mb: 6,
               maxWidth: '45ch',
               mx: 'auto',
@@ -438,8 +431,7 @@ export function DraftLanding({ data = brandData, sx }) {
               color: 'primary.main',
               px: 6,
               py: 1.5,
-              fontFamily: '"Silkscreen", monospace',
-              fontSize: '0.875rem',
+              fontFamily: '"VT323", monospace',
               letterSpacing: '0.05em',
               '&:hover': {
                 bgcolor: 'primary.main',
@@ -453,7 +445,7 @@ export function DraftLanding({ data = brandData, sx }) {
           {/* Footer */}
           <Box sx={ { mt: { xs: 10, md: 16 }, width: '100%' } }>
             <Divider sx={ { borderColor: 'primary.main', mb: 3 } } />
-            <Typography variant="caption" sx={ { color: 'text.disabled' } }>
+            <Typography variant="caption" sx={ { color: 'text.primary' } }>
               DRAFT. — WRITE THE BLUEPRINT.
             </Typography>
           </Box>

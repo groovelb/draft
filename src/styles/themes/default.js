@@ -7,11 +7,11 @@
  * ## 브랜드 비주얼 필러
  * - **Blueprint Precision**: Blueprint Blue (#003DA5), 그리드 시스템
  * - **Analog Warmth**: Aged Paper (#F5F0E6) 배경, 세리프 헤딩
- * - **Pixel Heritage**: Silkscreen 비트맵 디스플레이 폰트
+ * - **Pixel Heritage**: VT323 클래식 터미널 디스플레이 폰트
  * - **Masculine Restraint**: 절제된 팔레트, borderRadius 0
  *
  * ## 타이포그래피 3-tier
- * - Brand Display: Silkscreen (pixel)
+ * - Brand Display: VT323 (classic terminal pixel)
  * - Heading: Playfair Display (serif, retro editorial)
  * - Body: Pretendard Variable (sans, 한국어 가독성)
  */
@@ -120,7 +120,7 @@ const palette = {
 
 // 폰트 패밀리 정의
 const serifHeadingStack = '"Playfair Display", "Pretendard Variable", Pretendard, serif';
-const pixelDisplayStack = '"Silkscreen", monospace';
+const pixelDisplayStack = '"VT323", monospace';
 const bodyStack = [
   '"Pretendard Variable"',
   'Pretendard',
@@ -163,67 +163,67 @@ const typography = {
   h1: {
     fontFamily: serifHeadingStack,
     fontWeight: 700,
-    fontSize: '2.5rem',      // 40px
+    fontSize: '3.125rem',    // 50px (40×1.25)
     lineHeight: 1.15,
     letterSpacing: '-0.02em',
   },
   h2: {
     fontFamily: serifHeadingStack,
     fontWeight: 700,
-    fontSize: '2rem',        // 32px
+    fontSize: '2.5rem',      // 40px (32×1.25)
     lineHeight: 1.2,
     letterSpacing: '-0.01em',
   },
   h3: {
     fontFamily: serifHeadingStack,
     fontWeight: 600,
-    fontSize: '1.75rem',     // 28px
+    fontSize: '2.188rem',    // 35px (28×1.25)
     lineHeight: 1.25,
     letterSpacing: '-0.01em',
   },
   h4: {
     fontFamily: serifHeadingStack,
     fontWeight: 600,
-    fontSize: '1.5rem',      // 24px
+    fontSize: '1.875rem',    // 30px (24×1.25)
     lineHeight: 1.3,
     letterSpacing: '0',
   },
   h5: {
     fontFamily: serifHeadingStack,
     fontWeight: 500,
-    fontSize: '1.25rem',     // 20px
+    fontSize: '1.563rem',    // 25px (20×1.25)
     lineHeight: 1.35,
     letterSpacing: '0',
   },
   h6: {
     fontFamily: serifHeadingStack,
     fontWeight: 500,
-    fontSize: '1.125rem',    // 18px
+    fontSize: '1.4rem',      // ~22px (18×1.25)
     lineHeight: 1.4,
     letterSpacing: '0',
   },
 
   // 본문 스타일 — Pretendard (sans-serif)
   body1: {
-    fontSize: '1rem',        // 16px
+    fontSize: '1.25rem',     // 20px (16×1.25)
     lineHeight: 1.6,
     letterSpacing: '0',
   },
   body2: {
-    fontSize: '0.875rem',    // 14px
+    fontSize: '1.1rem',      // ~18px (14×1.25)
     lineHeight: 1.6,
     letterSpacing: '0',
   },
 
   // 부제목
   subtitle1: {
-    fontSize: '1rem',        // 16px
+    fontSize: '1.25rem',     // 20px (16×1.25)
     fontWeight: 500,
     lineHeight: 1.5,
     letterSpacing: '0.01em',
   },
   subtitle2: {
-    fontSize: '0.875rem',    // 14px
+    fontSize: '1.1rem',      // ~18px (14×1.25)
     fontWeight: 500,
     lineHeight: 1.5,
     letterSpacing: '0.01em',
@@ -231,19 +231,19 @@ const typography = {
 
   // 기타
   button: {
-    fontSize: '0.875rem',    // 14px
+    fontSize: '1.1rem',      // ~18px (14×1.25)
     fontWeight: 600,
     lineHeight: 1.75,
     letterSpacing: '0.02em',
     textTransform: 'none',   // 대문자 변환 비활성화
   },
   caption: {
-    fontSize: '0.75rem',     // 12px
+    fontSize: '0.938rem',    // 15px (12×1.25)
     lineHeight: 1.5,
     letterSpacing: '0.02em',
   },
   overline: {
-    fontSize: '0.75rem',     // 12px
+    fontSize: '0.938rem',    // 15px (12×1.25)
     fontWeight: 600,
     lineHeight: 2,
     letterSpacing: '0.08em',
