@@ -3,15 +3,15 @@ import LineGrid from '../../layout/LineGrid';
 import { Title } from '../../typography/Title';
 import { ProductLineBlock } from './ProductLineBlock';
 
-import GridNotebookA5 from '../../../assets/illustrations/grid-notebook-a5.svg';
-import GridMemoPad from '../../../assets/illustrations/grid-memo-pad.svg';
-import DeskMat from '../../../assets/illustrations/desk-mat.svg';
-import RollerballPen from '../../../assets/illustrations/rollerball-pen.svg';
-import FountainPen from '../../../assets/illustrations/fountain-pen.svg';
-import InkCartridgeSet from '../../../assets/illustrations/ink-cartridge-set.svg';
-import LeatherBinderA5 from '../../../assets/illustrations/leather-binder-a5.svg';
-import DocumentFolder from '../../../assets/illustrations/document-folder.svg';
-import CardWallet from '../../../assets/illustrations/card-wallet.svg';
+import GridNotebookA5 from '../../../assets/illustrations/grid-notebook-a5.svg?react';
+import GridMemoPad from '../../../assets/illustrations/grid-memo-pad.svg?react';
+import DeskMat from '../../../assets/illustrations/desk-mat.svg?react';
+import RollerballPen from '../../../assets/illustrations/rollerball-pen.svg?react';
+import FountainPen from '../../../assets/illustrations/fountain-pen.svg?react';
+import InkCartridgeSet from '../../../assets/illustrations/ink-cartridge-set.svg?react';
+import LeatherBinderA5 from '../../../assets/illustrations/leather-binder-a5.svg?react';
+import DocumentFolder from '../../../assets/illustrations/document-folder.svg?react';
+import CardWallet from '../../../assets/illustrations/card-wallet.svg?react';
 
 /** 제품명 → 일러스트 SVG 매핑 */
 const illustrationMap = {

@@ -4,10 +4,10 @@ import LineGrid from '../../layout/LineGrid';
 import { Title } from '../../typography/Title';
 import { CoreValueCard } from './CoreValueCard';
 
-import ValuePrecision from '../../../assets/illustrations/value-precision.svg';
-import ValueOrigin from '../../../assets/illustrations/value-origin.svg';
-import ValueRestraint from '../../../assets/illustrations/value-restraint.svg';
-import ValueCraft from '../../../assets/illustrations/value-craft.svg';
+import ValuePrecision from '../../../assets/illustrations/value-precision.svg?react';
+import ValueOrigin from '../../../assets/illustrations/value-origin.svg?react';
+import ValueRestraint from '../../../assets/illustrations/value-restraint.svg?react';
+import ValueCraft from '../../../assets/illustrations/value-craft.svg?react';
 
 /** Core Value key → 일러스트 SVG 매핑 */
 const valueIllustrationMap = {
@@ -46,7 +46,7 @@ export function CoreValuesSection({ coreValues, gridGap }) {
           <Grid size={ { xs: 12, sm: 6 } } key={ value.key }>
             <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 }, textAlign: 'center' } }>
               <CoreValueCard
-                illustrationSrc={ valueIllustrationMap[value.key] }
+                Illustration={ valueIllustrationMap[value.key] }
                 index={ index }
                 label={ value.label }
                 description={ value.description }

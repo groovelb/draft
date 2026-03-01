@@ -2,7 +2,8 @@ import { Box, Typography } from '@mui/material';
 import LineGrid from '../../layout/LineGrid';
 import { PhiSplit } from '../../layout/PhiSplit';
 import { Title } from '../../typography/Title';
-import BrandHero from '../../../assets/illustrations/brand-hero.svg';
+import BlueprintReveal from '../../motion/BlueprintReveal';
+import BrandHero from '../../../assets/illustrations/brand-hero.svg?react';
 
 /**
  * BrandStorySection 컴포넌트
@@ -51,12 +52,12 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
         <PhiSplit
           isReversed
           primary={
-            <Box
-              component="img"
-              src={ BrandHero }
-              alt="The Blueprint Desk"
-              sx={ { width: '100%', height: 'auto', display: 'block' } }
-            />
+            <BlueprintReveal stagger={ 200 } duration={ 800 } distance={ 16 }>
+              <BrandHero
+                style={ { width: '100%', height: 'auto', display: 'block' } }
+                aria-label="The Blueprint Desk"
+              />
+            </BlueprintReveal>
           }
           secondary={
             <Typography
