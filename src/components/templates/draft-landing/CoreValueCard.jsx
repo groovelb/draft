@@ -36,20 +36,20 @@ export function CoreValueCard({ Illustration, index, title, label, description }
       <Box
         sx={ {
           px: { xs: 3, sm: 4, md: 5 },
-          py: { xs: 2, sm: 2.5, md: 3 },
+          py: { xs: 4, sm: 5, md: 6 },
           display: 'flex',
           alignItems: 'baseline',
           gap: { xs: 1.5, sm: 2 },
         } }
       >
         <Typography
-          variant="h3"
+          variant="h2"
           sx={ { color: 'primary.main' } }
         >
           { `0${index + 1}` }
         </Typography>
         <Typography
-          variant="h3"
+          variant="h2"
           sx={ { color: 'text.primary' } }
         >
           { title.toUpperCase() }

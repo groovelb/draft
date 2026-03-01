@@ -21,6 +21,7 @@ const fragmentShader = `
   uniform vec3 uColorLight;
   uniform vec3 uColorDark;
   uniform float uGrainIntensity;
+  uniform float uOffset;
 
   varying vec2 vUv;
 
@@ -60,8 +61,10 @@ const fragmentShader = `
     float wave = snoise(vec2(vUv.x * 0.8, uTime * 0.25)) * 0.04;
     float distortedY = vUv.y + wave;
 
-    // Phase 1: 어두운색이 아래에서 올라옴
-    float progressIn = uScrollIn * 1.2 + 0.15;
+    // Phase 1: 어두운색이 아래에서 올라옴 (uOffset으로 시작점 조절)
+    // uScrollIn=0 → progressIn = 0.15 - uOffset (offset만큼 화면 밖으로 밀림)
+    // uScrollIn=1 → progressIn = 1.35 (offset 무관, 항상 화면 전체 커버)
+    float progressIn = uScrollIn * (1.2 + uOffset) + 0.15 - uOffset;
     float maskIn = smoothstep(progressIn - 0.2, progressIn + 0.2, distortedY);
     float darkFromIn = 1.0 - maskIn;
 
@@ -116,19 +119,23 @@ function hexToRgb(hex) {
  * Props:
  * @param {string} colorLight - 밝은 영역 hex 색상 [Optional, 기본값: theme.palette.grey[200]]
  * @param {string} colorDark - 어두운 영역 hex 색상 [Optional, 기본값: theme.palette.secondary.main]
+ * @param {object} scrollInRef - 전환 시작 기준 요소의 React ref [Optional]
  * @param {object} scrollOutRef - outro 구간 기준 요소의 React ref [Optional]
+ * @param {number} offset - dark color 시작점 오프셋 (0~1). 높을수록 전환이 늦게 시작 [Optional, 기본값: 0]
  * @param {boolean} isGrain - 필름 그레인 효과 여부 [Optional, 기본값: true]
  * @param {number} grainIntensity - 필름 그레인 강도 (0~0.1) [Optional, 기본값: 0.035]
  * @param {object} sx - MUI sx 스타일 [Optional]
  *
  * Example usage:
  * <GradientOverlay />
- * <GradientOverlay colorLight="#f5f5f5" colorDark="#263238" scrollOutRef={outroRef} />
+ * <GradientOverlay colorLight="#f5f5f5" colorDark="#263238" scrollInRef={sectionRef} offset={0.5} />
  */
 function GradientOverlay({
   colorLight,
   colorDark,
+  scrollInRef,
   scrollOutRef,
+  offset = 0,
   isGrain = true,
   grainIntensity = 0.035,
   sx = {},
@@ -167,6 +174,7 @@ function GradientOverlay({
       uColorLight: { value: new THREE.Color(...rgbLight) },
       uColorDark: { value: new THREE.Color(...rgbDark) },
       uGrainIntensity: { value: isGrain ? grainIntensity : 0 },
+      uOffset: { value: offset },
     };
 
     /** 셰이더 머티리얼 생성 */
@@ -186,10 +194,17 @@ function GradientOverlay({
     let currentScrollOut = 0;
 
     const updateScrollTarget = () => {
-      const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      targetScrollIn = Math.min(scrollY / windowHeight, 1);
+      if (scrollInRef?.current) {
+        /** ref 기반: 해당 요소가 뷰포트에 진입할 때 0→1 */
+        const rect = scrollInRef.current.getBoundingClientRect();
+        const progress = (windowHeight - rect.top) / windowHeight;
+        targetScrollIn = Math.max(0, Math.min(1, progress));
+      } else {
+        /** 기본: 페이지 상단 기준 (기존 동작) */
+        targetScrollIn = Math.min(window.scrollY / windowHeight, 1);
+      }
 
       if (scrollOutRef?.current) {
         const outroRect = scrollOutRef.current.getBoundingClientRect();
@@ -238,7 +253,7 @@ function GradientOverlay({
         container.removeChild(renderer.domElement);
       }
     };
-  }, [resolvedLight, resolvedDark, scrollOutRef, isGrain, grainIntensity]);
+  }, [resolvedLight, resolvedDark, scrollInRef, scrollOutRef, offset, isGrain, grainIntensity]);
 
   return (
     <Box

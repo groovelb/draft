@@ -46,7 +46,6 @@ export function ProductLinesSection({ products, gridGap }) {
       gap={ gridGap }
       borderColor="common.white"
       sx={ {
-        bgcolor: 'primary.main',
         color: 'common.white',
         '& svg': { filter: 'brightness(0) invert(1)' },
       } }
@@ -54,7 +53,7 @@ export function ProductLinesSection({ products, gridGap }) {
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
           title="Three Lines of Tools"
-          level="h2"
+          level="h1"
         />
       </Box>
 

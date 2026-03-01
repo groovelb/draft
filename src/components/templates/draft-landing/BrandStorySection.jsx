@@ -28,7 +28,7 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
           primary={
             <Title
               title="The Blueprint of Ideas"
-              level="h2"
+              level="h1"
             />
           }
           secondary={

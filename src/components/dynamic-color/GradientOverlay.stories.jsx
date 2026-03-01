@@ -27,9 +27,17 @@ export default {
       control: { type: 'range', min: 0, max: 0.1, step: 0.005 },
       description: '필름 그레인 강도',
     },
+    scrollInRef: {
+      control: false,
+      description: '전환 시작 기준 요소의 React ref',
+    },
     scrollOutRef: {
       control: false,
       description: 'outro 구간 기준 요소의 React ref',
+    },
+    offset: {
+      control: { type: 'range', min: 0, max: 1, step: 0.05 },
+      description: 'dark color 시작점 오프셋 (0~1). 높을수록 전환이 늦게 시작',
     },
   },
 };
@@ -94,6 +102,33 @@ const WithOutroDemo = () => {
 
 export const WithOutro = {
   render: () => <WithOutroDemo />,
+};
+
+/** scrollInRef + offset 데모 — 특정 섹션 진입 시 전환 */
+const WithScrollInDemo = () => {
+  const sectionRef = useRef(null);
+
+  return (
+    <Box>
+      <GradientOverlay
+        colorLight="#F4F5F7"
+        colorDark="#003DA5"
+        scrollInRef={ sectionRef }
+        offset={ 0.5 }
+      />
+      <Section label="Hero" />
+      <Section label="Section 1" />
+      <Section label="Section 2" />
+      <Box ref={ sectionRef }>
+        <Section label="Target Section" />
+      </Box>
+      <Section label="After" />
+    </Box>
+  );
+};
+
+export const WithScrollIn = {
+  render: () => <WithScrollInDemo />,
 };
 
 export const CustomColors = {

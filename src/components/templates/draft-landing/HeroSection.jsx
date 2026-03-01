@@ -2,27 +2,27 @@ import { Box, Typography } from '@mui/material';
 import { FullPageContainer } from '../../layout/FullPageContainer';
 import { PageContainer } from '../../layout/PageContainer';
 import { StretchedHeadline } from '../../typography/StretchedHeadline';
+import MarqueeContainer from '../../motion/MarqueeContainer';
 
 /**
  * HeroSection 컴포넌트
  *
  * DraftLanding의 첫 번째 섹션.
- * 전체 화면에 브랜드 로고와 태그라인, 히어로 메시지를 표시한다.
+ * 전체 화면에 브랜드 로고를 표시하고, 하단에 히어로 메시지가 스크롤 마퀴로 흐른다.
  *
  * Props:
- * @param {string} tagline - 브랜드 태그라인 [Required]
  * @param {string} heroMessage - 히어로 메시지 텍스트 [Required]
  * @param {object} widePx - 반응형 px 값 [Required]
  *
  * Example usage:
- * <HeroSection tagline="WRITE THE BLUEPRINT." heroMessage="..." widePx={ widePx } />
+ * <HeroSection heroMessage="..." widePx={ widePx } />
  */
-export function HeroSection({ tagline, heroMessage, widePx }) {
+export function HeroSection({ heroMessage, widePx }) {
   return (
     <FullPageContainer
       align="center"
       justify="center"
-      sx={ { bgcolor: 'background.default' } }
+      sx={ { bgcolor: 'transparent' } }
     >
       <PageContainer sx={ { px: widePx } }>
         <Box sx={ { display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
@@ -31,6 +31,7 @@ export function HeroSection({ tagline, heroMessage, widePx }) {
             sx={ {
               color: 'text.primary',
               letterSpacing: '0.2em',
+              fontSize: (theme) => `calc(${theme.typography.overline.fontSize} * 2)`,
               mb: { xs: 2, md: 3 },
             } }
           >
@@ -46,33 +47,26 @@ export function HeroSection({ tagline, heroMessage, widePx }) {
             textTransform="none"
             sx={ { color: 'primary.main', width: '100%', textAlign: 'center' } }
           />
+        </Box>
+      </PageContainer>
 
+      <Box sx={ { width: '100%', mt: { xs: 16, md: 28 } } }>
+        <MarqueeContainer
+          isScrollScrub
+          isPauseOnHover={ false }
+          gap={ 6 }
+        >
           <Typography
-            variant="overline"
-            sx={ {
-              fontFamily: '"Doto", monospace',
-              color: 'primary.main',
-              letterSpacing: '0.15em',
-              mt: { xs: 1, md: 2 },
-            } }
-          >
-            { tagline }
-          </Typography>
-
-          <Typography
-            variant="body1"
+            variant="h1"
             sx={ {
               color: 'text.primary',
-              mt: { xs: 8, md: 14 },
-              maxWidth: '36ch',
-              textAlign: 'center',
-              lineHeight: 1.8,
+              whiteSpace: 'nowrap',
             } }
           >
             { heroMessage }
           </Typography>
-        </Box>
-      </PageContainer>
+        </MarqueeContainer>
+      </Box>
     </FullPageContainer>
   );
 }

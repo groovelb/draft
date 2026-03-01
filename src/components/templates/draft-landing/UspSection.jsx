@@ -24,7 +24,7 @@ export function UspSection({ usp, gridGap }) {
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
           title="Analog for the Digital Age"
-          level="h2"
+          level="h1"
         />
       </Box>
 

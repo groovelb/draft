@@ -6,7 +6,8 @@ import { PageContainer } from '../../layout/PageContainer';
  * CtaSection 컴포넌트
  *
  * DraftLanding의 마지막 CTA/Footer 섹션.
- * 마감 메시지와 행동 유도 버튼을 전체 화면(70%)으로 표시한다.
+ * 마감 메시지와 행동 유도 버튼을 전체 화면으로 표시한다.
+ * FooterShifting 내부에서 Sticky Footer Reveal 패턴으로 사용된다.
  *
  * Props:
  * @param {string} closingMessage - 클로징 메시지 [Required]
@@ -19,7 +20,6 @@ import { PageContainer } from '../../layout/PageContainer';
 export function CtaSection({ closingMessage, ctaText, widePx }) {
   return (
     <FullPageContainer
-      heightRatio={ 0.7 }
       align="center"
       justify="center"
       sx={ { bgcolor: '#111111' } }
