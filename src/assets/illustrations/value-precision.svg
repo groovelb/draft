@@ -2,85 +2,266 @@
 
   <!-- ============================================================
        CORE VALUE: PRECISION — 정밀함
-       5mm 그리드 + 십자선 + 눈금
+       등각투영 그리드 노트북 페이지 + 직각자 + 디테일 콜아웃
        Color: #003DA5 (Blueprint Blue), stroke only
+       Perspective: 30° true isometric
        ============================================================ -->
 
   <defs>
-    <clipPath id="precision-grid-clip">
-      <circle cx="200" cy="200" r="120" />
+    <!-- Clip path for grid pattern on page surface -->
+    <clipPath id="precision-page-clip">
+      <polygon points="175,235 268,181 204,144 111,198" />
+    </clipPath>
+    <!-- Clip path for detail callout inset -->
+    <clipPath id="precision-inset-clip">
+      <circle cx="330" cy="100" r="45" />
     </clipPath>
   </defs>
 
-  <!-- Grid field (clipped to circle) -->
-  <g clip-path="url(#precision-grid-clip)" stroke="#003DA5" stroke-width="0.3" opacity="0.15">
-    <!-- Horizontal lines -->
-    <line x1="80" y1="100" x2="320" y2="100" />
-    <line x1="80" y1="120" x2="320" y2="120" />
-    <line x1="80" y1="140" x2="320" y2="140" />
-    <line x1="80" y1="160" x2="320" y2="160" />
-    <line x1="80" y1="180" x2="320" y2="180" />
-    <line x1="80" y1="200" x2="320" y2="200" />
-    <line x1="80" y1="220" x2="320" y2="220" />
-    <line x1="80" y1="240" x2="320" y2="240" />
-    <line x1="80" y1="260" x2="320" y2="260" />
-    <line x1="80" y1="280" x2="320" y2="280" />
-    <line x1="80" y1="300" x2="320" y2="300" />
-    <!-- Vertical lines -->
-    <line x1="100" y1="80" x2="100" y2="320" />
-    <line x1="120" y1="80" x2="120" y2="320" />
-    <line x1="140" y1="80" x2="140" y2="320" />
-    <line x1="160" y1="80" x2="160" y2="320" />
-    <line x1="180" y1="80" x2="180" y2="320" />
-    <line x1="200" y1="80" x2="200" y2="320" />
-    <line x1="220" y1="80" x2="220" y2="320" />
-    <line x1="240" y1="80" x2="240" y2="320" />
-    <line x1="260" y1="80" x2="260" y2="320" />
-    <line x1="280" y1="80" x2="280" y2="320" />
-    <line x1="300" y1="80" x2="300" y2="320" />
+  <!-- ============================================================
+       Layer 1: NOTEBOOK PAGE (isometric top face, single page)
+       Front corner: (175, 235), W=108, D=74
+       ============================================================ -->
+  <g>
+    <!-- Top face (page surface) -->
+    <polygon
+      points="175,235 268,181 204,144 111,198"
+      stroke="#003DA5" stroke-width="1"
+      fill="rgba(0,61,165,0.02)"
+    />
+
+    <!-- 5mm Grid pattern on page surface -->
+    <g clip-path="url(#precision-page-clip)" stroke="#003DA5" stroke-width="0.4" opacity="0.3">
+      <!-- Set A: lines parallel to width (right-up direction, spaced along depth) -->
+      <line x1="168" y1="231" x2="261" y2="177" />
+      <line x1="160" y1="226" x2="254" y2="172" />
+      <line x1="153" y1="222" x2="247" y2="168" />
+      <line x1="145" y1="217" x2="240" y2="163" />
+      <line x1="138" y1="213" x2="233" y2="159" />
+      <line x1="130" y1="208" x2="226" y2="154" />
+      <line x1="123" y1="204" x2="219" y2="150" />
+      <!-- Set B: lines parallel to depth (left-up direction, spaced along width) -->
+      <line x1="189" y1="228" x2="125" y2="191" />
+      <line x1="203" y1="220" x2="139" y2="183" />
+      <line x1="217" y1="212" x2="153" y2="175" />
+      <line x1="231" y1="204" x2="167" y2="167" />
+      <line x1="245" y1="196" x2="181" y2="159" />
+      <line x1="259" y1="188" x2="195" y2="151" />
+    </g>
+
+    <!-- Right side face (thin page edge) -->
+    <polygon
+      points="175,235 268,181 268,184 175,238"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.05)"
+    />
+
+    <!-- Left side face (thin page edge) -->
+    <polygon
+      points="175,235 111,198 111,201 175,238"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.04)"
+    />
   </g>
 
-  <!-- Outer circle -->
-  <circle cx="200" cy="200" r="120"
-    stroke="#003DA5" stroke-width="0.8" fill="none" opacity="0.3" />
+  <!-- ============================================================
+       Layer 2: RULER / STRAIGHTEDGE (along right edge)
+       Positioned parallel to the width axis of the page
+       ============================================================ -->
+  <g>
+    <!-- Ruler body (thin isometric strip) -->
+    <polygon
+      points="272,178 280,173 217,136 209,141"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.03)"
+    />
+    <!-- Ruler right edge face -->
+    <polygon
+      points="272,178 280,173 280,175 272,180"
+      stroke="#003DA5" stroke-width="0.6"
+      fill="rgba(0,61,165,0.05)"
+    />
 
-  <!-- Crosshair (center) -->
-  <g stroke="#003DA5" stroke-width="0.8" opacity="0.6">
-    <!-- Horizontal -->
-    <line x1="120" y1="200" x2="185" y2="200" />
-    <line x1="215" y1="200" x2="280" y2="200" />
-    <!-- Vertical -->
-    <line x1="200" y1="120" x2="200" y2="185" />
-    <line x1="200" y1="215" x2="200" y2="280" />
+    <!-- Ruler tick marks (along the ruler surface) -->
+    <g stroke="#003DA5" stroke-width="0.4" opacity="0.5">
+      <!-- Major ticks (every 10mm equivalent) -->
+      <line x1="270" y1="179" x2="266" y2="177" />
+      <line x1="256" y1="172" x2="252" y2="170" />
+      <line x1="242" y1="165" x2="238" y2="163" />
+      <line x1="228" y1="158" x2="224" y2="156" />
+      <line x1="214" y1="151" x2="210" y2="149" />
+      <!-- Minor ticks (every 5mm equivalent) -->
+      <line x1="263" y1="175" x2="261" y2="174" />
+      <line x1="249" y1="168" x2="247" y2="167" />
+      <line x1="235" y1="161" x2="233" y2="160" />
+      <line x1="221" y1="154" x2="219" y2="153" />
+    </g>
+
+    <!-- Ruler measurement numbers -->
+    <g font-family="'VT323', monospace" font-size="4" fill="#003DA5" opacity="0.4">
+      <text x="267" y="176" transform="rotate(-30, 267, 176)">0</text>
+      <text x="253" y="169" transform="rotate(-30, 253, 169)">10</text>
+      <text x="239" y="162" transform="rotate(-30, 239, 162)">20</text>
+      <text x="225" y="155" transform="rotate(-30, 225, 155)">30</text>
+      <text x="211" y="148" transform="rotate(-30, 211, 148)">40</text>
+    </g>
   </g>
 
-  <!-- Center target -->
-  <circle cx="200" cy="200" r="10"
-    stroke="#003DA5" stroke-width="0.6" fill="none" opacity="0.5" />
-  <circle cx="200" cy="200" r="2"
-    fill="#003DA5" opacity="0.4" />
+  <!-- ============================================================
+       Layer 3: DETAIL CALLOUT (magnified grid intersection)
+       Source: circle on page grid → Leader → Inset circle (upper-right)
+       ============================================================ -->
+  <g>
+    <!-- Source circle (on grid intersection) -->
+    <circle cx="217" cy="212" r="10"
+      stroke="#003DA5" stroke-width="0.6" stroke-dasharray="4 2"
+      fill="none" opacity="0.4" />
 
-  <!-- Ruler ticks (top edge) -->
-  <g stroke="#003DA5" stroke-width="0.4" opacity="0.35">
-    <line x1="120" y1="80" x2="120" y2="90" />
-    <line x1="140" y1="80" x2="140" y2="86" />
-    <line x1="160" y1="80" x2="160" y2="90" />
-    <line x1="180" y1="80" x2="180" y2="86" />
-    <line x1="200" y1="80" x2="200" y2="93" />
-    <line x1="220" y1="80" x2="220" y2="86" />
-    <line x1="240" y1="80" x2="240" y2="90" />
-    <line x1="260" y1="80" x2="260" y2="86" />
-    <line x1="280" y1="80" x2="280" y2="90" />
+    <!-- Leader line from source to inset -->
+    <line x1="225" y1="204" x2="290" y2="115"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3" />
+
+    <!-- Magnified inset circle -->
+    <circle cx="330" cy="100" r="45"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.01)" />
+
+    <!-- Magnified content inside inset -->
+    <g clip-path="url(#precision-inset-clip)">
+      <!-- Zoomed grid lines (4x magnification) -->
+      <line x1="290" y1="100" x2="370" y2="100"
+        stroke="#003DA5" stroke-width="0.6" opacity="0.4" />
+      <line x1="330" y1="60" x2="330" y2="140"
+        stroke="#003DA5" stroke-width="0.6" opacity="0.4" />
+      <!-- Additional grid lines -->
+      <line x1="290" y1="75" x2="370" y2="75"
+        stroke="#003DA5" stroke-width="0.3" opacity="0.2" />
+      <line x1="290" y1="125" x2="370" y2="125"
+        stroke="#003DA5" stroke-width="0.3" opacity="0.2" />
+      <line x1="305" y1="60" x2="305" y2="140"
+        stroke="#003DA5" stroke-width="0.3" opacity="0.2" />
+      <line x1="355" y1="60" x2="355" y2="140"
+        stroke="#003DA5" stroke-width="0.3" opacity="0.2" />
+
+      <!-- 90° angle indicator arc -->
+      <path d="M330,88 L342,88 L342,100"
+        stroke="#003DA5" stroke-width="0.8" fill="none" opacity="0.6" />
+      <!-- Center intersection dot -->
+      <circle cx="330" cy="100" r="2"
+        fill="#003DA5" opacity="0.3" />
+    </g>
+
+    <!-- Inset label -->
+    <text x="330" y="153"
+      font-family="'VT323', monospace" font-size="5" fill="#003DA5"
+      text-anchor="middle" opacity="0.4">
+      DETAIL (4:1)
+    </text>
   </g>
-  <!-- Ruler line -->
-  <line x1="110" y1="80" x2="290" y2="80"
-    stroke="#003DA5" stroke-width="0.5" opacity="0.3" />
 
-  <!-- 5mm label -->
-  <text x="200" y="365"
-    font-family="'VT323', monospace" font-size="7" fill="#003DA5"
-    text-anchor="middle" opacity="0.5">
-    5MM GRID
+  <!-- ============================================================
+       Layer 4: GHOST ELEMENTS
+       Pencil line following grid precisely
+       ============================================================ -->
+  <g opacity="0.15">
+    <!-- Pencil stroke following a grid line perfectly -->
+    <line x1="140" y1="216" x2="258" y2="148"
+      stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+    <!-- Pencil silhouette at end of line -->
+    <line x1="258" y1="148" x2="270" y2="141"
+      stroke="#003DA5" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="270" y1="141" x2="275" y2="138"
+      stroke="#003DA5" stroke-width="1" stroke-linecap="round" />
+  </g>
+
+  <!-- ============================================================
+       Annotations: Leader lines + Labels
+       ============================================================ -->
+  <g>
+    <!-- 5MM GRID label (left side) -->
+    <line x1="130" y1="208" x2="55" y2="208"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="130" cy="208" r="1.5" fill="#003DA5" />
+    <text x="14" y="206"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      5MM GRID
+    </text>
+    <text x="14" y="216"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      80GSM PAPER
+    </text>
+
+    <!-- 90° label (from inset) -->
+    <text x="348" y="86"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5" opacity="0.6">
+      90°
+    </text>
+
+    <!-- TOLERANCE label (right side) -->
+    <line x1="268" y1="182" x2="310" y2="215"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="268" cy="182" r="1.5" fill="#003DA5" />
+    <text x="314" y="213"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      TOLERANCE
+    </text>
+    <text x="314" y="223"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      ±0.1MM
+    </text>
+
+    <!-- RULER label -->
+    <line x1="280" y1="173" x2="310" y2="165"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="280" cy="173" r="1.5" fill="#003DA5" />
+    <text x="314" y="163"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      STRAIGHTEDGE
+    </text>
+    <text x="314" y="173"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      STAINLESS
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Dimension lines
+       ============================================================ -->
+  <g>
+    <!-- Grid spacing dimension (showing 5mm interval on the page) -->
+    <g stroke="#003DA5" stroke-width="0.5" opacity="0.4">
+      <line x1="160" y1="226" x2="153" y2="222" stroke-dasharray="2 2" />
+      <!-- Start tick -->
+      <line x1="159" y1="224" x2="161" y2="228" />
+      <!-- End tick -->
+      <line x1="152" y1="220" x2="154" y2="224" />
+    </g>
+    <text x="150" y="232"
+      font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.5"
+      transform="rotate(30, 150, 232)">
+      5MM
+    </text>
+
+    <!-- Page width dimension -->
+    <g stroke="#003DA5" stroke-width="0.5" opacity="0.4">
+      <line x1="175" y1="250" x2="268" y2="196" stroke-dasharray="2 2" />
+      <line x1="173" y1="248" x2="177" y2="252" />
+      <line x1="266" y1="194" x2="270" y2="198" />
+    </g>
+    <text x="214" y="232"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+      transform="rotate(-30, 214, 232)">
+      148MM
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Title
+       ============================================================ -->
+  <text x="200" y="370"
+    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
+    text-anchor="middle" letter-spacing="0.1em">
+    PRECISION
   </text>
 
 </svg>

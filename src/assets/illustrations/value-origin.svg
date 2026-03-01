@@ -2,74 +2,315 @@
 
   <!-- ============================================================
        CORE VALUE: ORIGIN — 시작점
-       종이 위의 첫 번째 선, 연필 한 획
+       등각투영 펼친 노트북 + 첫 획 + 펜.
+       왼쪽 페이지는 비어있고, 오른쪽 페이지에 첫 번째 선.
        Color: #003DA5 (Blueprint Blue), stroke only
+       Perspective: 30° true isometric
        ============================================================ -->
 
-  <!-- Paper (large, slightly rotated isometric) -->
-  <polygon
-    points="200,100 310,160 200,300 90,240"
-    stroke="#003DA5" stroke-width="0.6"
-    fill="rgba(0,61,165,0.015)"
-  />
+  <defs>
+    <!-- Clip path for right page surface -->
+    <clipPath id="origin-right-page-clip">
+      <polygon points="200,205 295,150 243,120 200,147" />
+    </clipPath>
+    <!-- Clip path for detail callout inset -->
+    <clipPath id="origin-inset-clip">
+      <circle cx="78" cy="85" r="44" />
+    </clipPath>
+  </defs>
 
-  <!-- Paper shadow -->
-  <polygon
-    points="200,304 310,164 310,166 200,306 90,244 90,242"
-    stroke="none" fill="rgba(0,61,165,0.02)"
-  />
-
-  <!-- First line drawn — the origin stroke -->
-  <path
-    d="M 150,210 Q 180,195 220,185 Q 250,178 270,180"
-    stroke="#003DA5" stroke-width="1.5"
-    fill="none" stroke-linecap="round"
-    opacity="0.7"
-  />
-
-  <!-- Pencil tip at the start of the line -->
+  <!-- ============================================================
+       Layer 1: OPEN NOTEBOOK (two pages, isometric)
+       Spine runs along the depth axis at x=200
+       ============================================================ -->
   <g>
-    <!-- Pencil body -->
-    <line x1="118" y1="235" x2="150" y2="210"
-      stroke="#003DA5" stroke-width="2" stroke-linecap="round" opacity="0.5" />
-    <!-- Pencil taper -->
-    <line x1="147" y1="213" x2="153" y2="208"
-      stroke="#003DA5" stroke-width="1" stroke-linecap="round" opacity="0.6" />
-    <!-- Pencil tip point -->
-    <circle cx="150" cy="210" r="1" fill="#003DA5" opacity="0.5" />
+    <!-- LEFT PAGE (blank — the "before" state) -->
+    <!-- Top face -->
+    <polygon
+      points="200,205 200,147 108,198 108,256"
+      stroke="#003DA5" stroke-width="1"
+      fill="rgba(0,61,165,0.015)"
+    />
+    <!-- Left side edge -->
+    <polygon
+      points="108,256 108,198 108,201 108,259"
+      stroke="#003DA5" stroke-width="0.6"
+      fill="rgba(0,61,165,0.04)"
+    />
+    <!-- Front edge (bottom) -->
+    <polygon
+      points="200,205 108,256 108,259 200,208"
+      stroke="#003DA5" stroke-width="0.6"
+      fill="rgba(0,61,165,0.05)"
+    />
+
+    <!-- Faint ruled lines on left page (empty, waiting) -->
+    <g stroke="#003DA5" stroke-width="0.2" opacity="0.06">
+      <line x1="196" y1="152" x2="112" y2="203" />
+      <line x1="196" y1="162" x2="112" y2="213" />
+      <line x1="196" y1="172" x2="112" y2="223" />
+      <line x1="196" y1="182" x2="112" y2="233" />
+      <line x1="196" y1="192" x2="112" y2="243" />
+    </g>
+
+    <!-- RIGHT PAGE (with first stroke — the "after" state) -->
+    <!-- Top face -->
+    <polygon
+      points="200,205 295,150 243,120 200,147"
+      stroke="#003DA5" stroke-width="1"
+      fill="rgba(0,61,165,0.02)"
+    />
+    <!-- Right side edge -->
+    <polygon
+      points="295,150 295,153 200,208 200,205"
+      stroke="#003DA5" stroke-width="0.6"
+      fill="rgba(0,61,165,0.05)"
+    />
+
+    <!-- Faint grid on right page -->
+    <g clip-path="url(#origin-right-page-clip)" stroke="#003DA5" stroke-width="0.25" opacity="0.1">
+      <!-- Horizontal set -->
+      <line x1="204" y1="152" x2="291" y2="152" />
+      <line x1="204" y1="162" x2="287" y2="148" />
+      <line x1="204" y1="172" x2="283" y2="144" />
+      <!-- Vertical set -->
+      <line x1="220" y1="200" x2="220" y2="130" />
+      <line x1="240" y1="195" x2="253" y2="125" />
+      <line x1="260" y1="185" x2="273" y2="130" />
+      <line x1="280" y1="175" x2="285" y2="140" />
+    </g>
+
+    <!-- SPINE LINE (center, where pages meet) -->
+    <line x1="200" y1="147" x2="200" y2="208"
+      stroke="#003DA5" stroke-width="1.2" opacity="0.5" />
+
+    <!-- Spine stitch marks -->
+    <g stroke="#003DA5" stroke-width="0.4" opacity="0.2">
+      <line x1="198" y1="155" x2="202" y2="155" />
+      <line x1="198" y1="165" x2="202" y2="165" />
+      <line x1="198" y1="175" x2="202" y2="175" />
+      <line x1="198" y1="185" x2="202" y2="185" />
+      <line x1="198" y1="195" x2="202" y2="195" />
+    </g>
+
+    <!-- Book cover edges visible beneath pages -->
+    <g stroke="#003DA5" stroke-width="0.5" opacity="0.2">
+      <!-- Left cover edge -->
+      <line x1="105" y1="260" x2="200" y2="210" />
+      <!-- Right cover edge -->
+      <line x1="200" y1="210" x2="298" y2="155" />
+    </g>
   </g>
 
-  <!-- Origin marker (coordinate system hint) -->
-  <g opacity="0.3">
-    <!-- Origin dot -->
-    <circle cx="150" cy="210" r="4"
-      stroke="#003DA5" stroke-width="0.6" fill="none" />
-    <!-- X arrow -->
-    <line x1="150" y1="210" x2="175" y2="196"
+  <!-- ============================================================
+       Layer 2: FIRST STROKE (bold, on right page)
+       Single confident line — the origin mark
+       ============================================================ -->
+  <g>
+    <path
+      d="M210,190 Q230,178 260,168 Q278,162 288,160"
+      stroke="#003DA5" stroke-width="1.8"
+      fill="none" stroke-linecap="round"
+      opacity="0.7"
+    />
+    <!-- Ink pooling at stroke start (thicker) -->
+    <circle cx="210" cy="190" r="1.5" fill="#003DA5" opacity="0.3" />
+  </g>
+
+  <!-- ============================================================
+       Layer 3: PEN (resting diagonally on right page)
+       Positioned at the start of the stroke
+       ============================================================ -->
+  <g>
+    <!-- Pen body -->
+    <line x1="206" y1="196" x2="180" y2="228"
+      stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="209" y1="198" x2="183" y2="230"
+      stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+    <!-- Cap -->
+    <line x1="180" y1="228" x2="172" y2="240"
+      stroke="#003DA5" stroke-width="1.8" stroke-linecap="round" />
+    <line x1="183" y1="230" x2="175" y2="242"
+      stroke="#003DA5" stroke-width="1.8" stroke-linecap="round" />
+    <!-- Cap end -->
+    <ellipse cx="173" cy="242" rx="2" ry="1.5"
+      stroke="#003DA5" stroke-width="0.5" opacity="0.4" />
+    <!-- Nib (at stroke start) -->
+    <line x1="206" y1="196" x2="210" y2="190"
+      stroke="#003DA5" stroke-width="0.8" stroke-linecap="round" />
+    <line x1="209" y1="198" x2="210" y2="190"
+      stroke="#003DA5" stroke-width="0.8" stroke-linecap="round" />
+    <!-- Tip point -->
+    <circle cx="210" cy="190" r="0.8" fill="#003DA5" opacity="0.5" />
+    <!-- Cap ring -->
+    <ellipse cx="180" cy="227" rx="2.5" ry="1.5"
+      stroke="#003DA5" stroke-width="0.3" fill="none" opacity="0.3" />
+  </g>
+
+  <!-- ============================================================
+       Layer 4: DETAIL CALLOUT (magnified pen-paper contact point)
+       Source: circle at pen tip → Inset circle (upper-left)
+       ============================================================ -->
+  <g>
+    <!-- Source circle around pen tip -->
+    <circle cx="210" cy="190" r="12"
+      stroke="#003DA5" stroke-width="0.6" stroke-dasharray="4 2"
+      fill="none" opacity="0.4" />
+
+    <!-- Leader line from source to inset -->
+    <line x1="200" y1="182" x2="118" y2="98"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3" />
+
+    <!-- Magnified inset circle (upper-left) -->
+    <circle cx="78" cy="85" r="44"
+      stroke="#003DA5" stroke-width="0.8"
+      fill="rgba(0,61,165,0.01)" />
+
+    <!-- Magnified content inside inset -->
+    <g clip-path="url(#origin-inset-clip)">
+      <!-- Paper surface (magnified) -->
+      <line x1="35" y1="95" x2="121" y2="95"
+        stroke="#003DA5" stroke-width="0.5" opacity="0.2" />
+
+      <!-- Pen tip touching paper (magnified) -->
+      <line x1="65" y1="60" x2="78" y2="93"
+        stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="68" y1="60" x2="78" y2="93"
+        stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" />
+      <!-- Ink contact dot -->
+      <circle cx="78" cy="94" r="3" fill="#003DA5" opacity="0.15" />
+
+      <!-- Coordinate axes from origin point -->
+      <!-- X axis -->
+      <line x1="78" y1="94" x2="118" y2="94"
+        stroke="#003DA5" stroke-width="0.6" opacity="0.4" />
+      <!-- Arrow -->
+      <polygon points="116,92 120,94 116,96" fill="#003DA5" opacity="0.4" />
+      <!-- Y axis (upward) -->
+      <line x1="78" y1="94" x2="78" y2="55"
+        stroke="#003DA5" stroke-width="0.6" opacity="0.4" />
+      <!-- Arrow -->
+      <polygon points="76,57 78,53 80,57" fill="#003DA5" opacity="0.4" />
+
+      <!-- (0,0) label -->
+      <text x="82" y="104"
+        font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+        (0,0)
+      </text>
+      <!-- Axis labels -->
+      <text x="112" y="104"
+        font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.35">
+        X
+      </text>
+      <text x="72" y="56"
+        font-family="'VT323', monospace" font-size="5" fill="#003DA5" opacity="0.35">
+        Y
+      </text>
+    </g>
+
+    <!-- Inset label -->
+    <text x="78" y="137"
+      font-family="'VT323', monospace" font-size="5" fill="#003DA5"
+      text-anchor="middle" opacity="0.4">
+      DETAIL (5:1)
+    </text>
+  </g>
+
+  <!-- ============================================================
+       Layer 5: GHOST ELEMENTS
+       Faint coordinate grid emanating from origin point
+       ============================================================ -->
+  <g opacity="0.06" stroke="#003DA5" stroke-width="0.5" stroke-dasharray="4 4">
+    <!-- Grid lines radiating from pen tip on the right page -->
+    <line x1="210" y1="190" x2="295" y2="155" />
+    <line x1="210" y1="190" x2="290" y2="165" />
+    <line x1="210" y1="190" x2="285" y2="175" />
+    <line x1="210" y1="190" x2="210" y2="145" />
+    <line x1="210" y1="190" x2="230" y2="148" />
+    <line x1="210" y1="190" x2="250" y2="152" />
+  </g>
+
+  <!-- ============================================================
+       Annotations: Leader lines + Labels
+       ============================================================ -->
+  <g>
+    <!-- ORIGIN (0,0) label -->
+    <line x1="220" y1="185" x2="310" y2="110"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
-    <!-- Y arrow -->
-    <line x1="150" y1="210" x2="136" y2="196"
+    <circle cx="220" cy="185" r="1.5" fill="#003DA5" />
+    <text x="314" y="108"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      ORIGIN (0,0)
+    </text>
+    <text x="314" y="118"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      FIRST CONTACT
+    </text>
+
+    <!-- FIRST MARK label -->
+    <line x1="268" y1="162" x2="310" y2="145"
       stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="268" cy="162" r="1.5" fill="#003DA5" />
+    <text x="314" y="143"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      FIRST MARK
+    </text>
+    <text x="314" y="153"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      INK ON PAPER
+    </text>
+
+    <!-- BLANK → PURPOSE label (left page) -->
+    <line x1="150" y1="220" x2="50" y2="280"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="150" cy="220" r="1.5" fill="#003DA5" />
+    <text x="14" y="278"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      BLANK
+    </text>
+    <text x="14" y="288"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      → PURPOSE
+    </text>
+
+    <!-- SPINE label -->
+    <line x1="200" y1="165" x2="154" y2="130"
+      stroke="#003DA5" stroke-width="0.5" stroke-dasharray="2 2" />
+    <circle cx="200" cy="165" r="1.5" fill="#003DA5" />
+    <text x="110" y="128"
+      font-family="'VT323', monospace" font-size="7" fill="#003DA5">
+      SPINE
+    </text>
+    <text x="110" y="138"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5">
+      THREAD BOUND
+    </text>
   </g>
 
-  <!-- "0,0" coordinate label -->
-  <text x="155" y="228"
-    font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.4">
-    0, 0
-  </text>
-
-  <!-- Faint guidelines radiating from origin -->
-  <g stroke="#003DA5" stroke-width="0.3" stroke-dasharray="4 4" opacity="0.1">
-    <line x1="150" y1="210" x2="300" y2="130" />
-    <line x1="150" y1="210" x2="100" y2="130" />
-    <line x1="150" y1="210" x2="200" y2="310" />
+  <!-- ============================================================
+       Dimension lines
+       ============================================================ -->
+  <g>
+    <!-- Page spread dimension (full width) -->
+    <g stroke="#003DA5" stroke-width="0.5" opacity="0.4">
+      <line x1="108" y1="268" x2="295" y2="161" stroke-dasharray="2 2" />
+      <line x1="106" y1="266" x2="110" y2="270" />
+      <line x1="293" y1="159" x2="297" y2="163" />
+    </g>
+    <text x="195" y="225"
+      font-family="'VT323', monospace" font-size="6" fill="#003DA5" opacity="0.5"
+      transform="rotate(-30, 195, 225)">
+      A5 SPREAD (297x210MM)
+    </text>
   </g>
 
-  <!-- Label -->
-  <text x="200" y="365"
-    font-family="'VT323', monospace" font-size="7" fill="#003DA5"
-    text-anchor="middle" opacity="0.5">
-    FIRST LINE
+  <!-- ============================================================
+       Title
+       ============================================================ -->
+  <text x="200" y="370"
+    font-family="'VT323', monospace" font-size="8" fill="#003DA5"
+    text-anchor="middle" letter-spacing="0.1em">
+    ORIGIN
   </text>
 
 </svg>
