@@ -156,6 +156,7 @@ export function Title({
           component={level}
           sx={{
             fontWeight: level === 'h1' ? 900 : level === 'h2' ? 800 : 700,
+            whiteSpace: 'pre-line',
           }}
         >
           { revealTitle }

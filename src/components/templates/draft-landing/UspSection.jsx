@@ -25,7 +25,7 @@ export function UspSection({ usp, gridGap }) {
     <LineGrid gap={ gridGap } borderColor="text.primary">
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
-          title="Analog for the Digital Age"
+          title={ "Analog\nfor the\nDigital Age" }
           level="h1"
         />
       </Box>

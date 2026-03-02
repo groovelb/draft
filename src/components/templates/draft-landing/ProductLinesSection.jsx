@@ -30,7 +30,7 @@ export function ProductLinesSection({ products, gridGap }) {
     >
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
-          title="Three Lines of Tools"
+          title={ "Three\nLines of\nTools" }
           level="h1"
         />
       </Box>

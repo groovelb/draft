@@ -38,14 +38,6 @@ export function ProductCard({ Illustration, name, description }) {
             color: 'rgba(255,255,255,0.7)',
             mt: 1,
             wordBreak: 'keep-all',
-            '&::first-letter': {
-              float: 'left',
-              fontSize: '3.2em',
-              lineHeight: 1,
-              fontWeight: 'bold',
-              mr: 0.5,
-              mt: '0.05em',
-            },
           } }
         >
           { description }

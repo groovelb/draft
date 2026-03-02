@@ -28,7 +28,7 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
         <PhiSplit
           primary={
             <Title
-              title="The Blueprint of Ideas"
+              title={ "The\nBlueprint\nof Ideas" }
               level="h1"
             />
           }

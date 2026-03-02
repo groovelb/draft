@@ -28,7 +28,7 @@ export function CoreValuesSection({ coreValues, gridGap }) {
     >
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
-          title="Principles Drawn on the Blueprint"
+          title={ "Principles\nDrawn on\nthe Blueprint" }
           level="h1"
         />
       </Box>
