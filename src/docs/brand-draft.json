@@ -8,22 +8,22 @@
     {
       "key": "precision",
       "label": "정밀함",
-      "description": "5mm 그리드 위에 정렬되는 사고. 도면을 그리듯 생각을 적는다."
+      "description": "5mm 그리드 위에 정렬되는 사고. 도면을 그리듯 생각을 적는다. 흐트러진 생각에 구조를 부여하고, 여백 사이에서 방향을 찾는다. 정밀함은 강박이 아니라 사고의 습관이다."
     },
     {
       "key": "origin",
       "label": "시작점",
-      "description": "모든 설계는 한 줄의 선에서 시작되었다. 완성은 화면 안에 있지만, 시작은 언제나 종이 위에 있었다."
+      "description": "모든 설계는 한 줄의 선에서 시작되었다. 완성은 화면 안에 있지만, 시작은 언제나 종이 위에 있었다. 키보드를 누르기 전, 펜을 쥐었던 그 순간이 진짜 출발점이다. 우리는 그 시작을 다시 종이 위로 되돌린다."
     },
     {
       "key": "restraint",
       "label": "절제",
-      "description": "종이 한 장. 펜 하나. 그것으로 충분하다. 과시보다 기능과 질감을 중시한다."
+      "description": "종이 한 장. 펜 하나. 그것으로 충분하다. 과시보다 기능과 질감을 중시한다. 불필요한 장식을 걷어내면 남는 것은 본질뿐이다. 절제는 부족이 아니라 선택이다."
     },
     {
       "key": "craft",
       "label": "도구에 대한 존중",
-      "description": "잉크가 종이에 스미는 0.3초의 확신. 누군가는 비효율이라 부르지만, 우리는 설계라 부른다."
+      "description": "잉크가 종이에 스미는 0.3초의 확신. 누군가는 비효율이라 부르지만, 우리는 설계라 부른다. 손끝에 전해지는 무게와 질감, 종이 위에 남는 필압의 흔적. 좋은 도구는 사용자의 사고를 닮아간다."
     }
   ],
   "message": {
@@ -59,27 +59,54 @@
       "line": "GRID",
       "concept": "Blueprint 정밀함. 5mm 그리드 시스템.",
       "items": [
-        { "name": "Grid Notebook A5", "description": "5mm 그리드 노트북. 80gsm 미색지 192p." },
-        { "name": "Grid Memo Pad", "description": "탁상용 모눈 메모 패드. 떼어쓰는 100매." },
-        { "name": "Desk Mat", "description": "그리드 인쇄 데스크 매트. 600x400mm." }
+        {
+          "name": "Grid Notebook A5",
+          "description": "5mm 그리드 노트북. 80gsm 미색지 192p."
+        },
+        {
+          "name": "Grid Memo Pad",
+          "description": "탁상용 모눈 메모 패드. 떼어쓰는 100매."
+        },
+        {
+          "name": "Desk Mat",
+          "description": "그리드 인쇄 데스크 매트. 600x400mm."
+        }
       ]
     },
     {
       "line": "INK",
       "concept": "필기의 본질. 잉크와 펜.",
       "items": [
-        { "name": "Rollerball Pen", "description": "황동 바디 롤러볼. 0.5mm. Brass 마감." },
-        { "name": "Fountain Pen", "description": "스틸 닙 만년필. EF/F/M 선택." },
-        { "name": "Ink Cartridge Set", "description": "Blueprint Blue 잉크 카트리지 6본입." }
+        {
+          "name": "Rollerball Pen",
+          "description": "황동 바디 롤러볼. 0.5mm. Brass 마감."
+        },
+        {
+          "name": "Fountain Pen",
+          "description": "스틸 닙 만년필. EF/F/M 선택."
+        },
+        {
+          "name": "Ink Cartridge Set",
+          "description": "Blueprint Blue 잉크 카트리지 6본입."
+        }
       ]
     },
     {
       "line": "FOLIO",
       "concept": "정리와 보관. 가죽과 종이.",
       "items": [
-        { "name": "Leather Binder A5", "description": "식물성 가죽 바인더. 6링. Warm Leather 색상." },
-        { "name": "Document Folder", "description": "A4 문서 폴더. 내부 포켓 2칸." },
-        { "name": "Card Wallet", "description": "명함 월렛. 20매 수납. 황동 클립." }
+        {
+          "name": "Leather Binder A5",
+          "description": "식물성 가죽 바인더. 6링. Warm Leather 색상."
+        },
+        {
+          "name": "Document Folder",
+          "description": "A4 문서 폴더. 내부 포켓 2칸."
+        },
+        {
+          "name": "Card Wallet",
+          "description": "명함 월렛. 20매 수납. 황동 클립."
+        }
       ]
     }
   ]

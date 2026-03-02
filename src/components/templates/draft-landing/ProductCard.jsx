@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import BlueprintGrid from '../../layout/BlueprintGrid';
 import BlueprintReveal from '../../motion/BlueprintReveal';
 
 /**
@@ -18,12 +19,14 @@ import BlueprintReveal from '../../motion/BlueprintReveal';
 export function ProductCard({ Illustration, name, description }) {
   return (
     <Box>
-      <BlueprintReveal stagger={ 120 } duration={ 600 } converge={ 0.35 }>
-        <Illustration
-          style={ { width: '100%', height: 'auto', display: 'block' } }
-          aria-label={ name }
-        />
-      </BlueprintReveal>
+      <BlueprintGrid color="#ffffff" opacity={ 0.08 }>
+        <BlueprintReveal stagger={ 120 } duration={ 600 } converge={ 0.35 }>
+          <Illustration
+            style={ { width: '100%', height: 'auto', display: 'block' } }
+            aria-label={ name }
+          />
+        </BlueprintReveal>
+      </BlueprintGrid>
 
       <Box sx={ { mt: 3, px: { xs: 0, md: 1 } } }>
         <Typography variant="h5" sx={ { color: 'common.white' } }>
@@ -35,6 +38,14 @@ export function ProductCard({ Illustration, name, description }) {
             color: 'rgba(255,255,255,0.7)',
             mt: 1,
             wordBreak: 'keep-all',
+            '&::first-letter': {
+              float: 'left',
+              fontSize: '3.2em',
+              lineHeight: 1,
+              fontWeight: 'bold',
+              mr: 0.5,
+              mt: '0.05em',
+            },
           } }
         >
           { description }

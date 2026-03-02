@@ -1,9 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import LineGrid from '../../layout/LineGrid';
+import BlueprintGrid from '../../layout/BlueprintGrid';
 import { PhiSplit } from '../../layout/PhiSplit';
 import { Title } from '../../typography/Title';
 import BlueprintReveal from '../../motion/BlueprintReveal';
-import BrandHero from '../../../assets/illustrations/brand-hero.svg?react';
+import { BrandHero } from '../../../assets/illustrations';
 
 /**
  * BrandStorySection 컴포넌트
@@ -38,6 +39,14 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
                 color: 'text.primary',
                 lineHeight: 2,
                 wordBreak: 'keep-all',
+                '&::first-letter': {
+                  float: 'left',
+                  fontSize: '3.2em',
+                  lineHeight: 1,
+                  fontWeight: 'bold',
+                  mr: 0.5,
+                  mt: '0.05em',
+                },
               } }
             >
               { bodyMessage }
@@ -52,12 +61,14 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
         <PhiSplit
           isReversed
           primary={
-            <BlueprintReveal stagger={ 200 } duration={ 800 } converge={ 0.3 }>
-              <BrandHero
-                style={ { width: '100%', height: 'auto', display: 'block' } }
-                aria-label="The Blueprint Desk"
-              />
-            </BlueprintReveal>
+            <BlueprintGrid>
+              <BlueprintReveal stagger={ 200 } duration={ 800 } converge={ 0.3 }>
+                <BrandHero
+                  style={ { width: '100%', height: 'auto', display: 'block' } }
+                  aria-label="The Blueprint Desk"
+                />
+              </BlueprintReveal>
+            </BlueprintGrid>
           }
           secondary={
             <Typography
@@ -66,6 +77,14 @@ export function BrandStorySection({ bodyMessage, closingMessage, gridGap }) {
                 color: 'text.primary',
                 lineHeight: 2,
                 wordBreak: 'keep-all',
+                '&::first-letter': {
+                  float: 'left',
+                  fontSize: '3.2em',
+                  lineHeight: 1,
+                  fontWeight: 'bold',
+                  mr: 0.5,
+                  mt: '0.05em',
+                },
               } }
             >
               { closingMessage }

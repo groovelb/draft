@@ -1,4 +1,6 @@
+import { useRef, useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
+import RandomRevealText from '../kinetic-typography/RandomRevealText';
 
 /**
  * Title 컴포넌트
@@ -41,6 +43,31 @@ export function Title({
   sx,
   ...props
 }) {
+  /** 뷰포트 진입 감지 */
+  const rootRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  /** 폰트 상속하는 RandomRevealText */
+  const revealTitle = isVisible
+    ? <RandomRevealText
+        text={ title }
+        delay={ 200 }
+        stagger={ 60 }
+        sx={ { fontSize: 'inherit', fontFamily: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', letterSpacing: 'inherit' } }
+      />
+    : null;
+
   // 레벨에 따른 타이포그래피 variant 매핑
   const variantMap = {
     h1: 'h1',
@@ -99,6 +126,7 @@ export function Title({
   if (layout === 'stack') {
     return (
       <Box
+        ref={ rootRef }
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -130,7 +158,7 @@ export function Title({
             fontWeight: level === 'h1' ? 900 : level === 'h2' ? 800 : 700,
           }}
         >
-          {title}
+          { revealTitle }
         </Typography>
 
         {subtitle && (
@@ -166,6 +194,7 @@ export function Title({
   if (layout === 'inline') {
     return (
       <Box
+        ref={ rootRef }
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -204,7 +233,7 @@ export function Title({
               fontWeight: level === 'h1' ? 900 : level === 'h2' ? 800 : 700,
             }}
           >
-            {title}
+            { revealTitle }
           </Typography>
         </Box>
 
@@ -241,6 +270,7 @@ export function Title({
   if (layout === 'split') {
     return (
       <Box
+        ref={ rootRef }
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -280,7 +310,7 @@ export function Title({
               flex: '1 1 auto',
             }}
           >
-            {title}
+            { revealTitle }
           </Typography>
 
           {subtitle && (

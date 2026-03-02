@@ -1,7 +1,7 @@
 import { DraftLanding } from './DraftLanding';
 
 export default {
-  title: 'Template/DraftLanding',
+  title: 'Page/DraftLanding',
   component: DraftLanding,
   tags: ['autodocs'],
   parameters: {
@@ -27,7 +27,7 @@ export default {
 6. **CtaSection** — 마감 메시지와 CTA 버튼
 
 ### 사용된 컴포넌트
-FullPageContainer, LineGrid, PhiSplit, PageContainer, SectionContainer, Title, StretchedHeadline
+FullPageContainer, LineGrid, PhiSplit, PageContainer, Title, StretchedHeadline, MarqueeContainer, BlueprintReveal, GradientOverlay, FooterShifting
         `,
       },
     },
@@ -46,3 +46,4 @@ FullPageContainer, LineGrid, PhiSplit, PageContainer, SectionContainer, Title, S
 
 /** 기본 랜딩 페이지 */
 export const Default = {};
+

@@ -3,19 +3,7 @@ import Grid from '@mui/material/Grid';
 import LineGrid from '../../layout/LineGrid';
 import { Title } from '../../typography/Title';
 import { CoreValueCard } from './CoreValueCard';
-
-import ValuePrecision from '../../../assets/illustrations/value-precision.svg?react';
-import ValueOrigin from '../../../assets/illustrations/value-origin.svg?react';
-import ValueRestraint from '../../../assets/illustrations/value-restraint.svg?react';
-import ValueCraft from '../../../assets/illustrations/value-craft.svg?react';
-
-/** Core Value key → 일러스트 SVG 매핑 */
-const valueIllustrationMap = {
-  'precision': ValuePrecision,
-  'origin': ValueOrigin,
-  'restraint': ValueRestraint,
-  'craft': ValueCraft,
-};
+import { coreValueIllustrationMap } from '../../../assets/illustrations';
 
 /**
  * CoreValuesSection 컴포넌트
@@ -33,7 +21,11 @@ const valueIllustrationMap = {
  */
 export function CoreValuesSection({ coreValues, gridGap }) {
   return (
-    <LineGrid gap={ gridGap } borderColor="text.primary">
+    <LineGrid
+      gap={ gridGap }
+      borderColor="text.primary"
+      sx={ { '& > hr': { borderBottomWidth: 2 } } }
+    >
       <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 } } }>
         <Title
           title="Principles Drawn on the Blueprint"
@@ -41,11 +33,19 @@ export function CoreValuesSection({ coreValues, gridGap }) {
         />
       </Box>
 
-      <LineGrid container gap={ gridGap } borderColor="text.primary">
+      <LineGrid
+        container
+        gap={ gridGap }
+        borderColor="text.primary"
+        sx={ {
+          '& > .MuiGrid-root::before': { width: '2px !important' },
+          '& > .MuiGrid-root::after': { height: '2px !important' },
+        } }
+      >
         { coreValues.map((value, index) => (
           <Grid size={ { xs: 12, sm: 6 } } key={ value.key }>
             <CoreValueCard
-              Illustration={ valueIllustrationMap[value.key] }
+              Illustration={ coreValueIllustrationMap[value.key] }
               index={ index }
               title={ value.key }
               label={ value.label }

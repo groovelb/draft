@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+
+  <!-- ============================================================
+       USP: ANALOG FOR DIGITAL
+       좌측 유기적 곡선 ↔ 우측 기하학 픽셀. 중앙 축에서 변환.
+       Color: #003DA5 (Blueprint Blue), stroke only
+       ============================================================ -->
+
+  <!-- Center axis -->
+  <line x1="200" y1="100" x2="200" y2="300"
+    stroke="#003DA5" stroke-width="0.8" opacity="0.3" />
+  <g stroke="#003DA5" stroke-width="0.4" opacity="0.25">
+    <line x1="196" y1="120" x2="204" y2="120" />
+    <line x1="196" y1="150" x2="204" y2="150" />
+    <line x1="196" y1="180" x2="204" y2="180" />
+    <line x1="196" y1="210" x2="204" y2="210" />
+    <line x1="196" y1="240" x2="204" y2="240" />
+    <line x1="196" y1="270" x2="204" y2="270" />
+  </g>
+
+  <!-- LEFT: Analog world — organic curves -->
+  <path d="M180,140 Q155,160 160,185 T145,220 Q140,240 155,260"
+    stroke="#003DA5" stroke-width="0.8" fill="none" opacity="0.4" />
+  <path d="M170,130 Q140,155 148,180 T130,215 Q125,238 140,265"
+    stroke="#003DA5" stroke-width="0.6" fill="none" opacity="0.3" />
+  <path d="M190,135 Q168,158 175,188 T160,228 Q155,248 168,272"
+    stroke="#003DA5" stroke-width="0.5" fill="none" opacity="0.25" />
+
+  <!-- Scattered dots (warmth, imperfection) -->
+  <g fill="#003DA5" opacity="0.2">
+    <circle cx="120" cy="170" r="1.5" />
+    <circle cx="108" cy="195" r="1" />
+    <circle cx="135" cy="200" r="1.8" />
+    <circle cx="115" cy="230" r="1.2" />
+    <circle cx="145" cy="245" r="1" />
+    <circle cx="100" cy="210" r="0.8" />
+    <circle cx="125" cy="155" r="1.3" />
+  </g>
+
+  <!-- Organic circle (hand-drawn) -->
+  <path d="M130,190 C130,175 148,168 155,178 C162,188 155,205 142,205 C129,205 128,198 130,190"
+    stroke="#003DA5" stroke-width="0.6" fill="none" opacity="0.25" />
+
+  <!-- Paper grain texture -->
+  <g stroke="#003DA5" stroke-width="0.2" opacity="0.1">
+    <line x1="80" y1="155" x2="195" y2="155" />
+    <line x1="80" y1="175" x2="195" y2="175" />
+    <line x1="80" y1="195" x2="195" y2="195" />
+    <line x1="80" y1="215" x2="195" y2="215" />
+    <line x1="80" y1="235" x2="195" y2="235" />
+    <line x1="80" y1="255" x2="195" y2="255" />
+  </g>
+
+  <!-- RIGHT: Digital world — pixel grid -->
+  <g stroke="#003DA5" stroke-width="0.3" opacity="0.15">
+    <line x1="215" y1="130" x2="215" y2="275" />
+    <line x1="230" y1="130" x2="230" y2="275" />
+    <line x1="245" y1="130" x2="245" y2="275" />
+    <line x1="260" y1="130" x2="260" y2="275" />
+    <line x1="275" y1="130" x2="275" y2="275" />
+    <line x1="290" y1="130" x2="290" y2="275" />
+    <line x1="305" y1="130" x2="305" y2="275" />
+    <line x1="205" y1="140" x2="310" y2="140" />
+    <line x1="205" y1="155" x2="310" y2="155" />
+    <line x1="205" y1="170" x2="310" y2="170" />
+    <line x1="205" y1="185" x2="310" y2="185" />
+    <line x1="205" y1="200" x2="310" y2="200" />
+    <line x1="205" y1="215" x2="310" y2="215" />
+    <line x1="205" y1="230" x2="310" y2="230" />
+    <line x1="205" y1="245" x2="310" y2="245" />
+    <line x1="205" y1="260" x2="310" y2="260" />
+  </g>
+
+  <!-- Filled pixel blocks (digital curve) -->
+  <g fill="#003DA5" opacity="0.1">
+    <rect x="215" y="140" width="15" height="15" />
+    <rect x="215" y="155" width="15" height="15" />
+    <rect x="230" y="170" width="15" height="15" />
+    <rect x="230" y="185" width="15" height="15" />
+    <rect x="230" y="200" width="15" height="15" />
+    <rect x="245" y="200" width="15" height="15" />
+    <rect x="245" y="215" width="15" height="15" />
+    <rect x="245" y="230" width="15" height="15" />
+    <rect x="230" y="245" width="15" height="15" />
+    <rect x="215" y="245" width="15" height="15" />
+  </g>
+  <g stroke="#003DA5" stroke-width="0.4" fill="none" opacity="0.25">
+    <rect x="215" y="140" width="15" height="15" />
+    <rect x="215" y="155" width="15" height="15" />
+    <rect x="230" y="170" width="15" height="15" />
+    <rect x="230" y="185" width="15" height="15" />
+    <rect x="230" y="200" width="15" height="15" />
+    <rect x="245" y="200" width="15" height="15" />
+    <rect x="245" y="215" width="15" height="15" />
+    <rect x="245" y="230" width="15" height="15" />
+    <rect x="230" y="245" width="15" height="15" />
+    <rect x="215" y="245" width="15" height="15" />
+  </g>
+
+  <!-- Transition particles at axis -->
+  <g opacity="0.35">
+    <circle cx="192" cy="160" r="2" stroke="#003DA5" stroke-width="0.5" fill="none" />
+    <circle cx="194" cy="190" r="2" stroke="#003DA5" stroke-width="0.5" fill="none" />
+    <circle cx="193" cy="220" r="2" stroke="#003DA5" stroke-width="0.5" fill="none" />
+    <rect x="206" y="158" width="4" height="4" stroke="#003DA5" stroke-width="0.5" fill="none" />
+    <rect x="206" y="188" width="4" height="4" stroke="#003DA5" stroke-width="0.5" fill="none" />
+    <rect x="206" y="218" width="4" height="4" stroke="#003DA5" stroke-width="0.5" fill="none" />
+  </g>
+
+</svg>

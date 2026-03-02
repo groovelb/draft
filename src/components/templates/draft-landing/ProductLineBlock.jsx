@@ -41,7 +41,7 @@ export function ProductLineBlock({ lineName, concept, items, illustrationMap, gr
       <LineGrid container gap={ gridGap } borderColor="common.white">
         { items.map((item) => (
           <Grid size={ { xs: 12, sm: 4 } } key={ item.name }>
-            <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 }, textAlign: 'center' } }>
+            <Box sx={ { p: { xs: 4, sm: 5, md: 8, lg: 10 }, textAlign: 'left' } }>
               <ProductCard
                 Illustration={ illustrationMap[item.name] }
                 name={ item.name }
