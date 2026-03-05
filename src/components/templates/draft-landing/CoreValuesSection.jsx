@@ -43,7 +43,7 @@ export function CoreValuesSection({ coreValues, gridGap }) {
         } }
       >
         { coreValues.map((value, index) => (
-          <Grid size={ { xs: 12, sm: 6 } } key={ value.key }>
+          <Grid size={ 6 } key={ value.key }>
             <CoreValueCard
               Illustration={ coreValueIllustrationMap[value.key] }
               index={ index }

@@ -199,17 +199,22 @@ const typography = {
   },
 
   // 본문 스타일 — Noto Serif KR (serif)
+  // 반응형: 모바일/태블릿에서 본문 축소
   body1: {
     fontSize: '1.25rem',     // 20px (16×1.25)
     fontWeight: 500,
     lineHeight: 1.6,
     letterSpacing: '0',
+    '@media (max-width:899.95px)': { fontSize: '1.125rem' },
+    '@media (max-width:599.95px)': { fontSize: '1.1rem' },
   },
   body2: {
     fontSize: '1.1rem',      // ~18px (14×1.25)
     fontWeight: 500,
     lineHeight: 1.6,
     letterSpacing: '0',
+    '@media (max-width:899.95px)': { fontSize: '1rem' },
+    '@media (max-width:599.95px)': { fontSize: '1rem' },
   },
 
   // 부제목
@@ -218,12 +223,16 @@ const typography = {
     fontWeight: 500,
     lineHeight: 1.5,
     letterSpacing: '0.01em',
+    '@media (max-width:899.95px)': { fontSize: '1.125rem' },
+    '@media (max-width:599.95px)': { fontSize: '1rem' },
   },
   subtitle2: {
     fontSize: '1.1rem',      // ~18px (14×1.25)
     fontWeight: 500,
     lineHeight: 1.5,
     letterSpacing: '0.01em',
+    '@media (max-width:899.95px)': { fontSize: '1rem' },
+    '@media (max-width:599.95px)': { fontSize: '0.938rem' },
   },
 
   // 기타
@@ -233,11 +242,15 @@ const typography = {
     lineHeight: 1.75,
     letterSpacing: '0.02em',
     textTransform: 'none',   // 대문자 변환 비활성화
+    '@media (max-width:899.95px)': { fontSize: '1rem' },
+    '@media (max-width:599.95px)': { fontSize: '0.938rem' },
   },
   caption: {
     fontSize: '0.938rem',    // 15px (12×1.25)
     lineHeight: 1.5,
     letterSpacing: '0.02em',
+    '@media (max-width:899.95px)': { fontSize: '0.875rem' },
+    '@media (max-width:599.95px)': { fontSize: '0.813rem' },
   },
   overline: {
     fontSize: '0.938rem',    // 15px (12×1.25)
@@ -245,6 +258,8 @@ const typography = {
     lineHeight: 2,
     letterSpacing: '0.08em',
     textTransform: 'uppercase',
+    '@media (max-width:899.95px)': { fontSize: '0.875rem' },
+    '@media (max-width:599.95px)': { fontSize: '0.75rem' },
   },
 };
 

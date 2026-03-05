@@ -32,7 +32,7 @@ export function UspSection({ usp, gridGap }) {
 
       <LineGrid container gap={ gridGap } borderColor="text.primary">
         { usp.map((item) => (
-          <Grid size={ { xs: 12, sm: 6, md: 3 } } key={ item.key }>
+          <Grid size={ { xs: 6, sm: 6, md: 3 } } key={ item.key }>
             <Box sx={ { p: { xs: 2, sm: 2.5, md: 4, lg: 5 }, textAlign: 'left' } }>
               <UspCard
                 Illustration={ uspIllustrationMap[item.key] }

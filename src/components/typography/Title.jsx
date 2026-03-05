@@ -58,16 +58,6 @@ export function Title({
     return () => observer.disconnect();
   }, []);
 
-  /** 폰트 상속하는 RandomRevealText */
-  const revealTitle = isVisible
-    ? <RandomRevealText
-        text={ title }
-        delay={ 200 }
-        stagger={ 60 }
-        sx={ { fontSize: 'inherit', fontFamily: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', letterSpacing: 'inherit' } }
-      />
-    : null;
-
   // 레벨에 따른 타이포그래피 variant 매핑
   const variantMap = {
     h1: 'h1',
@@ -90,6 +80,31 @@ export function Title({
     center: 'center',
     right: 'flex-end',
   };
+
+  /** 반응형 fontSize — sx 브레이크포인트로 시각 계층 보장 */
+  const responsiveFontSize = {
+    h1: { xs: '2.25rem', md: '4.5rem' },
+    h2: { xs: '1.5rem', md: '3.125rem' },
+    h3: { xs: '1.375rem', md: '2.5rem' },
+    h4: { xs: '1.25rem', md: '1.875rem' },
+  };
+
+  /** 폰트 상속하는 RandomRevealText */
+  const revealTitle = isVisible
+    ? <RandomRevealText
+        text={ title }
+        delay={ 200 }
+        stagger={ 60 }
+        variant={ variantMap[level] }
+        sx={ {
+          fontSize: responsiveFontSize[level] || 'inherit',
+          fontFamily: 'inherit',
+          fontWeight: 'inherit',
+          lineHeight: 'inherit',
+          letterSpacing: 'inherit',
+        } }
+      />
+    : null;
 
   // 구분선 스타일 정의
   const dividerStyles = {
@@ -154,10 +169,7 @@ export function Title({
         <Typography
           variant={variantMap[level]}
           component={level}
-          sx={{
-            fontWeight: level === 'h1' ? 900 : level === 'h2' ? 800 : 700,
-            whiteSpace: 'pre-line',
-          }}
+          sx={ { fontSize: responsiveFontSize[level] } }
         >
           { revealTitle }
         </Typography>
@@ -231,6 +243,7 @@ export function Title({
             variant={variantMap[level]}
             component={level}
             sx={{
+              fontSize: responsiveFontSize[level],
               fontWeight: level === 'h1' ? 900 : level === 'h2' ? 800 : 700,
             }}
           >
@@ -307,6 +320,7 @@ export function Title({
             variant={variantMap[level]}
             component={level}
             sx={{
+              fontSize: responsiveFontSize[level],
               fontWeight: level === 'h1' ? 900 : level === 'h2' ? 800 : 700,
               flex: '1 1 auto',
             }}

@@ -18,7 +18,7 @@ import BlueprintReveal from '../../motion/BlueprintReveal';
  */
 export function UspCard({ Illustration, label, description }) {
   return (
-    <Box sx={ { py: { xs: 4, md: 6 }, px: { xs: 1, md: 2 } } }>
+    <Box sx={ { py: { xs: 2, sm: 4, md: 6 }, px: { xs: 1, md: 2 } } }>
       { Illustration && (
         <BlueprintGrid sx={ { mb: 3 } }>
           <BlueprintReveal stagger={ 150 } duration={ 700 } converge={ 0.35 }>
@@ -30,7 +30,7 @@ export function UspCard({ Illustration, label, description }) {
         </BlueprintGrid>
       ) }
 
-      <Typography variant="h5">
+      <Typography variant="h5" sx={ { fontSize: { xs: '1.125rem', md: '1.563rem' } } }>
         { label }
       </Typography>
 
@@ -44,7 +44,7 @@ export function UspCard({ Illustration, label, description }) {
           wordBreak: 'keep-all',
           '&::first-letter': {
             float: 'left',
-            fontSize: '3.2em',
+            fontSize: { xs: '2.4em', sm: '3.2em' },
             lineHeight: 1,
             fontWeight: 'bold',
             mr: 0.5,

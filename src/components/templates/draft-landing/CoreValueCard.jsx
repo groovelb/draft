@@ -31,24 +31,24 @@ import BlueprintReveal from '../../motion/BlueprintReveal';
  */
 export function CoreValueCard({ Illustration, index, title, label, description }) {
   return (
-    <Box sx={ { px: { xs: 3, sm: 4, md: 5 } } }>
+    <Box sx={ { px: { xs: 1.5, sm: 4, md: 5 } } }>
       <Box
         sx={ {
-          py: { xs: 4, sm: 5, md: 6 },
+          py: { xs: 3, sm: 5, md: 6 },
           display: 'flex',
           alignItems: 'baseline',
-          gap: { xs: 1.5, sm: 2 },
+          gap: { xs: 1, sm: 2 },
         } }
       >
         <Typography
           variant="h2"
-          sx={ { color: 'primary.main', fontWeight: 'bold' } }
+          sx={ { color: 'primary.main', fontWeight: 'bold', fontSize: { xs: '1.25rem', md: '3.125rem' } } }
         >
           { `0${index + 1}` }
         </Typography>
         <Typography
           variant="h2"
-          sx={ { color: 'text.primary', fontWeight: 'bold' } }
+          sx={ { color: 'text.primary', fontWeight: 'bold', fontSize: { xs: '1.25rem', md: '3.125rem' } } }
         >
           { title.toUpperCase() }
         </Typography>
@@ -56,7 +56,7 @@ export function CoreValueCard({ Illustration, index, title, label, description }
 
       <Divider sx={ { borderColor: 'text.primary', opacity: 0.3 } } />
 
-      <BlueprintGrid sx={ { py: { xs: 3, sm: 4, md: 5 } } }>
+      <BlueprintGrid sx={ { py: { xs: 2, sm: 4, md: 5 } } }>
         <BlueprintReveal
           stagger={ 150 }
           duration={ 700 }
@@ -76,7 +76,7 @@ export function CoreValueCard({ Illustration, index, title, label, description }
 
       <Divider sx={ { borderColor: 'text.primary', opacity: 0.3 } } />
 
-      <Box sx={ { py: { xs: 3, sm: 4, md: 5 } } }>
+      <Box sx={ { py: { xs: 2, sm: 4, md: 5 } } }>
         <Typography
           variant="body1"
           sx={ {
@@ -85,7 +85,7 @@ export function CoreValueCard({ Illustration, index, title, label, description }
             wordBreak: 'keep-all',
             '&::first-letter': {
               float: 'left',
-              fontSize: '3.2em',
+              fontSize: { xs: '2.4em', sm: '3.2em' },
               lineHeight: 1,
               fontWeight: 'bold',
               mr: 0.5,

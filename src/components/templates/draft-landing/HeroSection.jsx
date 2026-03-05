@@ -31,7 +31,8 @@ export function HeroSection({ heroMessage, widePx }) {
             sx={ {
               color: 'text.primary',
               letterSpacing: '0.2em',
-              fontSize: (theme) => `calc(${theme.typography.overline.fontSize} * 2)`,
+              textAlign: 'center',
+              fontSize: { xs: '0.75rem', sm: '1rem', md: '1.5rem', lg: '1.875rem' },
               mb: { xs: 2, md: 3 },
             } }
           >
@@ -45,7 +46,12 @@ export function HeroSection({ heroMessage, widePx }) {
             fontSize="clamp(3.75rem, 18vw, 15rem)"
             fontWeight={ 700 }
             textTransform="none"
-            sx={ { color: 'primary.main', width: '100%', textAlign: 'center' } }
+            sx={ {
+              color: 'primary.main',
+              width: '100%',
+              textAlign: 'center',
+              transform: 'translateX(0.5ch)',
+            } }
           />
         </Box>
       </PageContainer>
